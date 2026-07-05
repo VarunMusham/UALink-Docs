@@ -1,0 +1,3737 @@
+{
+  "table_of_contents": [
+    {
+      "title": "9 Security",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          71.71875,
+          75.67999267578125
+        ],
+        [
+          158.1719970703125,
+          75.67999267578125
+        ],
+        [
+          158.1719970703125,
+          93.67999267578125
+        ],
+        [
+          71.71875,
+          93.67999267578125
+        ]
+      ]
+    },
+    {
+      "title": "9.1 References",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          71.71875,
+          288.87890625
+        ],
+        [
+          177.9546661376953,
+          288.87890625
+        ],
+        [
+          177.9546661376953,
+          304.8799743652344
+        ],
+        [
+          71.71875,
+          304.8799743652344
+        ]
+      ]
+    },
+    {
+      "title": "9.2 System Overview",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          70.822265625,
+          623.390625
+        ],
+        [
+          215.98733520507812,
+          623.390625
+        ],
+        [
+          215.98733520507812,
+          639.7300109863281
+        ],
+        [
+          70.822265625,
+          639.7300109863281
+        ]
+      ]
+    },
+    {
+      "title": "Evaluation Copy",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          8.3671875,
+          181.7578125
+        ],
+        [
+          62.86174392700195,
+          181.7578125
+        ],
+        [
+          62.86174392700195,
+          589.6808166503906
+        ],
+        [
+          8.3671875,
+          589.6808166503906
+        ]
+      ]
+    },
+    {
+      "title": "Ultra Accelerator Link Consortium Inc. (UALink) - UALink_200 Rev 1.0 Specification",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          95.326171875,
+          37.4912109375
+        ],
+        [
+          516.02392578125,
+          37.4912109375
+        ],
+        [
+          516.02392578125,
+          48.53118896484375
+        ],
+        [
+          95.326171875,
+          48.53118896484375
+        ]
+      ]
+    },
+    {
+      "title": "9.3 Security model",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          72.02399444580078,
+          377.82421875
+        ],
+        [
+          200.10716247558594,
+          377.82421875
+        ],
+        [
+          200.10716247558594,
+          393.94000244140625
+        ],
+        [
+          72.02399444580078,
+          393.94000244140625
+        ]
+      ]
+    },
+    {
+      "title": "9.3.1 Security objectives:",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          70.5234375,
+          538.3125
+        ],
+        [
+          224.32737731933594,
+          538.3125
+        ],
+        [
+          224.32737731933594,
+          553.2099914550781
+        ],
+        [
+          70.5234375,
+          553.2099914550781
+        ]
+      ]
+    },
+    {
+      "title": "9.3.2 Trusted Computing Base (TCB)",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          70.5234375,
+          74.25
+        ],
+        [
+          284.1799011230469,
+          74.25
+        ],
+        [
+          284.1799011230469,
+          88.85003662109375
+        ],
+        [
+          70.5234375,
+          88.85003662109375
+        ]
+      ]
+    },
+    {
+      "title": "9.3.3 Adversary profile and capabilities",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          71.12109375,
+          388.29998779296875
+        ],
+        [
+          302.5442199707031,
+          388.29998779296875
+        ],
+        [
+          302.5442199707031,
+          402.3399963378906
+        ],
+        [
+          71.12109375,
+          402.3399963378906
+        ]
+      ]
+    },
+    {
+      "title": "Evaluation Copy",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          9.263671875,
+          191.8125
+        ],
+        [
+          62.86174392700195,
+          191.8125
+        ],
+        [
+          62.86174392700195,
+          589.6808166503906
+        ],
+        [
+          9.263671875,
+          589.6808166503906
+        ]
+      ]
+    },
+    {
+      "title": "Ultra Accelerator Link Consortium Inc. (UALink) - UALink_200 Rev 1.0 Specification",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          94.728515625,
+          37.125
+        ],
+        [
+          516.076171875,
+          37.125
+        ],
+        [
+          516.076171875,
+          48.53118896484375
+        ],
+        [
+          94.728515625,
+          48.53118896484375
+        ]
+      ]
+    },
+    {
+      "title": "9.3.4 Security Assumptions",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          71.12109375,
+          256.39453125
+        ],
+        [
+          233.0742950439453,
+          256.39453125
+        ],
+        [
+          233.0742950439453,
+          271.51995849609375
+        ],
+        [
+          71.12109375,
+          271.51995849609375
+        ]
+      ]
+    },
+    {
+      "title": "9.3.5 Threat model",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          70.5234375,
+          612.3699951171875
+        ],
+        [
+          186.4053497314453,
+          612.3699951171875
+        ],
+        [
+          186.4053497314453,
+          626.4099884033203
+        ],
+        [
+          70.5234375,
+          626.4099884033203
+        ]
+      ]
+    },
+    {
+      "title": "Ultra Accelerator Link Consortium Inc. (UALink) - UALink_200 Rev 1.0 Specification",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          95.326171875,
+          37.4912109375
+        ],
+        [
+          516.02392578125,
+          37.4912109375
+        ],
+        [
+          516.02392578125,
+          48.53118896484375
+        ],
+        [
+          95.326171875,
+          48.53118896484375
+        ]
+      ]
+    },
+    {
+      "title": "9.4 UALink System Security",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          71.71875,
+          544.88671875
+        ],
+        [
+          263.987060546875,
+          544.88671875
+        ],
+        [
+          263.987060546875,
+          560.8899993896484
+        ],
+        [
+          71.71875,
+          560.8899993896484
+        ]
+      ]
+    },
+    {
+      "title": "Evaluation Copy",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          8.96484375,
+          193.74609375
+        ],
+        [
+          62.86174392700195,
+          193.74609375
+        ],
+        [
+          62.86174392700195,
+          589.6808166503906
+        ],
+        [
+          8.96484375,
+          589.6808166503906
+        ]
+      ]
+    },
+    {
+      "title": "Ultra Accelerator Link Consortium Inc. (UALink) - UALink_200 Rev 1.0 Specification",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          94.4296875,
+          37.4912109375
+        ],
+        [
+          516.02392578125,
+          37.4912109375
+        ],
+        [
+          516.02392578125,
+          48.53118896484375
+        ],
+        [
+          94.4296875,
+          48.53118896484375
+        ]
+      ]
+    },
+    {
+      "title": "Ultra Accelerator Link Consortium Inc. (UALink) - UALink_200 Rev 1.0 Specification",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          94.4296875,
+          37.4912109375
+        ],
+        [
+          516.02392578125,
+          37.4912109375
+        ],
+        [
+          516.02392578125,
+          48.53118896484375
+        ],
+        [
+          94.4296875,
+          48.53118896484375
+        ]
+      ]
+    },
+    {
+      "title": "9.5 Encryption and authentication scheme for UALink",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          71.419921875,
+          190.49005126953125
+        ],
+        [
+          430.7232666015625,
+          190.49005126953125
+        ],
+        [
+          430.7232666015625,
+          206.45001220703125
+        ],
+        [
+          71.419921875,
+          206.45001220703125
+        ]
+      ]
+    },
+    {
+      "title": "9.5.1 AES-GCM IV format",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          71.71875,
+          480.2200012207031
+        ],
+        [
+          221.2357177734375,
+          480.2200012207031
+        ],
+        [
+          221.2357177734375,
+          494.260009765625
+        ],
+        [
+          71.71875,
+          494.260009765625
+        ]
+      ]
+    },
+    {
+      "title": "9.5.2 Control Half-Flit field encryption",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          71.419921875,
+          74.80999755859375
+        ],
+        [
+          298.7694396972656,
+          74.80999755859375
+        ],
+        [
+          298.7694396972656,
+          88.85003662109375
+        ],
+        [
+          71.419921875,
+          88.85003662109375
+        ]
+      ]
+    },
+    {
+      "title": "9.5.3 Control Half-Flit field authentication",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          71.71875,
+          154.6875
+        ],
+        [
+          321.7155456542969,
+          154.6875
+        ],
+        [
+          321.7155456542969,
+          169.6099853515625
+        ],
+        [
+          71.71875,
+          169.6099853515625
+        ]
+      ]
+    },
+    {
+      "title": "Ultra Accelerator Link Consortium Inc. (UALink) - UALink_200 Rev 1.0 Specification",
+      "heading_level": null,
+      "page_id": 10,
+      "polygon": [
+        [
+          95.625,
+          37.125
+        ],
+        [
+          516.375,
+          37.125
+        ],
+        [
+          516.375,
+          48.53118896484375
+        ],
+        [
+          95.625,
+          48.53118896484375
+        ]
+      ]
+    },
+    {
+      "title": "Ultra Accelerator Link Consortium Inc. (UALink) - UALink_200 Rev 1.0 Specification",
+      "heading_level": null,
+      "page_id": 11,
+      "polygon": [
+        [
+          96.14399719238281,
+          36.3515625
+        ],
+        [
+          516.375,
+          36.3515625
+        ],
+        [
+          516.375,
+          48.53118896484375
+        ],
+        [
+          96.14399719238281,
+          48.53118896484375
+        ]
+      ]
+    },
+    {
+      "title": "Evaluation Copy",
+      "heading_level": null,
+      "page_id": 12,
+      "polygon": [
+        [
+          7.76953125,
+          186.3984375
+        ],
+        [
+          62.86174392700195,
+          186.3984375
+        ],
+        [
+          62.86174392700195,
+          589.6808166503906
+        ],
+        [
+          7.76953125,
+          589.6808166503906
+        ]
+      ]
+    },
+    {
+      "title": "Ultra Accelerator Link Consortium Inc. (UALink) - UALink_200 Rev 1.0 Specification",
+      "heading_level": null,
+      "page_id": 12,
+      "polygon": [
+        [
+          95.326171875,
+          37.4912109375
+        ],
+        [
+          516.02392578125,
+          37.4912109375
+        ],
+        [
+          516.02392578125,
+          48.7265625
+        ],
+        [
+          95.326171875,
+          48.7265625
+        ]
+      ]
+    },
+    {
+      "title": "Ultra Accelerator Link Consortium Inc. (UALink) - UALink_200 Rev 1.0 Specification",
+      "heading_level": null,
+      "page_id": 13,
+      "polygon": [
+        [
+          96.14399719238281,
+          37.4912109375
+        ],
+        [
+          516.02392578125,
+          37.4912109375
+        ],
+        [
+          516.02392578125,
+          48.53118896484375
+        ],
+        [
+          96.14399719238281,
+          48.53118896484375
+        ]
+      ]
+    },
+    {
+      "title": "9.5.4 Data authentication and encryption",
+      "heading_level": null,
+      "page_id": 13,
+      "polygon": [
+        [
+          70.822265625,
+          469.4765625
+        ],
+        [
+          315.6435241699219,
+          469.4765625
+        ],
+        [
+          315.6435241699219,
+          485.260009765625
+        ],
+        [
+          70.822265625,
+          485.260009765625
+        ]
+      ]
+    },
+    {
+      "title": "9.5.5 Poisoned data handling with security enabled",
+      "heading_level": null,
+      "page_id": 13,
+      "polygon": [
+        [
+          71.12109375,
+          524.77734375
+        ],
+        [
+          373.2215270996094,
+          524.77734375
+        ],
+        [
+          373.2215270996094,
+          540.25
+        ],
+        [
+          71.12109375,
+          540.25
+        ]
+      ]
+    },
+    {
+      "title": "Evaluation Copy",
+      "heading_level": null,
+      "page_id": 14,
+      "polygon": [
+        [
+          10.458984375,
+          195.29296875
+        ],
+        [
+          62.86174392700195,
+          195.29296875
+        ],
+        [
+          62.86174392700195,
+          589.6808166503906
+        ],
+        [
+          10.458984375,
+          589.6808166503906
+        ]
+      ]
+    },
+    {
+      "title": "9.5.6 ISOLATE response handling",
+      "heading_level": null,
+      "page_id": 14,
+      "polygon": [
+        [
+          70.822265625,
+          74.80999755859375
+        ],
+        [
+          265.5909729003906,
+          74.80999755859375
+        ],
+        [
+          265.5909729003906,
+          88.85003662109375
+        ],
+        [
+          70.822265625,
+          88.85003662109375
+        ]
+      ]
+    },
+    {
+      "title": "9.5.7 Modes of operation",
+      "heading_level": null,
+      "page_id": 14,
+      "polygon": [
+        [
+          70.822265625,
+          129.76995849609375
+        ],
+        [
+          223.6393585205078,
+          129.76995849609375
+        ],
+        [
+          223.6393585205078,
+          143.80999755859375
+        ],
+        [
+          70.822265625,
+          143.80999755859375
+        ]
+      ]
+    },
+    {
+      "title": "9.5.8 Ordering requirements imposed due to AES-GCM",
+      "heading_level": null,
+      "page_id": 14,
+      "polygon": [
+        [
+          72.02399444580078,
+          361.58203125
+        ],
+        [
+          393.7937316894531,
+          361.58203125
+        ],
+        [
+          393.7937316894531,
+          376.5400085449219
+        ],
+        [
+          72.02399444580078,
+          376.5400085449219
+        ]
+      ]
+    },
+    {
+      "title": "9.5.8.1 Notes on ordering",
+      "heading_level": null,
+      "page_id": 14,
+      "polygon": [
+        [
+          71.419921875,
+          561.9400024414062
+        ],
+        [
+          208.10000610351562,
+          561.9400024414062
+        ],
+        [
+          208.10000610351562,
+          573.9400024414062
+        ],
+        [
+          71.419921875,
+          573.9400024414062
+        ]
+      ]
+    },
+    {
+      "title": "9.5.9 Authentication and Encryption/Decryption Implementation in an UALink\nport",
+      "heading_level": null,
+      "page_id": 15,
+      "polygon": [
+        [
+          70.224609375,
+          74.25
+        ],
+        [
+          533.4049072265625,
+          74.25
+        ],
+        [
+          533.4049072265625,
+          106.010009765625
+        ],
+        [
+          70.224609375,
+          106.010009765625
+        ]
+      ]
+    },
+    {
+      "title": "9.5.9.1 Key and other security state management",
+      "heading_level": null,
+      "page_id": 15,
+      "polygon": [
+        [
+          71.12109375,
+          111.375
+        ],
+        [
+          329.0600280761719,
+          111.375
+        ],
+        [
+          329.0600280761719,
+          124.5799560546875
+        ],
+        [
+          71.12109375,
+          124.5799560546875
+        ]
+      ]
+    },
+    {
+      "title": "Evaluation Copy",
+      "heading_level": null,
+      "page_id": 17,
+      "polygon": [
+        [
+          7.76953125,
+          196.453125
+        ],
+        [
+          62.86174392700195,
+          196.453125
+        ],
+        [
+          62.86174392700195,
+          589.6808166503906
+        ],
+        [
+          7.76953125,
+          589.6808166503906
+        ]
+      ]
+    },
+    {
+      "title": "Ultra Accelerator Link Consortium Inc. (UALink) - UALink_200 Rev 1.0 Specification",
+      "heading_level": null,
+      "page_id": 17,
+      "polygon": [
+        [
+          95.923828125,
+          37.4912109375
+        ],
+        [
+          516.02392578125,
+          37.4912109375
+        ],
+        [
+          516.02392578125,
+          48.53118896484375
+        ],
+        [
+          95.923828125,
+          48.53118896484375
+        ]
+      ]
+    },
+    {
+      "title": "Evaluation Copy",
+      "heading_level": null,
+      "page_id": 19,
+      "polygon": [
+        [
+          8.068359375,
+          190.265625
+        ],
+        [
+          62.86174392700195,
+          190.265625
+        ],
+        [
+          62.86174392700195,
+          589.6808166503906
+        ],
+        [
+          8.068359375,
+          589.6808166503906
+        ]
+      ]
+    },
+    {
+      "title": "Ultra Accelerator Link Consortium Inc. (UALink) - UALink_200 Rev 1.0 Specification",
+      "heading_level": null,
+      "page_id": 19,
+      "polygon": [
+        [
+          95.02734375,
+          37.125
+        ],
+        [
+          516.02392578125,
+          37.125
+        ],
+        [
+          516.02392578125,
+          48.53118896484375
+        ],
+        [
+          95.02734375,
+          48.53118896484375
+        ]
+      ]
+    },
+    {
+      "title": "9.5.9.1.1 Master key management",
+      "heading_level": null,
+      "page_id": 19,
+      "polygon": [
+        [
+          71.419921875,
+          176.34375
+        ],
+        [
+          247.10000610351562,
+          176.34375
+        ],
+        [
+          247.10000610351562,
+          188.6600341796875
+        ],
+        [
+          71.419921875,
+          188.6600341796875
+        ]
+      ]
+    },
+    {
+      "title": "9.5.9.1.2 Master keys maintained by RX and TX in an UALink system \u2013 an illustration",
+      "heading_level": null,
+      "page_id": 19,
+      "polygon": [
+        [
+          71.71875,
+          464.22998046875
+        ],
+        [
+          497.3500061035156,
+          464.22998046875
+        ],
+        [
+          497.3500061035156,
+          476.22998046875
+        ],
+        [
+          71.71875,
+          476.22998046875
+        ]
+      ]
+    },
+    {
+      "title": "Ultra Accelerator Link Consortium Inc. (UALink) - UALink_200 Rev 1.0 Specification",
+      "heading_level": null,
+      "page_id": 20,
+      "polygon": [
+        [
+          95.326171875,
+          37.4912109375
+        ],
+        [
+          516.02392578125,
+          37.4912109375
+        ],
+        [
+          516.02392578125,
+          48.53118896484375
+        ],
+        [
+          95.326171875,
+          48.53118896484375
+        ]
+      ]
+    },
+    {
+      "title": "9.5.9.1.3 Illustration of security State requirements in TX and RX",
+      "heading_level": null,
+      "page_id": 20,
+      "polygon": [
+        [
+          71.419921875,
+          496.5400085449219
+        ],
+        [
+          398.6839904785156,
+          496.5400085449219
+        ],
+        [
+          398.6839904785156,
+          508.5400085449219
+        ],
+        [
+          71.419921875,
+          508.5400085449219
+        ]
+      ]
+    },
+    {
+      "title": "Evaluation Copy",
+      "heading_level": null,
+      "page_id": 22,
+      "polygon": [
+        [
+          6.873046875,
+          194.51953125
+        ],
+        [
+          62.86174392700195,
+          194.51953125
+        ],
+        [
+          62.86174392700195,
+          589.6808166503906
+        ],
+        [
+          6.873046875,
+          589.6808166503906
+        ]
+      ]
+    },
+    {
+      "title": "Ultra Accelerator Link Consortium Inc. (UALink) - UALink_200 Rev 1.0 Specification",
+      "heading_level": null,
+      "page_id": 22,
+      "polygon": [
+        [
+          95.326171875,
+          37.125
+        ],
+        [
+          516.02392578125,
+          37.125
+        ],
+        [
+          516.02392578125,
+          48.53118896484375
+        ],
+        [
+          95.326171875,
+          48.53118896484375
+        ]
+      ]
+    },
+    {
+      "title": "9.5.9.2 TX implementation",
+      "heading_level": null,
+      "page_id": 22,
+      "polygon": [
+        [
+          71.71875,
+          335.671875
+        ],
+        [
+          210.96800231933594,
+          335.671875
+        ],
+        [
+          210.96800231933594,
+          348.5299987792969
+        ],
+        [
+          71.71875,
+          348.5299987792969
+        ]
+      ]
+    },
+    {
+      "title": "9.5.9.2.1 TX Stream-Key derivation flow",
+      "heading_level": null,
+      "page_id": 22,
+      "polygon": [
+        [
+          69.029296875,
+          617.1399993896484
+        ],
+        [
+          276.9440002441406,
+          617.1399993896484
+        ],
+        [
+          276.9440002441406,
+          629.1399993896484
+        ],
+        [
+          69.029296875,
+          629.1399993896484
+        ]
+      ]
+    },
+    {
+      "title": "9.5.9.2.2 TX Master key swap flow",
+      "heading_level": null,
+      "page_id": 23,
+      "polygon": [
+        [
+          70.5234375,
+          541.3000030517578
+        ],
+        [
+          249.81202697753906,
+          541.3000030517578
+        ],
+        [
+          249.81202697753906,
+          553.3000030517578
+        ],
+        [
+          70.5234375,
+          553.3000030517578
+        ]
+      ]
+    },
+    {
+      "title": "Evaluation Copy",
+      "heading_level": null,
+      "page_id": 25,
+      "polygon": [
+        [
+          7.470703125,
+          196.06640625
+        ],
+        [
+          62.86174392700195,
+          196.06640625
+        ],
+        [
+          62.86174392700195,
+          589.6808166503906
+        ],
+        [
+          7.470703125,
+          589.6808166503906
+        ]
+      ]
+    },
+    {
+      "title": "Ultra Accelerator Link Consortium Inc. (UALink) - UALink_200 Rev 1.0 Specification",
+      "heading_level": null,
+      "page_id": 25,
+      "polygon": [
+        [
+          95.923828125,
+          37.4912109375
+        ],
+        [
+          516.076171875,
+          37.4912109375
+        ],
+        [
+          516.076171875,
+          48.53118896484375
+        ],
+        [
+          95.923828125,
+          48.53118896484375
+        ]
+      ]
+    },
+    {
+      "title": "9.5.9.3 RX implementation",
+      "heading_level": null,
+      "page_id": 25,
+      "polygon": [
+        [
+          70.822265625,
+          214.2421875
+        ],
+        [
+          214.4600067138672,
+          214.2421875
+        ],
+        [
+          214.4600067138672,
+          226.489990234375
+        ],
+        [
+          70.822265625,
+          226.489990234375
+        ]
+      ]
+    },
+    {
+      "title": "9.5.9.3.1 RX Stream Key derivation flow",
+      "heading_level": null,
+      "page_id": 25,
+      "polygon": [
+        [
+          70.5234375,
+          654.9600067138672
+        ],
+        [
+          276.78802490234375,
+          654.9600067138672
+        ],
+        [
+          276.78802490234375,
+          666.9600067138672
+        ],
+        [
+          70.5234375,
+          666.9600067138672
+        ]
+      ]
+    },
+    {
+      "title": "Ultra Accelerator Link Consortium Inc. (UALink) - UALink_200 Rev 1.0 Specification",
+      "heading_level": null,
+      "page_id": 26,
+      "polygon": [
+        [
+          94.4296875,
+          37.4912109375
+        ],
+        [
+          516.02392578125,
+          37.4912109375
+        ],
+        [
+          516.02392578125,
+          48.53118896484375
+        ],
+        [
+          94.4296875,
+          48.53118896484375
+        ]
+      ]
+    },
+    {
+      "title": "9.5.9.3.2 RX Key swap flow",
+      "heading_level": null,
+      "page_id": 26,
+      "polygon": [
+        [
+          71.12109375,
+          609.8199920654297
+        ],
+        [
+          210.45201110839844,
+          609.8199920654297
+        ],
+        [
+          210.45201110839844,
+          621.8199920654297
+        ],
+        [
+          71.12109375,
+          621.8199920654297
+        ]
+      ]
+    },
+    {
+      "title": "Ultra Accelerator Link Consortium Inc. (UALink) - UALink_200 Rev 1.0 Specification",
+      "heading_level": null,
+      "page_id": 28,
+      "polygon": [
+        [
+          95.02734375,
+          37.5
+        ],
+        [
+          516.75,
+          37.5
+        ],
+        [
+          516.75,
+          48.0
+        ],
+        [
+          95.02734375,
+          48.0
+        ]
+      ]
+    },
+    {
+      "title": "Ultra Accelerator Link Consortium Inc. (UALink) - UALink_200 Rev 1.0 Specification",
+      "heading_level": null,
+      "page_id": 29,
+      "polygon": [
+        [
+          95.25,
+          37.5
+        ],
+        [
+          517.5,
+          37.5
+        ],
+        [
+          517.5,
+          48.7265625
+        ],
+        [
+          95.25,
+          48.7265625
+        ]
+      ]
+    },
+    {
+      "title": "9.5.9.4 Context input for key derivation",
+      "heading_level": null,
+      "page_id": 29,
+      "polygon": [
+        [
+          70.5,
+          73.4765625
+        ],
+        [
+          278.25,
+          73.4765625
+        ],
+        [
+          278.25,
+          84.3046875
+        ],
+        [
+          70.5,
+          84.3046875
+        ]
+      ]
+    },
+    {
+      "title": "9.5.9.5 AES-GCM Message and Auxiliary Authentication Data",
+      "heading_level": null,
+      "page_id": 29,
+      "polygon": [
+        [
+          70.5,
+          218.109375
+        ],
+        [
+          382.5,
+          218.109375
+        ],
+        [
+          382.5,
+          228.9375
+        ],
+        [
+          70.5,
+          228.9375
+        ]
+      ]
+    },
+    {
+      "title": "Table 9-9 Originator Data Channel Fields for AAD and MSG (partial-word write or UPLI Write Message Request)",
+      "heading_level": null,
+      "page_id": 29,
+      "polygon": [
+        [
+          78.0,
+          573.75
+        ],
+        [
+          539.25,
+          573.75
+        ],
+        [
+          539.25,
+          583.171875
+        ],
+        [
+          78.0,
+          583.171875
+        ]
+      ]
+    },
+    {
+      "title": "Table 9-10 Originator Data Channel Fields for AAD and MSG (Full Write)",
+      "heading_level": null,
+      "page_id": 29,
+      "polygon": [
+        [
+          156.287109375,
+          666.75
+        ],
+        [
+          457.5,
+          666.75
+        ],
+        [
+          457.5,
+          676.5
+        ],
+        [
+          156.287109375,
+          676.5
+        ]
+      ]
+    },
+    {
+      "title": "Ultra Accelerator Link Consortium Inc. (UALink) - UALink_200 Rev 1.0 Specification",
+      "heading_level": null,
+      "page_id": 30,
+      "polygon": [
+        [
+          95.923828125,
+          37.125
+        ],
+        [
+          516.02392578125,
+          37.125
+        ],
+        [
+          516.02392578125,
+          48.53118896484375
+        ],
+        [
+          95.923828125,
+          48.53118896484375
+        ]
+      ]
+    },
+    {
+      "title": "MSG Read Response",
+      "heading_level": null,
+      "page_id": 36,
+      "polygon": [
+        [
+          158.9765625,
+          677.91796875
+        ],
+        [
+          296.969482421875,
+          677.91796875
+        ],
+        [
+          296.969482421875,
+          695.8460922241211
+        ],
+        [
+          158.9765625,
+          695.8460922241211
+        ]
+      ]
+    },
+    {
+      "title": "9.5.10 Initializing encrypted and authenticated transmission and reception",
+      "heading_level": null,
+      "page_id": 39,
+      "polygon": [
+        [
+          70.822265625,
+          74.92999267578125
+        ],
+        [
+          504.7655029296875,
+          74.92999267578125
+        ],
+        [
+          504.7655029296875,
+          88.97003173828125
+        ],
+        [
+          70.822265625,
+          88.97003173828125
+        ]
+      ]
+    },
+    {
+      "title": "Ultra Accelerator Link Consortium Inc. (UALink) - UALink_200 Rev 1.0 Specification",
+      "heading_level": null,
+      "page_id": 40,
+      "polygon": [
+        [
+          95.326171875,
+          37.4912109375
+        ],
+        [
+          516.02392578125,
+          37.4912109375
+        ],
+        [
+          516.02392578125,
+          48.53118896484375
+        ],
+        [
+          95.326171875,
+          48.53118896484375
+        ]
+      ]
+    },
+    {
+      "title": "9.5.11 Refreshing an expired key",
+      "heading_level": null,
+      "page_id": 40,
+      "polygon": [
+        [
+          70.822265625,
+          367.76953125
+        ],
+        [
+          261.522216796875,
+          367.76953125
+        ],
+        [
+          261.522216796875,
+          382.4200134277344
+        ],
+        [
+          70.822265625,
+          382.4200134277344
+        ]
+      ]
+    },
+    {
+      "title": "9.5.12 Safeguarding UALink configuration to ensure confidentiality and integrity",
+      "heading_level": null,
+      "page_id": 41,
+      "polygon": [
+        [
+          69.92578125,
+          74.25
+        ],
+        [
+          536.6939086914062,
+          74.25
+        ],
+        [
+          536.6939086914062,
+          88.85003662109375
+        ],
+        [
+          69.92578125,
+          88.85003662109375
+        ]
+      ]
+    },
+    {
+      "title": "9.5.13 Integrity failure handling",
+      "heading_level": null,
+      "page_id": 41,
+      "polygon": [
+        [
+          72.02399444580078,
+          334.8984375
+        ],
+        [
+          255.47117614746094,
+          334.8984375
+        ],
+        [
+          255.47117614746094,
+          349.2799987792969
+        ],
+        [
+          72.02399444580078,
+          349.2799987792969
+        ]
+      ]
+    },
+    {
+      "title": "9.5.14 Switch requirements",
+      "heading_level": null,
+      "page_id": 41,
+      "polygon": [
+        [
+          71.419921875,
+          441.6328125
+        ],
+        [
+          235.08511352539062,
+          441.6328125
+        ],
+        [
+          235.08511352539062,
+          455.739990234375
+        ],
+        [
+          71.419921875,
+          455.739990234375
+        ]
+      ]
+    },
+    {
+      "title": "9.5.15 Key Derivation Function Requirements",
+      "heading_level": null,
+      "page_id": 41,
+      "polygon": [
+        [
+          70.822265625,
+          579.69140625
+        ],
+        [
+          335.6396179199219,
+          579.69140625
+        ],
+        [
+          335.6396179199219,
+          594.0099945068359
+        ],
+        [
+          70.822265625,
+          594.0099945068359
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          107
+        ],
+        [
+          "Line",
+          35
+        ],
+        [
+          "Text",
+          12
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          129
+        ],
+        [
+          "Line",
+          43
+        ],
+        [
+          "Text",
+          11
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          182
+        ],
+        [
+          "Line",
+          62
+        ],
+        [
+          "TableCell",
+          21
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "ListItem",
+          5
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          149
+        ],
+        [
+          "Line",
+          41
+        ],
+        [
+          "ListItem",
+          10
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          219
+        ],
+        [
+          "Line",
+          86
+        ],
+        [
+          "TableCell",
+          20
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "ListItem",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 5,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          141
+        ],
+        [
+          "Line",
+          41
+        ],
+        [
+          "ListItem",
+          8
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "ListGroup",
+          3
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 6,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          58
+        ],
+        [
+          "Span",
+          8
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 7,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          130
+        ],
+        [
+          "Line",
+          44
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "ListItem",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 8,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          202
+        ],
+        [
+          "TableCell",
+          163
+        ],
+        [
+          "Line",
+          46
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "Reference",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Table",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "TableGroup",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 9,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          200
+        ],
+        [
+          "TableCell",
+          60
+        ],
+        [
+          "Line",
+          47
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 10,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          243
+        ],
+        [
+          "TableCell",
+          84
+        ],
+        [
+          "Line",
+          53
+        ],
+        [
+          "Table",
+          2
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 11,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          149
+        ],
+        [
+          "TableCell",
+          47
+        ],
+        [
+          "Line",
+          33
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "Text",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 12,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          229
+        ],
+        [
+          "TableCell",
+          72
+        ],
+        [
+          "Line",
+          56
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "Table",
+          2
+        ],
+        [
+          "TableGroup",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 13,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          196
+        ],
+        [
+          "TableCell",
+          54
+        ],
+        [
+          "Line",
+          49
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 14,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          141
+        ],
+        [
+          "Line",
+          39
+        ],
+        [
+          "ListItem",
+          14
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "SectionHeader",
+          5
+        ],
+        [
+          "ListGroup",
+          5
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 15,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          42
+        ],
+        [
+          "Line",
+          10
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 16,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          181
+        ],
+        [
+          "Line",
+          66
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "Text",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 17,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          70
+        ],
+        [
+          "Line",
+          19
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 18,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          196
+        ],
+        [
+          "Line",
+          68
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 19,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          115
+        ],
+        [
+          "Line",
+          36
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "ListItem",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 20,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          51
+        ],
+        [
+          "Line",
+          12
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 21,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          111
+        ],
+        [
+          "Line",
+          23
+        ],
+        [
+          "ListItem",
+          16
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 22,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          178
+        ],
+        [
+          "Line",
+          47
+        ],
+        [
+          "ListItem",
+          12
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 23,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          75
+        ],
+        [
+          "Line",
+          23
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 24,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          140
+        ],
+        [
+          "Line",
+          50
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 25,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          141
+        ],
+        [
+          "Line",
+          44
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 26,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          85
+        ],
+        [
+          "Line",
+          25
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "ListItem",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 27,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          109
+        ],
+        [
+          "Line",
+          41
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "Text",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 28,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          93
+        ],
+        [
+          "Span",
+          9
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 29,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "TableCell",
+          116
+        ],
+        [
+          "Line",
+          30
+        ],
+        [
+          "Span",
+          30
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "SectionHeader",
+          5
+        ],
+        [
+          "Table",
+          3
+        ],
+        [
+          "ListItem",
+          2
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 30,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          208
+        ],
+        [
+          "TableCell",
+          176
+        ],
+        [
+          "Line",
+          33
+        ],
+        [
+          "Table",
+          4
+        ],
+        [
+          "Caption",
+          3
+        ],
+        [
+          "TableGroup",
+          3
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 31,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "TableCell",
+          252
+        ],
+        [
+          "Span",
+          220
+        ],
+        [
+          "Line",
+          44
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "Table",
+          2
+        ],
+        [
+          "TableGroup",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 32,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "TableCell",
+          250
+        ],
+        [
+          "Span",
+          226
+        ],
+        [
+          "Line",
+          45
+        ],
+        [
+          "Table",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 33,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          215
+        ],
+        [
+          "TableCell",
+          164
+        ],
+        [
+          "Line",
+          38
+        ],
+        [
+          "Table",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "Text",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 34,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          199
+        ],
+        [
+          "TableCell",
+          45
+        ],
+        [
+          "Line",
+          32
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 35,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "TableCell",
+          375
+        ],
+        [
+          "Span",
+          229
+        ],
+        [
+          "Line",
+          40
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "Form",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 36,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          202
+        ],
+        [
+          "Line",
+          31
+        ],
+        [
+          "TableCell",
+          23
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 37,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          212
+        ],
+        [
+          "TableCell",
+          198
+        ],
+        [
+          "Line",
+          37
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 38,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          170
+        ],
+        [
+          "TableCell",
+          98
+        ],
+        [
+          "Line",
+          35
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Table",
+          2
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 39,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          161
+        ],
+        [
+          "Line",
+          47
+        ],
+        [
+          "ListItem",
+          15
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 40,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          171
+        ],
+        [
+          "Line",
+          50
+        ],
+        [
+          "ListItem",
+          16
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 41,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          126
+        ],
+        [
+          "Line",
+          44
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "ListItem",
+          6
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/9_Security"
+}

@@ -1,0 +1,434 @@
+{
+  "table_of_contents": [
+    {
+      "title": "8 Manageability Requirements",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          71.71875,
+          78.1171875
+        ],
+        [
+          310.25396728515625,
+          78.1171875
+        ],
+        [
+          310.25396728515625,
+          96.32000732421875
+        ],
+        [
+          71.71875,
+          96.32000732421875
+        ]
+      ]
+    },
+    {
+      "title": "8.1 UALink Accelerators and System Nodes",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          71.12109375,
+          202.280029296875
+        ],
+        [
+          360.52008056640625,
+          202.280029296875
+        ],
+        [
+          360.52008056640625,
+          218.239990234375
+        ],
+        [
+          71.12109375,
+          218.239990234375
+        ]
+      ]
+    },
+    {
+      "title": "8.2 UALink Switches and Switch Platforms",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          70.5234375,
+          654.1499938964844
+        ],
+        [
+          354.8872985839844,
+          654.1499938964844
+        ],
+        [
+          354.8872985839844,
+          670.109992980957
+        ],
+        [
+          70.5234375,
+          670.109992980957
+        ]
+      ]
+    },
+    {
+      "title": "8.3 UALink Pod Controller",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          72.02399444580078,
+          435.83203125
+        ],
+        [
+          247.8594970703125,
+          435.83203125
+        ],
+        [
+          247.8594970703125,
+          452.8599853515625
+        ],
+        [
+          72.02399444580078,
+          452.8599853515625
+        ]
+      ]
+    },
+    {
+      "title": "8.4 UALink Virtual Pods",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          71.419921875,
+          631.0900115966797
+        ],
+        [
+          232.2193603515625,
+          631.0900115966797
+        ],
+        [
+          232.2193603515625,
+          647.0500183105469
+        ],
+        [
+          71.419921875,
+          647.0500183105469
+        ]
+      ]
+    },
+    {
+      "title": "8.5 Manageability Workflows",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          70.224609375,
+          652.78125
+        ],
+        [
+          272.1583557128906,
+          652.78125
+        ],
+        [
+          272.1583557128906,
+          669.75
+        ],
+        [
+          70.224609375,
+          669.75
+        ]
+      ]
+    },
+    {
+      "title": "Ultra Accelerator Link Consortium Inc. (UALink) - UALink_200 Rev 1.0 Specification",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          95.326171875,
+          37.4912109375
+        ],
+        [
+          516.02392578125,
+          37.4912109375
+        ],
+        [
+          516.02392578125,
+          48.53118896484375
+        ],
+        [
+          95.326171875,
+          48.53118896484375
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          116
+        ],
+        [
+          "Line",
+          38
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "Footnote",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          143
+        ],
+        [
+          "Line",
+          48
+        ],
+        [
+          "ListItem",
+          10
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Footnote",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          179
+        ],
+        [
+          "Line",
+          66
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "PageFooter",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          123
+        ],
+        [
+          "Line",
+          40
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "PageFooter",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          51
+        ],
+        [
+          "Line",
+          12
+        ],
+        [
+          "ListItem",
+          8
+        ],
+        [
+          "PageFooter",
+          3
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/8_Manageability_Requirements"
+}

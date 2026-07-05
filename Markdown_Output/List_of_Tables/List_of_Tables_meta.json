@@ -1,0 +1,194 @@
+{
+  "table_of_contents": [
+    {
+      "title": "List of Tables",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          72.02399444580078,
+          75.67999267578125
+        ],
+        [
+          169.15200805664062,
+          75.67999267578125
+        ],
+        [
+          169.15200805664062,
+          93.67999267578125
+        ],
+        [
+          72.02399444580078,
+          93.67999267578125
+        ]
+      ]
+    },
+    {
+      "title": "Evaluation Copy",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          7.470703125,
+          196.453125
+        ],
+        [
+          62.86174392700195,
+          196.453125
+        ],
+        [
+          62.86174392700195,
+          589.6808166503906
+        ],
+        [
+          7.470703125,
+          589.6808166503906
+        ]
+      ]
+    },
+    {
+      "title": "Ultra Accelerator Link Consortium Inc. (UALink) - UALink_200 Rev 1.0 Specification",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          95.625,
+          37.125
+        ],
+        [
+          516.02392578125,
+          37.125
+        ],
+        [
+          516.02392578125,
+          48.53118896484375
+        ],
+        [
+          95.625,
+          48.53118896484375
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          167
+        ],
+        [
+          "TableCell",
+          98
+        ],
+        [
+          "Line",
+          52
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "TableOfContents",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          163
+        ],
+        [
+          "TableCell",
+          100
+        ],
+        [
+          "Line",
+          53
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "TableOfContents",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          39
+        ],
+        [
+          "TableCell",
+          10
+        ],
+        [
+          "Line",
+          9
+        ],
+        [
+          "PageFooter",
+          3
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "TableOfContents",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/List_of_Tables"
+}

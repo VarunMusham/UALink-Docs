@@ -1,0 +1,547 @@
+{
+  "table_of_contents": [
+    {
+      "title": "10 UALink Switch Requirements",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          71.71875,
+          81.67999267578125
+        ],
+        [
+          313.81201171875,
+          81.67999267578125
+        ],
+        [
+          313.81201171875,
+          99.67999267578125
+        ],
+        [
+          71.71875,
+          99.67999267578125
+        ]
+      ]
+    },
+    {
+      "title": "10.1 Overview",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          71.71875,
+          105.1700439453125
+        ],
+        [
+          167.87693786621094,
+          105.1700439453125
+        ],
+        [
+          167.87693786621094,
+          121.1300048828125
+        ],
+        [
+          71.71875,
+          121.1300048828125
+        ]
+      ]
+    },
+    {
+      "title": "10.2 Bifurcation support",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          71.419921875,
+          579.3046875
+        ],
+        [
+          233.37677001953125,
+          579.3046875
+        ],
+        [
+          233.37677001953125,
+          595.4500122070312
+        ],
+        [
+          71.419921875,
+          595.4500122070312
+        ]
+      ]
+    },
+    {
+      "title": "10.3 Lossless Request and Response delivery",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          70.5234375,
+          642.7265625
+        ],
+        [
+          367.93560791015625,
+          642.7265625
+        ],
+        [
+          367.93560791015625,
+          659.6699981689453
+        ],
+        [
+          70.5234375,
+          659.6699981689453
+        ]
+      ]
+    },
+    {
+      "title": "10.4 Non-blocking architecture",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          72.017578125,
+          107.09002685546875
+        ],
+        [
+          277.12493896484375,
+          107.09002685546875
+        ],
+        [
+          277.12493896484375,
+          123.04998779296875
+        ],
+        [
+          72.017578125,
+          123.04998779296875
+        ]
+      ]
+    },
+    {
+      "title": "10.5 Forward progress guarantee",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          72.02399444580078,
+          344.0
+        ],
+        [
+          295.620849609375,
+          344.0
+        ],
+        [
+          295.620849609375,
+          359.9599914550781
+        ],
+        [
+          72.02399444580078,
+          359.9599914550781
+        ]
+      ]
+    },
+    {
+      "title": "10.6 Ordering and Virtual Channels",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          72.02399444580078,
+          452.4609375
+        ],
+        [
+          304.5743408203125,
+          452.4609375
+        ],
+        [
+          304.5743408203125,
+          468.94000244140625
+        ],
+        [
+          72.02399444580078,
+          468.94000244140625
+        ]
+      ]
+    },
+    {
+      "title": "10.7Routing Table Structure",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          72.017578125,
+          529.8046875
+        ],
+        [
+          258.0579833984375,
+          529.8046875
+        ],
+        [
+          258.0579833984375,
+          546.1300048828125
+        ],
+        [
+          72.017578125,
+          546.1300048828125
+        ]
+      ]
+    },
+    {
+      "title": "Ultra Accelerator Link Consortium Inc. (UALink) - UALink_200 Rev 1.0 Specification",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          93.533203125,
+          37.4912109375
+        ],
+        [
+          516.02392578125,
+          37.4912109375
+        ],
+        [
+          516.02392578125,
+          48.53118896484375
+        ],
+        [
+          93.533203125,
+          48.53118896484375
+        ]
+      ]
+    },
+    {
+      "title": "10.7.1 Routing Table Instances",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          71.12109375,
+          166.1300048828125
+        ],
+        [
+          249.223388671875,
+          166.1300048828125
+        ],
+        [
+          249.223388671875,
+          180.1700439453125
+        ],
+        [
+          71.12109375,
+          180.1700439453125
+        ]
+      ]
+    },
+    {
+      "title": "10.7.2 Egress port reachability",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          70.822265625,
+          272.719970703125
+        ],
+        [
+          247.62289428710938,
+          272.719970703125
+        ],
+        [
+          247.62289428710938,
+          286.760009765625
+        ],
+        [
+          70.822265625,
+          286.760009765625
+        ]
+      ]
+    },
+    {
+      "title": "10.8Configuration",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          72.02399444580078,
+          334.125
+        ],
+        [
+          191.80795288085938,
+          334.125
+        ],
+        [
+          191.80795288085938,
+          350.8399963378906
+        ],
+        [
+          72.02399444580078,
+          350.8399963378906
+        ]
+      ]
+    },
+    {
+      "title": "10.9 UALink Switch Recommendations and Goals",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          72.02399444580078,
+          526.9299926757812
+        ],
+        [
+          396.853271484375,
+          526.9299926757812
+        ],
+        [
+          396.853271484375,
+          542.8899993896484
+        ],
+        [
+          72.02399444580078,
+          542.8899993896484
+        ]
+      ]
+    },
+    {
+      "title": "10.9.1 Debug",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          71.71875,
+          577.8099975585938
+        ],
+        [
+          148.7391357421875,
+          577.8099975585938
+        ],
+        [
+          148.7391357421875,
+          591.8499908447266
+        ],
+        [
+          71.71875,
+          591.8499908447266
+        ]
+      ]
+    },
+    {
+      "title": "10.9.2Latency goals",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          71.71875,
+          74.63671875
+        ],
+        [
+          186.07965087890625,
+          74.63671875
+        ],
+        [
+          186.07965087890625,
+          88.85003662109375
+        ],
+        [
+          71.71875,
+          88.85003662109375
+        ]
+      ]
+    },
+    {
+      "title": "10.9.3 Performance goals",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          69.92578125,
+          185.0899658203125
+        ],
+        [
+          219.62701416015625,
+          185.0899658203125
+        ],
+        [
+          219.62701416015625,
+          199.1300048828125
+        ],
+        [
+          69.92578125,
+          199.1300048828125
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          140
+        ],
+        [
+          "Line",
+          46
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "PageFooter",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          115
+        ],
+        [
+          "Line",
+          46
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "PageFooter",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "ListItem",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          129
+        ],
+        [
+          "Line",
+          44
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "SectionHeader",
+          6
+        ],
+        [
+          "ListItem",
+          6
+        ],
+        [
+          "PageFooter",
+          3
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          67
+        ],
+        [
+          "Line",
+          16
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "PageFooter",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "SectionHeader",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/10__UALink_Switch_Requirements"
+}

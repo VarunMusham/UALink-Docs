@@ -1,0 +1,73 @@
+{
+  "figure": {
+    "id": "Figure 6-o",
+    "title": "Ack and Release Latency Loop",
+    "page": 37,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Illustrates the round-trip delay components involved in transmitting a payload and receiving its acknowledgment to release the Tx Buffer."
+  },
+  "technical_summary": [
+    "The left node transmits a payload from Tx DL through Tx PL, traversing amplifiers to the right node (Rx PL -> Rx DL).",
+    "The right node processes the payload and generates an 'Ack Request'.",
+    "The right node transmits the Ack from Tx DL through Tx PL back over the physical medium to the left node (Rx PL -> Rx DL).",
+    "The left node's Rx DL then issues a 'Release TxBuffer' signal to its Tx DL.",
+    "The diagram highlights two critical latency paths: 'Release Latency' (total round trip) and 'Ack Latency' (time taken at the remote node to generate the Ack)."
+  ],
+  "components": [
+    {
+      "name": "Tx DL / Rx DL",
+      "description": "Data Link layer transmit and receive blocks."
+    },
+    {
+      "name": "Tx PL / Rx PL",
+      "description": "Physical layer transmit and receive blocks."
+    }
+  ],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": [
+      "Release Latency > Round Trip Flight Time + Processing Time"
+    ]
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "Release Latency",
+    "Ack Latency",
+    "Round Trip",
+    "TxBuffer"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "The total time to release a buffer in the Tx Replay queue depends on the sum of flight times in both directions plus the remote node's processing latency (Ack Latency)."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

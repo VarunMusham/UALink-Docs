@@ -1,0 +1,102 @@
+{
+  "figure": {
+    "id": "Figure 2-d",
+    "title": "Accelerator and Switch Topology",
+    "page": 8,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Illustrates the interconnect topology between up to 32 Accelerators and 32 Switches."
+  },
+  "technical_summary": [
+    "Topology supports up to 32 Accelerators (Accelerator 0 to 31) and 32 Switches (Switch 0 to 31).",
+    "Each Accelerator contains multiple Stations (Station 0 to Station 7).",
+    "Each Station has 4 ports (0, 1, 2, 3).",
+    "Accelerator ports are connected across the Switch fabric.",
+    "Switch ports connect symmetrically to Accelerator stations."
+  ],
+  "components": [
+    {
+      "name": "Accelerator 0-31",
+      "type": "Node",
+      "description": "Accelerator compute nodes"
+    },
+    {
+      "name": "Switch 0-31",
+      "type": "Switch",
+      "description": "UALink switches forming the fabric"
+    },
+    {
+      "name": "Station 0-7",
+      "type": "Interface Group",
+      "description": "Grouping of ports within an Accelerator or Switch"
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "Fabric Interconnects",
+      "from": "Accelerator Ports",
+      "to": "Switch Ports",
+      "direction": "bidirectional",
+      "signals": []
+    }
+  ],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [
+    "32 Accelerators",
+    "32 Switches",
+    "8 Stations per device",
+    "4 Ports per station"
+  ],
+  "cross_references": [],
+  "keywords": [
+    "Accelerator",
+    "Switch",
+    "Station",
+    "Topology"
+  ],
+  "entities": [],
+  "relationships": [
+    {
+      "source": "Accelerator",
+      "relation": "contains",
+      "target": "Station"
+    },
+    {
+      "source": "Station",
+      "relation": "contains",
+      "target": "Ports"
+    }
+  ],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "The topology forms a complex fabric interconnecting 32 accelerators with 32 switches via interleaved port groups (stations)."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

@@ -1,0 +1,79 @@
+{
+  "figure": {
+    "id": "Figure 6-m",
+    "title": "Rx Flit Processing Logic",
+    "page": 35,
+    "type": "FLOWCHART",
+    "purpose": "Details the logical flow for processing incoming Rx Flits, including CRC validation, acknowledgment, and enqueuing."
+  },
+  "technical_summary": [
+    "Divided into three main sections: Rx Ingress Rules, Rx Ack and Replay Request Processing Rules, and Rx Enqueuing Rules.",
+    "Rx Ingress handles CRC checks and replay counters.",
+    "Rx Ack Processing handles parsing Op codes ('command', 'rpy', 'Ack') and validating sequence numbers (ackReqSeq) to manage retransmission or acknowledgment.",
+    "Rx Enqueuing dictates whether a valid payload flit is added to the receive queue or dropped."
+  ],
+  "components": [
+    {
+      "name": "Rx Ingress Rules",
+      "description": "Initial flit filtering based on CRC."
+    },
+    {
+      "name": "Rx Ack and Replay Rules",
+      "description": "State management for handling acks and replays."
+    },
+    {
+      "name": "Rx Enqueuing Rules",
+      "description": "Logic for storing data into the Rx queue."
+    }
+  ],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": [
+      "Check CRC in Ingress.",
+      "Process Acks and sequence numbers.",
+      "Enqueue valid payloads or trigger retransmissions."
+    ]
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "Rx Flit",
+    "CRC",
+    "Replay",
+    "Enqueuing",
+    "Ack"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "The receiver uses a complex set of conditional rules to robustly handle missing or corrupted flits and coordinate with the transmitter's replay queue."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

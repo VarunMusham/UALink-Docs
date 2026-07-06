@@ -1,0 +1,70 @@
+{
+  "figure": {
+    "id": "Figure 7-c",
+    "title": "PCS Multi-Flow Block Diagram",
+    "page": 17,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Illustrates the PCS processing pipeline split across multiple concurrent flows (IFlow 0 and IFlow 1)."
+  },
+  "technical_summary": [
+    "Data from the Reconciliation Sub Layer undergoes '66-bit block distribution' into multiple independent flows (IFlow 0 and IFlow 1).",
+    "Each IFlow independently performs Transcode, Scramble, Alignment Overwrite, Pre FEC distribution, FEC Encode, and Distribution and interleave.",
+    "On the receive side, lower-level functions (Alignment lock and deskew, Lane reorder) are shared, but then data is split back into IFlows for de-interleave, FEC Decode, Post-FEC interleave, Alignment Overwrite, Descramble, and Transcode.",
+    "Finally, '66-bit block collection' merges the flows back together."
+  ],
+  "components": [
+    {
+      "name": "66-bit block distribution/collection",
+      "description": "Splits/merges data across multiple processing pipelines."
+    },
+    {
+      "name": "IFlow 0 / IFlow 1",
+      "description": "Parallel processing pipelines for PCS functions."
+    }
+  ],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "Multi-Flow",
+    "IFlow",
+    "Parallel processing",
+    "PCS"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "To support high bandwidth, the PCS logic is parallelized into multiple independent flows that operate concurrently on distributed 66-bit blocks."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

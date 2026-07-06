@@ -1,0 +1,97 @@
+{
+  "figure": {
+    "id": "Figure 2-h",
+    "title": "BEAT 0 Layout",
+    "page": 41,
+    "type": "PACKET FORMAT",
+    "purpose": "Shows the byte and double-word (DW) mapping for BEAT 0 on the data bus."
+  },
+  "technical_summary": [
+    "BEAT 0 contains 64 Byte Lanes (0 to 63).",
+    "Bytes are grouped into Double Words (DW). Each DW contains 4 Bytes.",
+    "DW0 maps to Byte Lanes 0-3.",
+    "DW15 maps to Byte Lanes 60-63.",
+    "ReqAddr targets the start of DW0 (Byte 0)."
+  ],
+  "components": [],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [
+    {
+      "field": "DW0",
+      "bits": "31:0",
+      "description": "Double Word 0, maps to Bytes 0-3",
+      "valid_values": []
+    },
+    {
+      "field": "DW1",
+      "bits": "63:32",
+      "description": "Double Word 1, maps to Bytes 4-7",
+      "valid_values": []
+    },
+    {
+      "field": "DW2",
+      "bits": "95:64",
+      "description": "Double Word 2, maps to Bytes 8-11",
+      "valid_values": []
+    },
+    {
+      "field": "DW3",
+      "bits": "127:96",
+      "description": "Double Word 3, maps to Bytes 12-15",
+      "valid_values": []
+    },
+    {
+      "field": "DW15",
+      "bits": "511:480",
+      "description": "Double Word 15, maps to Bytes 60-63",
+      "valid_values": []
+    }
+  ],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [
+    "64 bytes per beat",
+    "16 Double Words per beat"
+  ],
+  "cross_references": [],
+  "keywords": [
+    "BEAT 0",
+    "Byte Lane",
+    "DW",
+    "ReqLen",
+    "ReqAddr"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "ReqLen defines the span of data starting from ReqAddr."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

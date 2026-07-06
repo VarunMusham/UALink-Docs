@@ -1,0 +1,77 @@
+{
+  "figure": {
+    "id": "Figure 8-b",
+    "title": "UALink Switch Platform Architecture",
+    "page": 1,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Illustrates the internal components of a UALink Switch Platform."
+  },
+  "technical_summary": [
+    "The Switch Platform is managed by a Processor running a Switch Mgmt Agent.",
+    "It contains a NIC, TPM, and BMC connected to the central Processor.",
+    "The Processor manages multiple Switch ASICs (two shown), which provide the external downstream ports."
+  ],
+  "components": [
+    {
+      "name": "Processor & Switch Mgmt Agent",
+      "description": "Central control and management software host."
+    },
+    {
+      "name": "Switches",
+      "description": "Hardware switching ASICs with external ports."
+    },
+    {
+      "name": "TPM",
+      "description": "Trusted Platform Module for security."
+    },
+    {
+      "name": "NIC / BMC",
+      "description": "Management interfaces."
+    }
+  ],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "Switch Platform",
+    "Switch Mgmt Agent",
+    "TPM",
+    "BMC"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "The Switch Platform integrates security (TPM) and management (BMC, Agent) directly with the switching hardware."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

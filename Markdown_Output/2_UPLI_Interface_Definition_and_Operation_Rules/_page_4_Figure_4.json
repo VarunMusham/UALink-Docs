@@ -1,0 +1,180 @@
+{
+  "figure": {
+    "id": "Figure 2-z",
+    "title": "UALink Stack Components",
+    "page": 4,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Shows the logical layers of the UALink stack and how UPLI interfaces with the TL."
+  },
+  "technical_summary": [
+    "UALink TL provides UPLI Originator and UPLI Completer interfaces to upper layers.",
+    "Upper layer UPLI Completer connects to TL UPLI Originator.",
+    "Upper layer UPLI Originator connects to TL UPLI Completer.",
+    "Signals passed between UPLI and TL include Req, OrigData, Rd Rsp/Data, and Wr Rsp.",
+    "UALink TL communicates with UALink DL using TL FLITs.",
+    "UALink DL communicates with UALink PL+SERDES using DL FLITs.",
+    "UALink PL+SERDES connects to UALink link via a Serial link."
+  ],
+  "components": [
+    {
+      "name": "UPLI Completer (Upper)",
+      "type": "Upper Layer Component",
+      "description": ""
+    },
+    {
+      "name": "UPLI Originator (Upper)",
+      "type": "Upper Layer Component",
+      "description": ""
+    },
+    {
+      "name": "UALink TL",
+      "type": "Protocol Layer",
+      "description": "Transaction Layer. Contains TL-side UPLI Originator and Completer."
+    },
+    {
+      "name": "UALink DL",
+      "type": "Protocol Layer",
+      "description": "Data Link Layer"
+    },
+    {
+      "name": "UALink PL+SERDES",
+      "type": "Protocol Layer",
+      "description": "Physical Layer and SERDES"
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "UPLI",
+      "from": "Upper Layer UPLI Components",
+      "to": "UALink TL",
+      "direction": "bidirectional",
+      "signals": [
+        "Req",
+        "OrigData",
+        "Rd Rsp/Data",
+        "Wr Rsp"
+      ]
+    },
+    {
+      "name": "TL-DL Interface",
+      "from": "UALink TL",
+      "to": "UALink DL",
+      "direction": "bidirectional",
+      "signals": [
+        "TL FLIT"
+      ]
+    },
+    {
+      "name": "DL-PL Interface",
+      "from": "UALink DL",
+      "to": "UALink PL+SERDES",
+      "direction": "bidirectional",
+      "signals": [
+        "DL FLIT"
+      ]
+    },
+    {
+      "name": "Serial link",
+      "from": "UALink PL+SERDES",
+      "to": "UALink link",
+      "direction": "bidirectional",
+      "signals": []
+    }
+  ],
+  "signals": [
+    {
+      "name": "Req",
+      "description": "Request signal",
+      "direction": "Originator to Completer",
+      "width": null
+    },
+    {
+      "name": "OrigData",
+      "description": "Originator Data signal",
+      "direction": "Originator to Completer",
+      "width": null
+    },
+    {
+      "name": "Rd Rsp/Data",
+      "description": "Read Response/Data signal",
+      "direction": "Completer to Originator",
+      "width": null
+    },
+    {
+      "name": "Wr Rsp",
+      "description": "Write Response signal",
+      "direction": "Completer to Originator",
+      "width": null
+    },
+    {
+      "name": "TL FLIT",
+      "description": "Transaction Layer FLIT",
+      "direction": "bidirectional",
+      "width": null
+    },
+    {
+      "name": "DL FLIT",
+      "description": "Data Link Layer FLIT",
+      "direction": "bidirectional",
+      "width": null
+    }
+  ],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "UPLI Completer",
+    "UPLI Originator",
+    "UALink TL",
+    "UALink DL",
+    "UALink PL",
+    "SERDES",
+    "FLIT"
+  ],
+  "entities": [],
+  "relationships": [
+    {
+      "source": "UALink TL",
+      "relation": "communicates_with",
+      "target": "UALink DL"
+    },
+    {
+      "source": "UALink DL",
+      "relation": "communicates_with",
+      "target": "UALink PL+SERDES"
+    }
+  ],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "Upper layer Completer receives Req/OrigData and sends Rd Rsp/Data and Wr Rsp.",
+      "Upper layer Originator sends Req/OrigData and receives Rd Rsp/Data and Wr Rsp."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

@@ -1,0 +1,66 @@
+{
+  "figure": {
+    "id": "Figure 6-r",
+    "title": "Detailed Flit Sector Mapping",
+    "page": 6,
+    "type": "DATA STRUCTURE",
+    "purpose": "Provides a comprehensive, byte-level logical mapping of all sectors within a full flit."
+  },
+  "technical_summary": [
+    "Displays a grid representing the entire flit payload space.",
+    "Shows byte addresses format 'Sx.By', where x is the payload sector number and y is the byte number within that sector.",
+    "Explicitly locates the Flit Headers (FH0-FH2), Segment Headers (SH0-SH4), and CRC bytes (CRC0-CRC3) amidst the payload bytes.",
+    "Payload sectors range up to S155."
+  ],
+  "components": [],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [
+    {
+      "field": "Sx.By",
+      "bits": "8",
+      "description": "Payload byte y in sector x."
+    }
+  ],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "Sector Mapping",
+    "Flit",
+    "Byte level"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "Defines the exact byte locations for all structural elements (headers, CRC) and data payload sectors within the flit."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

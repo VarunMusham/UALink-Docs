@@ -1,0 +1,120 @@
+{
+  "figure": {
+    "id": "Figure 2-f",
+    "title": "UALink Station and x1 Links",
+    "page": 12,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Shows the composition of a UALink Station from multiple UALink x1 Links (Serial links)."
+  },
+  "technical_summary": [
+    "A UALink Station is composed of four UALink x1 Links.",
+    "The serial links are designated P0, P1, P2, and P3.",
+    "These serial links connect to the UALink PL+SERDES layer."
+  ],
+  "components": [
+    {
+      "name": "UALink PL+SERDES",
+      "type": "Layer",
+      "description": "Physical and SERDES layer terminating the serial links"
+    },
+    {
+      "name": "UALink Station",
+      "type": "Interface Group",
+      "description": "A grouped interface containing four x1 Links (P0-P3)"
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "UALink x1 Links",
+      "from": "UALink PL+SERDES",
+      "to": "External",
+      "direction": "bidirectional",
+      "signals": [
+        "P0",
+        "P1",
+        "P2",
+        "P3"
+      ]
+    }
+  ],
+  "signals": [
+    {
+      "name": "P0",
+      "description": "Serial link 0",
+      "direction": "bidirectional",
+      "width": null
+    },
+    {
+      "name": "P1",
+      "description": "Serial link 1",
+      "direction": "bidirectional",
+      "width": null
+    },
+    {
+      "name": "P2",
+      "description": "Serial link 2",
+      "direction": "bidirectional",
+      "width": null
+    },
+    {
+      "name": "P3",
+      "description": "Serial link 3",
+      "direction": "bidirectional",
+      "width": null
+    }
+  ],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [
+    "4 serial links per UALink Station"
+  ],
+  "cross_references": [],
+  "keywords": [
+    "UALink Station",
+    "x1 Links",
+    "Serial links",
+    "P0",
+    "P1",
+    "P2",
+    "P3"
+  ],
+  "entities": [],
+  "relationships": [
+    {
+      "source": "UALink Station",
+      "relation": "contains",
+      "target": "UALink x1 Links"
+    }
+  ],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "Four x1 serial links logically aggregate into a single UALink Station."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

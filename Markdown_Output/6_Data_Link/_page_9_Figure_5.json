@@ -1,0 +1,66 @@
+{
+  "figure": {
+    "id": "Figure 6-u",
+    "title": "64-byte TL Flit Mirrored View - Lower Sectors (Duplicate)",
+    "page": 9,
+    "type": "DATA STRUCTURE",
+    "purpose": "Illustrates the detailed bit-to-byte mapping for the lower sectors of a 64-byte TL Flit (identical to Figure 6-t)."
+  },
+  "technical_summary": [
+    "This diagram focuses on the mapping of the 64-byte TL Flit's logical message bits into physical sectors S0 through S31.",
+    "Lines trace the logical bits from 'M0', 'M1', etc., to specific byte addresses (e.g., S0.B0, S0.B3) in the mirrored view layout.",
+    "This appears to be a duplicate image within the source document."
+  ],
+  "components": [],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [
+    {
+      "field": "S0.B0 - S31.B3",
+      "bits": "32 bytes",
+      "description": "Lower sectors of the TL flit data block."
+    }
+  ],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "TL Flit",
+    "Mirrored view",
+    "Lower Sectors",
+    "Duplicate"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "Duplicate of the mapping diagram for the lower sector addresses."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

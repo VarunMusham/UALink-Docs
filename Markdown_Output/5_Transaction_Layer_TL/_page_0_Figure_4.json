@@ -1,0 +1,83 @@
+{
+  "figure": {
+    "id": "Figure 5-a",
+    "title": "UALink TL Conceptual Diagram",
+    "page": 0,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Provides a high-level conceptual view of the UALink Transaction Layer (TL) and its interfaces with the UPLI Originator and Completer."
+  },
+  "technical_summary": [
+    "The UALink TL sits between the external UPLI blocks and the lower layers (DL/PL).",
+    "It processes 64-Byte Inbound Receive (Rx) TL Flits and Outbound Transmit (Tx) TL Flits.",
+    "The internal architecture consists of an internal UPLI Originator and UPLI Completer interfacing with the corresponding external blocks.",
+    "Red lines denote Request (Req) and Originator Data (OrigData) channels.",
+    "Blue lines denote Read Response/Data (Rd Rsp/Data) and Write Response (Wr Rsp) channels."
+  ],
+  "components": [
+    {
+      "name": "UALink TL",
+      "description": "The transaction layer processing flits."
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "UPLI",
+      "type": "Internal/External",
+      "width": "",
+      "description": "Interface between the TL and the upper protocol layers."
+    }
+  ],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [
+    {
+      "field": "TL Flit",
+      "bits": "512 (64 Bytes)",
+      "description": "Standard data unit transferred to and from the TL.",
+      "valid_values": []
+    }
+  ],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [
+    "64-Byte TL Flit"
+  ],
+  "cross_references": [],
+  "keywords": [
+    "UALink TL",
+    "Flit",
+    "UPLI Originator",
+    "UPLI Completer"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "The UALink Transaction Layer operates fundamentally on 64-byte flits for both inbound and outbound traffic."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

@@ -1,0 +1,70 @@
+{
+  "figure": {
+    "id": "Figure 9-c",
+    "title": "Accelerator Key Distribution Topology",
+    "page": 20,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Illustrates how encryption keys are assigned and distributed across different ports of multiple accelerators in a switched topology."
+  },
+  "technical_summary": [
+    "Shows four Accelerators (0, 1, 2, 3) connected via two Switches (0, 1).",
+    "Text overlays indicate specific key assignments for TX and RX ports.",
+    "For example, Accelerator 0 Port 0 TX has keys K001, K002, K003. Port 1 TX has K011, K012, K013.",
+    "Receiving ports (e.g., Accelerator 1 Port 0 RX) have corresponding keys (K001, K201, K301) to decrypt traffic from the respective source transmitters."
+  ],
+  "components": [
+    {
+      "name": "Accelerators (0-3)",
+      "description": "Endpoints with Port 0 and Port 1."
+    },
+    {
+      "name": "Switches (0-1)",
+      "description": "Fabric interconnects."
+    }
+  ],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "Key Distribution",
+    "Topology",
+    "TX Keys",
+    "RX Keys"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "Keys are assigned per-port and per-path, ensuring that specific communication channels between accelerators are uniquely secured."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

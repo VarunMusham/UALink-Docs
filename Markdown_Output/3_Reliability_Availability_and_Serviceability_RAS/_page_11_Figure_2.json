@@ -1,0 +1,64 @@
+{
+  "figure": {
+    "id": "Figure 3-b",
+    "title": "Link Down Event",
+    "page": 11,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Illustrates a failure scenario where a UALink connection between an Accelerator and a Switch goes down."
+  },
+  "technical_summary": [
+    "Shows the topology of ACC A, a Switch, and ACC B.",
+    "A specific physical link between ACC A's PHY and the Switch's PHY is marked with a dashed orange arrow.",
+    "A text annotation states 'A UALink Link does down', indicating a link failure event."
+  ],
+  "components": [
+    {
+      "name": "PHY",
+      "description": "Physical layer interface experiencing the link failure."
+    }
+  ],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "Link Down",
+    "Failure",
+    "PHY"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "A link going down interrupts the physical connection between a node and the switch."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

@@ -1,0 +1,74 @@
+{
+  "figure": {
+    "id": "Figure 2-l",
+    "title": "Six Byte Read Request Straddling a Beat Boundary",
+    "page": 43,
+    "type": "PACKET FORMAT",
+    "purpose": "Shows an example of a 6-byte read request that starts near the end of one beat and wraps into the next beat."
+  },
+  "technical_summary": [
+    "ReqAddr starts at DW15 (Byte Lane 62) in BEAT 0.",
+    "The read length spans 2 doublewords total (ReqLen = 1).",
+    "BEAT 0 contains the first part of the data in DW15.",
+    "BEAT 1 contains the remainder of the data in DW0."
+  ],
+  "components": [],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [
+    {
+      "field": "BEAT 0 DW15",
+      "bits": "511:480",
+      "description": "Last doubleword of the first beat, contains the start of the data",
+      "valid_values": []
+    },
+    {
+      "field": "BEAT 1 DW0",
+      "bits": "31:0",
+      "description": "First doubleword of the second beat, contains the remainder of the data",
+      "valid_values": []
+    }
+  ],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "Straddle",
+    "Beat Boundary",
+    "ReqAddr",
+    "ReqLen"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "When a request straddles a beat boundary, the byte enables for the first doubleword apply to the DW in the first beat, and the byte enables for the last doubleword apply to the DW in the second beat."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

@@ -1,0 +1,76 @@
+{
+  "figure": {
+    "id": "Figure 9-b",
+    "title": "RX Path Security Architecture",
+    "page": 18,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Shows the cryptographic key and counter management for the receive (RX) path feeding into the AES-GCM Crypto Engine."
+  },
+  "technical_summary": [
+    "Similar to the TX path, but manages contexts per source accelerator.",
+    "A Key Derivation Function (KDF) uses Active & alternate master keys for source accelerators (32Bx1023x2).",
+    "For each source accelerator, the engine receives derived keys (32Bx1023x2), IV counters (4Bx1023), and epoch counters (8Bx1023) for Request, Read Response, and Write Response streams.",
+    "These inputs feed into the AES-GCM Crypto Engine to decrypt and authenticate the RX data."
+  ],
+  "components": [
+    {
+      "name": "AES-GCM Crypto Engine",
+      "description": "Hardware decryption/authentication block for the RX path."
+    },
+    {
+      "name": "KDF",
+      "description": "Key Derivation Function."
+    }
+  ],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [
+    "1023 sources",
+    "32B derived keys",
+    "4B IV counters",
+    "8B epoch counters"
+  ],
+  "cross_references": [],
+  "keywords": [
+    "RX",
+    "AES-GCM",
+    "KDF",
+    "Decryption",
+    "Epoch"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "The RX security architecture maintains separate cryptographic contexts for each source accelerator to ensure secure and isolated data reception."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

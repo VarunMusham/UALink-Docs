@@ -14,6 +14,8 @@ The following figure illustrates one possible UALink System node with four UALin
 
 ![](_page_0_Figure_9.jpeg)
 
+[JSON Extraction](_page_0_Figure_9.json)
+
 **Figure 8-1 UALink System Node**
 
 ## **8.2 UALink Switches and Switch Platforms**
@@ -31,6 +33,8 @@ The Switch Management Agent shall interface with the Switches as specified in th
 The following figure illustrates one possible UALink Switch Platform with a Switch Management Agent running on a processor, managing two Physical Switches each with six ports. In this implementation, the processor and Physical Switches are separate devices. The Switch Platform also contains a NIC, a TPM, and a BMC separate from the processor.
 
 ![](_page_1_Figure_6.jpeg)
+
+[JSON Extraction](_page_1_Figure_6.json)
 
 **Figure 8-2. A UALink Switch Platform**
 
@@ -64,6 +68,8 @@ The following figure illustrates a UALink Pod containing a Pod Controller, three
 
 ![](_page_2_Figure_5.jpeg)
 
+[JSON Extraction](_page_2_Figure_5.json)
+
 **Figure 8-3. A UALink Pod managed by a Pod Controller**
 
 ## **8.4 UALink Virtual Pods**
@@ -79,6 +85,8 @@ Each System Node participating in a Virtual Pod hosts the tenant VM, and the app
 The following figure illustrates a UALink Pod that has been partitioned by the Pod Controller into three Virtual Pods. Virtual Pod 1 contains a subset of the Accelerators in System Node 1. Virtual Pod 2 contains a subset of the Accelerators in both System Nodes 1 and 2. Virtual Pod 3 contains all the accelerators in System Node 3. One Accelerator on System Node 2 is not part of any Virtual Pod and is excluded from routing tables on the Switches.
 
 ![](_page_3_Figure_6.jpeg)
+
+[JSON Extraction](_page_3_Figure_6.json)
 
 **Figure 8-4. A UALink Pod partitioned into three Virtual Pods**
 

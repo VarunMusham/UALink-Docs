@@ -1,0 +1,166 @@
+{
+  "figure": {
+    "id": "Figure 2-y",
+    "title": "UPLI Interface Signals and Flow Control",
+    "page": 2,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Shows the signal groups and credit flows between UPLI Originator and UPLI Completer."
+  },
+  "technical_summary": [
+    "UPLI Originator sends Request and Originator Data to UPLI Completer.",
+    "UPLI Completer sends Request Credits and Originator Data Credits to UPLI Originator.",
+    "UPLI Completer sends Read Response/Data and Write response to UPLI Originator.",
+    "UPLI Originator sends Read Response/Data Credits and Write Response Credits to UPLI Completer.",
+    "Interface includes bidirectional UPLI Interface Control, and common UPLICIk and UPLIReset_N."
+  ],
+  "components": [
+    {
+      "name": "UPLI Originator",
+      "type": "Interface Component",
+      "description": "Originates requests on the UPLI interface"
+    },
+    {
+      "name": "UPLI Completer",
+      "type": "Interface Component",
+      "description": "Completes requests on the UPLI interface"
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "UPLI",
+      "from": "UPLI Originator",
+      "to": "UPLI Completer",
+      "direction": "bidirectional",
+      "signals": [
+        "UPLI Interface Control",
+        "Request",
+        "Request Credits",
+        "Originator Data",
+        "Originator Data Credits",
+        "Read Response/Data",
+        "Read Response/Data Credits",
+        "Write response",
+        "Write Response Credits",
+        "UPLICIk",
+        "UPLIReset_N"
+      ]
+    }
+  ],
+  "signals": [
+    {
+      "name": "UPLI Interface Control",
+      "description": "Control signals for the UPLI interface",
+      "direction": "bidirectional",
+      "width": null
+    },
+    {
+      "name": "Request",
+      "description": "Request command",
+      "direction": "Originator to Completer",
+      "width": null
+    },
+    {
+      "name": "Request Credits",
+      "description": "Flow control for Request",
+      "direction": "Completer to Originator",
+      "width": null
+    },
+    {
+      "name": "Originator Data",
+      "description": "Data payload for requests",
+      "direction": "Originator to Completer",
+      "width": null
+    },
+    {
+      "name": "Originator Data Credits",
+      "description": "Flow control for Originator Data",
+      "direction": "Completer to Originator",
+      "width": null
+    },
+    {
+      "name": "Read Response/Data",
+      "description": "Read completion response and data",
+      "direction": "Completer to Originator",
+      "width": null
+    },
+    {
+      "name": "Read Response/Data Credits",
+      "description": "Flow control for Read Response/Data",
+      "direction": "Originator to Completer",
+      "width": null
+    },
+    {
+      "name": "Write response",
+      "description": "Write completion response",
+      "direction": "Completer to Originator",
+      "width": null
+    },
+    {
+      "name": "Write Response Credits",
+      "description": "Flow control for Write response",
+      "direction": "Originator to Completer",
+      "width": null
+    },
+    {
+      "name": "UPLICIk",
+      "description": "Clock signal",
+      "direction": "common",
+      "width": 1
+    },
+    {
+      "name": "UPLIReset_N",
+      "description": "Active-low reset signal",
+      "direction": "common",
+      "width": 1
+    }
+  ],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "UPLI Originator",
+    "UPLI Completer",
+    "Credits",
+    "Flow Control"
+  ],
+  "entities": [],
+  "relationships": [
+    {
+      "source": "UPLI Originator",
+      "relation": "sends_to",
+      "target": "UPLI Completer"
+    }
+  ],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "Every data/request channel has a corresponding credit channel in the opposite direction for flow control."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

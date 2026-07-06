@@ -1,0 +1,81 @@
+{
+  "figure": {
+    "id": "Figure 5-f",
+    "title": "Receive Catch Buffers",
+    "page": 26,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Details the architecture of the catch buffers used in the TL receive path to hold parsed flit sectors before queuing."
+  },
+  "technical_summary": [
+    "An Inbound Receive (Rx) TL Flit (64 Bytes) enters the TL Flit Decoder.",
+    "Decoded request data goes to a 4-entry Req Catch Buffer (each entry is 4 sectors wide). The buffer shifts one entry per TL flit.",
+    "Decoded response data goes to an 8-entry Rsp Catch Buffer (each entry is 2 sectors wide). This buffer also shifts one entry per TL flit.",
+    "Data from the Req Catch Buffer feeds into the Rx Req Queue and the Rx Address Cache/Address CAM.",
+    "Data from the Rsp Catch Buffer feeds into the Rx Rsp Queue.",
+    "Outputs from the queues go to the UPLI interface (Requests, Wr Rsp, Rd Rsp)."
+  ],
+  "components": [
+    {
+      "name": "Req Catch Buffer",
+      "description": "4-entry buffer (4-sector width) for temporary storage of incoming requests."
+    },
+    {
+      "name": "Rsp Catch Buffer",
+      "description": "8-entry buffer (2-sector width) for temporary storage of incoming responses."
+    },
+    {
+      "name": "Address CAM",
+      "description": "Content Addressable Memory used alongside the Rx Address Cache for address lookup."
+    }
+  ],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": [
+      "Flit Decoder -> Catch Buffers -> Queues -> External Interfaces"
+    ]
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [
+    "4-entry Req Catch Buffer",
+    "8-entry Rsp Catch Buffer"
+  ],
+  "cross_references": [],
+  "keywords": [
+    "Catch Buffer",
+    "Flit Decoder",
+    "Address CAM",
+    "Rx Queue"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "Catch buffers act as an intermediate staging area between the fast flit decoder and the deeper receive queues."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

@@ -1,0 +1,98 @@
+{
+  "figure": {
+    "id": "Figure 6-g",
+    "title": "Protocol Request Sequence - Pending and Concurrent",
+    "page": 17,
+    "type": "SEQUENCE DIAGRAM",
+    "purpose": "Shows a complex sequence involving a pending response and concurrent requests."
+  },
+  "technical_summary": [
+    "Local node sends an orange 'request' to Remote.",
+    "Remote responds with an orange 'pending' message to Local, putting the first request in a 'Request pending' state.",
+    "Remote subsequently sends a green 'request' to Local.",
+    "Local responds with a green 'ack' to Remote, completing the Remote's request successfully.",
+    "Finally, Remote sends a green 'ack' to Local. (Note: The color/labeling suggests this may be the delayed acknowledgment for the original orange request, completing it)."
+  ],
+  "components": [
+    {
+      "name": "Local",
+      "description": "Left-side node."
+    },
+    {
+      "name": "Remote",
+      "description": "Right-side node."
+    }
+  ],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [
+      {
+        "name": "request (orange)",
+        "description": "Local to Remote."
+      },
+      {
+        "name": "pending (orange)",
+        "description": "Remote to Local."
+      },
+      {
+        "name": "request (green)",
+        "description": "Remote to Local."
+      },
+      {
+        "name": "ack (green)",
+        "description": "Local to Remote."
+      },
+      {
+        "name": "ack (green)",
+        "description": "Remote to Local."
+      }
+    ],
+    "ordering": [
+      "request (orange) -> pending (orange)",
+      "request (green) -> ack (green, L->R)",
+      "pending (orange) -> ack (green, R->L)"
+    ],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "pending",
+    "request",
+    "ack",
+    "concurrent"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "The 'pending' state allows a node to defer an acknowledgment while potentially initiating its own requests in the opposite direction."
+    ],
+    "potential_ambiguities": [
+      "The final 'ack' is drawn green but appears to resolve the pending orange request."
+    ],
+    "missing_information": []
+  },
+  "confidence": 0.85
+}

@@ -4,6 +4,8 @@
 
 ![](_page_0_Figure_4.jpeg)
 
+[JSON Extraction](_page_0_Figure_4.json)
+
 **Figure 4-1 UPLI Interface Reset Requirements.**
 
 <span id="page-0-0"></span>The system reset signal UPLIReset\_N shall be a negative-active signal that shall be used to initialize the interface logic. No state information shall be retained across a reset event (an assertion followed by a de-assertion of UPLIReset\_N). Any established Credits shall be reset and any outstanding transactions shall be terminated and shall not receive a Response.
@@ -38,12 +40,18 @@ The following figures show the UPLI Connection Handshake Protocol with the Origi
 
 ![](_page_3_Figure_3.jpeg)
 
+[JSON Extraction](_page_3_Figure_3.json)
+
 **Figure 4-2 UPLI Connection Handshake Protocol – Originator connects first**
 
 <span id="page-3-0"></span>![](_page_3_Figure_5.jpeg)
 
+[JSON Extraction](_page_3_Figure_5.json)
+
 **Figure 4-3 UPLI Connection Handshake Protocol – Completer connects first**
 
 <span id="page-3-1"></span>![](_page_3_Figure_7.jpeg)
+
+[JSON Extraction](_page_3_Figure_7.json)
 
 <span id="page-3-2"></span>**Figure 4-4 UPLI Connection Handshake Protocol – Originator and Completer connecting concurrently**

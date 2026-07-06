@@ -1,0 +1,74 @@
+{
+  "figure": {
+    "id": "Figure 5-e",
+    "title": "Address Caching System - Rx Caches",
+    "page": 22,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Illustrates the address caching mechanism for incoming traffic, indexed by Source Accelerator ID (SRCACCID)."
+  },
+  "technical_summary": [
+    "Shows a source (SRC) Accelerator, a Switch, and a destination (DST) Accelerator.",
+    "The SRC Accelerator has an Rx Cache indexed by SRCACCID in its UALink TL.",
+    "The Switch has Tx Caches, also indexed by SRCACCID, at its egress ports.",
+    "The diagram traces the flow of cached address information from the DST Accelerator (acting as originator for this flow) through the switch to the SRC Accelerator.",
+    "Green arrows indicate the path of the compressed/cached addresses from the transmitter to the receiver."
+  ],
+  "components": [
+    {
+      "name": "Accelerator Rx Cache",
+      "description": "Cache in the receiving node used to decompress incoming addresses."
+    },
+    {
+      "name": "Switch Tx Cache",
+      "description": "Cache in the switch egress port to compress outgoing addresses."
+    }
+  ],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [
+    "Indexed by SRCACCID"
+  ],
+  "cross_references": [],
+  "keywords": [
+    "Address Cache",
+    "SRCACCID",
+    "Compression",
+    "Rx Cache",
+    "Tx Cache"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "While Tx caches (for outgoing requests) are indexed by DSTACCID, Rx caches (and Switch Tx caches for forwarding) are indexed by SRCACCID to manage reverse or incoming traffic compression."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

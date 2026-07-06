@@ -1,0 +1,95 @@
+{
+  "figure": {
+    "id": "Figure 2-k",
+    "title": "Six Byte Read Request across Two Doublewords",
+    "page": 42,
+    "type": "PACKET FORMAT",
+    "purpose": "Shows an example of a 6-byte read request spanning two doublewords."
+  },
+  "technical_summary": [
+    "ReqAddr[6:0] = 011_1000b (56). Points to DW14.",
+    "ReqLen = 1 (2 doublewords total).",
+    "ReqAttr[3:0] = 1110b (enables Bytes 1, 2, 3 in DW14, corresponding to Byte Lanes 57, 58, 59).",
+    "ReqAttr[7:4] = 0111b (enables Bytes 0, 1, 2 in DW15, corresponding to Byte Lanes 60, 61, 62)."
+  ],
+  "components": [],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [
+    {
+      "field": "ReqAddr[6:0]",
+      "bits": "6:0",
+      "description": "Address offset",
+      "valid_values": [
+        "011_1000b"
+      ]
+    },
+    {
+      "field": "ReqLen",
+      "bits": "",
+      "description": "Length of the request in doublewords minus 1",
+      "valid_values": [
+        "1"
+      ]
+    },
+    {
+      "field": "ReqAttr[3:0]",
+      "bits": "3:0",
+      "description": "Byte enables for the first doubleword",
+      "valid_values": [
+        "1110b"
+      ]
+    },
+    {
+      "field": "ReqAttr[7:4]",
+      "bits": "7:4",
+      "description": "Byte enables for the last doubleword",
+      "valid_values": [
+        "0111b"
+      ]
+    }
+  ],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "ReqAddr",
+    "ReqLen",
+    "ReqAttr",
+    "Byte enable",
+    "Doubleword"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "ReqAttr[3:0] specifies byte enables for the first doubleword, and ReqAttr[7:4] specifies byte enables for the last doubleword."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

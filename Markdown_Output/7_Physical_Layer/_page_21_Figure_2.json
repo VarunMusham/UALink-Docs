@@ -1,0 +1,86 @@
+{
+  "figure": {
+    "id": "Figure 7-e",
+    "title": "PCS Processing Pipeline and FEC Details",
+    "page": 21,
+    "type": "PIPELINE DIAGRAM",
+    "purpose": "Provides a detailed view of the data transformations, sizes, and FEC encoding applied in the PCS transmit path."
+  },
+  "technical_summary": [
+    "Four 66b words (264 bits total) are transcoded via a 64B/66B to 256B/257B transcoder, resulting in a 257-bit 'tx_coded' block.",
+    "The 257-bit block is scrambled using an X^58 scrambler to produce 'tx_scrambled'.",
+    "Alignment Markers (AM) are overwritten to produce 'tx_scrambled_am'.",
+    "These form a message (m543 to m0) which is fed into an RS-Encode (Reed-Solomon) block.",
+    "The output codeword includes parity (c543 to c0) and is then distributed into 10-bit symbols across 8 lanes (Lane 0 to 7)."
+  ],
+  "components": [
+    {
+      "name": "64B/66B to 256B/257B transcoder",
+      "description": "Compresses encoding overhead."
+    },
+    {
+      "name": "X^58 scrambler",
+      "description": "Scrambles data for DC balance and transition density."
+    },
+    {
+      "name": "RS-Encode",
+      "description": "Reed-Solomon Forward Error Correction encoder."
+    }
+  ],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": [
+      "Transcode (257B)",
+      "Scramble (X^58)",
+      "AM Overwrite",
+      "RS-Encode",
+      "10-bit symbol distribution across 8 lanes"
+    ]
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [
+    "256B/257B",
+    "X^58",
+    "10-bit symbols",
+    "8 lanes"
+  ],
+  "cross_references": [],
+  "keywords": [
+    "Transcoder",
+    "Scrambler",
+    "RS-Encode",
+    "Symbol distribution"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "The PCS utilizes standard high-speed Ethernet-like techniques: 256B/257B transcoding for efficiency, X^58 scrambling, and Reed-Solomon FEC distributed over 8 lanes."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

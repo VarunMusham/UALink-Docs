@@ -1,0 +1,79 @@
+{
+  "figure": {
+    "id": "Figure 2-r",
+    "title": "Dual Operand 8-Byte Atomic Operation Data Packing",
+    "page": 48,
+    "type": "PACKET FORMAT",
+    "purpose": "Shows the layout for a dual-operand (Op1/Op2) 8-byte Atomic operation and its returned data."
+  },
+  "technical_summary": [
+    "Operands are 8 bytes each, spanning two Doublewords.",
+    "Byte Enables are 0xFF for each active 8-byte operand element.",
+    "Op1 Element0 is at DW1:DW0, Op1 Element1 is at DW5:DW4.",
+    "Op2 Element0 is at DW9:DW8, Op2 Element1 is at DW13:DW12.",
+    "Returned Data for AtomicR is returned in the locations corresponding to Op1 (DW1:DW0, DW5:DW4)."
+  ],
+  "components": [],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [
+    {
+      "field": "OrigData",
+      "bits": "",
+      "description": "Originator Data channel carrying 8-byte Op1 and Op2 operands",
+      "valid_values": []
+    },
+    {
+      "field": "RdRspData",
+      "bits": "",
+      "description": "Read Response Data channel carrying 8-byte returned values in Op1 locations",
+      "valid_values": []
+    }
+  ],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [
+    "8-byte operands",
+    "0xFF Byte Enables per element"
+  ],
+  "cross_references": [],
+  "keywords": [
+    "AtomicR",
+    "Op1",
+    "Op2",
+    "8-byte",
+    "0xFF"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "For dual-operand Atomics, Op1 and Op2 elements are interleaved or placed in specific DW pairs, and return data replaces the Op1 positions."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

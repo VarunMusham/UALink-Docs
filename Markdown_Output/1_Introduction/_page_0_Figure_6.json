@@ -1,0 +1,108 @@
+{
+  "figure": {
+    "id": "Figure 1-1",
+    "title": "UALink Based Multi-Accelerator System",
+    "page": 0,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Illustrates an example system with multiple nodes connecting Hosts, Accelerators and Switches"
+  },
+  "technical_summary": [
+    "System has M Accelerators and each Accelerator has N Ports.",
+    "A single OS image controls and manages each System Node (OS Domain).",
+    "UALink Switches connect the Accelerators together.",
+    "UALink connection has 2 lanes @ 212.5G."
+  ],
+  "components": [
+    {
+      "name": "OS Domain",
+      "type": "System Node",
+      "description": "Boundary containing HOST and Accelerators"
+    },
+    {
+      "name": "HOST",
+      "type": "Processor",
+      "description": "Host processor connected to Accelerators"
+    },
+    {
+      "name": "ACC",
+      "type": "Accelerator",
+      "description": "Accelerator with multiple ports"
+    },
+    {
+      "name": "Switch",
+      "type": "Switch",
+      "description": "UALink Switch"
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "Host-ACC Link",
+      "from": "HOST",
+      "to": "ACC",
+      "direction": "bidirectional",
+      "signals": []
+    },
+    {
+      "name": "UALink",
+      "from": "ACC",
+      "to": "Switch",
+      "direction": "bidirectional",
+      "signals": []
+    }
+  ],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "UALink",
+    "Accelerator",
+    "Switch",
+    "OS Domain"
+  ],
+  "entities": [],
+  "relationships": [
+    {
+      "source": "HOST",
+      "relation": "connects_to",
+      "target": "ACC"
+    },
+    {
+      "source": "ACC",
+      "relation": "connects_to",
+      "target": "Switch"
+    }
+  ],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "Accelerators connect to Switches via UALink with 2 lanes @ 212.5G"
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

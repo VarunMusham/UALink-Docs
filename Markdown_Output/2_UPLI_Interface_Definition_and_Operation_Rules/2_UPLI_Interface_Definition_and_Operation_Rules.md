@@ -12,6 +12,8 @@ Data transfer is effected through Request / Response message pairs. A Request an
 
 ![](_page_0_Figure_9.jpeg)
 
+[JSON Extraction](_page_0_Figure_9.json)
+
 **Figure 2-1 UALink Protocol Level Interface**
 
 In the UALink Protocol Level Interface, a device that initiates a Transaction by making a Request is called an Originator Device. A device that can respond to a Request is called a Completer Device. Requests are also called Commands. The terms Command and Request are used interchangeably in this specification.
@@ -28,6 +30,8 @@ A UPLI interface can be (and is typically) extend through a series of intermedia
 
 ![](_page_1_Figure_3.jpeg)
 
+[JSON Extraction](_page_1_Figure_3.json)
+
 **Figure 2-2 Extending a UPLI interface through Intermediate UPLI Interfaces**
 
 <span id="page-1-0"></span>The Initial UPLI Interface connected to the Originator Devices is connected to a set of Intermediate Logic Blocks and Intermediate UPLI Interfaces that then ultimately connect to the Final UPLI Interface which is connected to the Completer Devices.
@@ -39,6 +43,8 @@ Generally speaking, but subject to rules explained later in [2.7.9](#page-38-0) 
 The UALink Protocol Level Interface contains four channels: The Request (Req) Channel, the Read Response/Data (RdRsp) Channel, the Originator Data (OrigData) Channel, and the Write Response (WrRsp) Channel.
 
 ![](_page_2_Figure_2.jpeg)
+
+[JSON Extraction](_page_2_Figure_2.json)
 
 **Figure 2-3 UALink Protocol Level Interface Channels and control signals**
 
@@ -72,6 +78,8 @@ Other examples include:
 
 ![](_page_4_Figure_4.jpeg)
 
+[JSON Extraction](_page_4_Figure_4.json)
+
 **Figure 2-4 UALink Stack Component**
 
 <span id="page-4-0"></span>The UALink TL converts the UPLI Protocol Channels driven by the UPLI Originator and UPLI Completer (Req and OrigData for the UPLI Originator and Rd Rsp/Data and Wr Rsp for the UPLI Completer) into a TL Flit that is passed to the UALink DL Layer. Similarly, the UALink TL receives a TL Flit from the UALink DL that is unpacked into the UPLI Protocol Channels received by the UPLI Completer and the UPLI Originator (Req and OrigData for the Completer and Rd Rsp/Data and Wr Rsp for the Originator).
@@ -84,6 +92,8 @@ To create an interface between an Accelerator and the Switch, two UALink Stack C
 
 ![](_page_5_Figure_2.jpeg)
 
+[JSON Extraction](_page_5_Figure_2.json)
+
 <span id="page-5-0"></span>**Figure 2-5 Connected UALink Stack Components**
 
 ## **2.3 UALink UPLI Request and Response Paths**
@@ -91,6 +101,8 @@ To create an interface between an Accelerator and the Switch, two UALink Stack C
 [Figure 2-6](#page-6-0), shows a logical representation of two different Accelerators (ACC "A" and ACC "B") connected through different pairs of UALink Stack Components through a Switch:
 
 ![](_page_6_Figure_4.jpeg)
+
+[JSON Extraction](_page_6_Figure_4.json)
 
 **Figure 2-6 End-to End UALink Connection Between two Accelerators**
 
@@ -108,6 +120,8 @@ The requests and Responses for Accelerator B's Requests and Responses follow pat
 
 ![](_page_7_Figure_5.jpeg)
 
+[JSON Extraction](_page_7_Figure_5.json)
+
 <span id="page-7-0"></span>**Figure 2-7 UPLI Request and Response Flows**
 
 ## **2.4 Routing a Transaction from End-to-End**
@@ -122,6 +136,8 @@ In a Pod, a Physical Switch shall have at least as many Ports as the number of A
 
 ![](_page_8_Figure_7.jpeg)
 
+[JSON Extraction](_page_8_Figure_7.json)
+
 **Figure 2-8 Example system with 32 Accelerators with 32 x1 UALink Links**
 
 <span id="page-8-0"></span>The Accelerators and Switches shall use a specific subset of signals in the various UPLI Channels to route and process Requests and data through the system. The rest of the signals within a Channel are conveyed, usually unmodified, with the Transaction. However, specific signals may be modified at various points as the Transaction progresses through the Pod. In addition to the routing signals and the other signals, a set of Credit Management signals shall provide flow control within a each UALink Channel within any given UALink Protocol Level Interface.
@@ -133,6 +149,8 @@ The Read Response/Data (RdRsp) Channel shall contain signals "RdRspSrcPhysAccID"
 A sample Read Request to address "X" from an Accelerator A (numbered "0") to an Accelerator B (numbered "31") in a Pod connected as shown above (Figure 2-8 [Example system with 32](#page-8-0)  [Accelerators with 32 x1 UALink Links\)](#page-8-0) will be used to illustrate the processing of a transaction using the following figure (Figure 2-9 [Read Request end-to-end flow with Response\)](#page-9-0):
 
 ![](_page_9_Figure_5.jpeg)
+
+[JSON Extraction](_page_9_Figure_5.json)
 
 **Figure 2-9 Read Request end-to-end flow with Response**
 
@@ -161,6 +179,8 @@ Each UALink Station driven by an UALink Stack Component can interface to 4 UALin
 Each Channel in an UALink Protocol Level Interface shall be Time Division Multiplexed (TDM), meaning that for a given cycle, the signals within the UALink Protocol Level Interface channel (aside from the Credit Management signals) are associated with a specific bifurcated Port on the UALink Stack Component attached to a UALink Link. [Figure 2-10](#page-12-0) illustrates an example UALink Stack Component with two associated UALink Protocol Level Interfaces with the UALink station bifurcated into four x1 UALink Links:
 
 ![](_page_12_Figure_5.jpeg)
+
+[JSON Extraction](_page_12_Figure_5.json)
 
 **Figure 2-10 UALink Station with x1 bifurcation**
 
@@ -214,6 +234,8 @@ If any Pool Credits were initially released, the sender side shall issue UPLI be
 When a UPLI Beat is received at the Receive side, the Virtual Channel of the Beat (\*VC[1:0]) and the Pool indication (\*Pool) shall be recorded by the Receive side and these values are played back to the Sender when returning the Credit for that beat. The Sender side shall return the Credit to the appropriate Pool or Virtual Credit count.
 
 ![](_page_16_Figure_4.jpeg)
+
+[JSON Extraction](_page_16_Figure_4.json)
 
 **Figure 2-11 Flow control loops**
 
@@ -919,6 +941,8 @@ The following figure illustrates the beat and byte lane assignments for a 16-byt
 
 ![](_page_41_Figure_2.jpeg)
 
+[JSON Extraction](_page_41_Figure_2.json)
+
 **Figure 2-12 Four DoubleWorld Read Request Not Straddling a 64-Byte Boundary**
 
 Bytes 0 through 15 are transferred in a single beat. The ReqAttr byte enables are all 1's to transfer all bytes in the first and last beat.
@@ -926,6 +950,8 @@ Bytes 0 through 15 are transferred in a single beat. The ReqAttr byte enables ar
 The next figure illustrates another 16 byte transfer but starting at byte 56:
 
 ![](_page_41_Figure_7.jpeg)
+
+[JSON Extraction](_page_41_Figure_7.json)
 
 **Figure 2-13 Four DoubleWord Read Request Straddling a 64-byte boundary**
 
@@ -935,6 +961,8 @@ The next figure illustrates accessing a single byte (byte 54):
 
 ![](_page_42_Figure_2.jpeg)
 
+[JSON Extraction](_page_42_Figure_2.json)
+
 **Figure 2-14 Single Byte Read**
 
 The ReqAddr/ReqLen fields call out a single double word (DW13 at address 52 in the data field), and ReqAttr[3:0] selects the byte (byte 54) to be accessed. ReqAttr[7:4] is ignored.
@@ -943,6 +971,8 @@ The next figure illustrates a six byte access necessitating the use of both ReqA
 
 ![](_page_42_Figure_6.jpeg)
 
+[JSON Extraction](_page_42_Figure_6.json)
+
 **Figure 2-15 Six Byte Read Access Not Straddling a 64-Byte Boundary**
 
 In a two doubleword transfer, the ReqAttr[7:0] bit control the bytes within the two doublewords that are valid.
@@ -950,6 +980,8 @@ In a two doubleword transfer, the ReqAttr[7:0] bit control the bytes within the 
 The next figure illustrates another two double word transfer, but one that spans a 64-byte boundary:
 
 ![](_page_43_Figure_2.jpeg)
+
+[JSON Extraction](_page_43_Figure_2.json)
 
 **Figure 2-16 Four Byte Read Access Straddling a 64-Byte Boundary**
 
@@ -969,6 +1001,8 @@ The follow figure shows the beat and byte lane assignments and the OrigDataByteE
 
 ![](_page_44_Figure_3.jpeg)
 
+[JSON Extraction](_page_44_Figure_3.json)
+
 **Figure 2-17 Four Doubleword Write Request Not Straddling a 64 Byte Boundary**
 
 The sixteen asserted byte enables starting at OrigDataByteEn[0] cause the first 16 bytes to be written.
@@ -977,6 +1011,8 @@ The following figure shows a sparse write contained within one beat:
 
 ![](_page_44_Figure_8.jpeg)
 
+[JSON Extraction](_page_44_Figure_8.json)
+
 **Figure 2-18 Sixteen Doubleword Write Request Not Straddling a 64-Byte Bounday**
 
 The various byte enables being on or off produce a sparse write. The ReqAddr/ReqLen are such that the write stays within a single beat.
@@ -984,6 +1020,8 @@ The various byte enables being on or off produce a sparse write. The ReqAddr/Req
 The following figure shows a sparse write spread across two beats:
 
 ![](_page_45_Figure_2.jpeg)
+
+[JSON Extraction](_page_45_Figure_2.json)
 
 **Figure 2-19 Three Doubleword Write Request Straddling a 64 Byte Boundary**
 
@@ -994,6 +1032,8 @@ Unshown in these figures is the case where no byte enables are asserted. In such
 The following figure shows a 128-byte WriteFull to address 0:
 
 ![](_page_45_Figure_8.jpeg)
+
+[JSON Extraction](_page_45_Figure_8.json)
 
 **Figure 2-20 A 128 Byte Write Full Request (Requires Two Beats)**
 
@@ -1021,6 +1061,8 @@ The following figure illustrates the byte lane allocation for the Operands and (
 
 ![](_page_47_Figure_7.jpeg)
 
+[JSON Extraction](_page_47_Figure_7.json)
+
 **Figure 2-22 Single Operand (Four-Byte Operands) Atomic**
 
 The data elements, for an AtomicR, are returned in their naturally aligned byte lanes.
@@ -1037,6 +1079,8 @@ The following figure illustrates the byte lane allocation for the Operands and (
 
 ![](_page_48_Figure_6.jpeg)
 
+[JSON Extraction](_page_48_Figure_6.json)
+
 **Figure 2-23 Double Operand (Eight-Byte Operands) Atomic, Data Returned in High 32 Bytes.**
 
 The data elements, for an AtomicR, are returned in their naturally aligned byte lanes relative to the address specified by ReqAddr.
@@ -1044,6 +1088,8 @@ The data elements, for an AtomicR, are returned in their naturally aligned byte 
 The following figure illustrates the byte lane allocation for the Operands and (if present) returned data for a 4-byte double-operand Atomic. The ReqAddr is at address '0' and four sparse elements are operated on:
 
 ![](_page_49_Figure_2.jpeg)
+
+[JSON Extraction](_page_49_Figure_2.json)
 
 **Figure 2-24 Double Operand (Four-Byte Operands) Atomic, Data Returned in Low 32 Bytes.**
 

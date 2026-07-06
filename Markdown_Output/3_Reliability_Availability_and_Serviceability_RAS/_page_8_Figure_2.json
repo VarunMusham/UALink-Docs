@@ -1,0 +1,65 @@
+{
+  "figure": {
+    "id": "Figure 3-h",
+    "title": "Error Detected at Accelerator UPLI Completer",
+    "page": 8,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Shows the system state when an error is detected at the UPLI Completer of an Accelerator."
+  },
+  "technical_summary": [
+    "An error is detected within the UPLI Completer of ACC A.",
+    "The entire UPLI Originator and UPLI Completer block in ACC A is highlighted with a dashed box.",
+    "A loopback symbol (purple arrow) is shown between the Originator and Completer, indicating that the node is isolating itself from the network."
+  ],
+  "components": [
+    {
+      "name": "UPLI Completer (ACC A)",
+      "description": "The component where the error is detected."
+    }
+  ],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "Error Detection",
+    "UPLI Completer",
+    "Isolation Mode",
+    "Accelerator"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "An error at the UPLI Completer level causes the entire UPLI interface of that accelerator to enter an isolated state."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

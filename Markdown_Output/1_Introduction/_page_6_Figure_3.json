@@ -1,0 +1,108 @@
+{
+  "figure": {
+    "id": "Figure 1-5",
+    "title": "Translation Process",
+    "page": 6,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Details the address translation bits and process"
+  },
+  "technical_summary": [
+    "Process VA goes through Source translate (ACC MMU).",
+    "AT=b1 selects Network PA (Cross Domain).",
+    "AT=b0 selects Local Host SPA.",
+    "NPA[51:42] = DstAccID[9:0], NPA[41:0] = Address[41:0].",
+    "Destination LNK MMU translates NPA to SPA[51:0]."
+  ],
+  "components": [
+    {
+      "name": "Process VA",
+      "type": "Process",
+      "description": ""
+    },
+    {
+      "name": "Source translate",
+      "type": "Translation Logic",
+      "description": ""
+    },
+    {
+      "name": "Dest. Translate",
+      "type": "Translation Logic",
+      "description": ""
+    }
+  ],
+  "interfaces": [],
+  "signals": [
+    {
+      "name": "AT",
+      "description": "Address Type",
+      "direction": "internal",
+      "width": 1
+    },
+    {
+      "name": "NPA",
+      "description": "Network Physical Address",
+      "direction": "cross-domain",
+      "width": 52
+    },
+    {
+      "name": "SPA",
+      "description": "System Physical Address",
+      "direction": "internal",
+      "width": 52
+    }
+  ],
+  "registers": [],
+  "packet_layout": [
+    {
+      "field": "DstAccID",
+      "bits": "51:42",
+      "description": "Destination Accelerator ID in NPA",
+      "valid_values": []
+    },
+    {
+      "field": "Address",
+      "bits": "41:0",
+      "description": "Address bits in NPA",
+      "valid_values": []
+    }
+  ],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "AT",
+    "GVA",
+    "NPA",
+    "SPA"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

@@ -1,0 +1,81 @@
+{
+  "figure": {
+    "id": "Figure 9-j",
+    "title": "Counter and Data Mapping (Partial)",
+    "page": 34,
+    "type": "DATA STRUCTURE",
+    "purpose": "Shows the mapping of the 3rd, 4th, and 5th 16-byte counters to specific bit ranges of the original data payload."
+  },
+  "technical_summary": [
+    "Displays the structure for AES-GCM counter blocks.",
+    "3rd Counter: Corresponds to Bytes [0-15] mapped to OrigData bits [255-127] (Note: typically [255-128] in 128-bit chunks).",
+    "4th Counter: Corresponds to Bytes [0-15] mapped to OrigData bits [383-256].",
+    "5th Counter: Corresponds to Bytes [0-15] mapped to OrigData bits [511-384]."
+  ],
+  "components": [],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [
+    {
+      "field": "3rd Counter",
+      "bits": "128 bits",
+      "description": "Maps to OrigData[255-127]"
+    },
+    {
+      "field": "4th Counter",
+      "bits": "128 bits",
+      "description": "Maps to OrigData[383-256]"
+    },
+    {
+      "field": "5th Counter",
+      "bits": "128 bits",
+      "description": "Maps to OrigData[511-384]"
+    }
+  ],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [
+    "16-byte (128-bit) counters"
+  ],
+  "cross_references": [],
+  "keywords": [
+    "Counter",
+    "AES-GCM",
+    "Data Mapping",
+    "OrigData"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "Large payloads are broken into 128-bit (16-byte) chunks, each associated with a sequentially incremented counter block for AES-GCM encryption."
+    ],
+    "potential_ambiguities": [
+      "The diagram shows [255-127] which is 129 bits. It is likely a typo for [255-128]."
+    ],
+    "missing_information": []
+  },
+  "confidence": 0.90
+}

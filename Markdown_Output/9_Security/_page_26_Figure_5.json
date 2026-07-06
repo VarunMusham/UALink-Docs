@@ -1,0 +1,71 @@
+{
+  "figure": {
+    "id": "Figure 9-g",
+    "title": "RX Derived Key Rollover Logic",
+    "page": 26,
+    "type": "FLOWCHART",
+    "purpose": "Describes the mechanism for automatically rolling over the RX derived decryption key based on transaction counts."
+  },
+  "technical_summary": [
+    "Continuously monitors the number of decrypted transactions.",
+    "Triggers rollover when the count equals the 'RX derived key expiry threshold' or reaches the maximum value (2^32 - 1).",
+    "Upon triggering, it increments the RX epoch counter.",
+    "It then uses the KDF, the new epoch counter, and the active master key to derive a new decryption key, and resets the invocation field counter.",
+    "This logic mirrors the TX side to maintain cryptographic synchronization."
+  ],
+  "components": [],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": [
+      "Check transaction count against threshold.",
+      "Increment epoch counter.",
+      "Derive new key and reset invocation counter."
+    ]
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [
+    "Rollover condition: Count == Threshold OR Count == (2^32 - 1)"
+  ],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [
+    "2^32 - 1 (Maximum transaction count)"
+  ],
+  "cross_references": [],
+  "keywords": [
+    "Derived Key",
+    "Rollover",
+    "Epoch Counter",
+    "KDF",
+    "RX"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "The RX logic for derived key rollover is functionally identical to the TX logic, ensuring both sides rotate keys at the exact same transaction boundaries."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

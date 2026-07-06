@@ -1,0 +1,99 @@
+{
+  "figure": {
+    "id": "Figure 2-1",
+    "title": "UPLI Interface",
+    "page": 0,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Shows the basic UPLI Interface connecting Originator Devices to Completer Devices."
+  },
+  "technical_summary": [
+    "UPLI interface connects multiple Originator Devices to multiple Completer Devices.",
+    "UPLI Originator acts as an aggregation point for Originator Devices.",
+    "UPLI Completer acts as an aggregation point for Completer Devices."
+  ],
+  "components": [
+    {
+      "name": "Originator Device",
+      "type": "Device",
+      "description": "Source device initiating requests"
+    },
+    {
+      "name": "UPLI Originator",
+      "type": "Interface Component",
+      "description": "Interface controller for originator devices"
+    },
+    {
+      "name": "UPLI Completer",
+      "type": "Interface Component",
+      "description": "Interface controller for completer devices"
+    },
+    {
+      "name": "Completer Device",
+      "type": "Device",
+      "description": "Destination device receiving requests"
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "UPLI Interface",
+      "from": "UPLI Originator",
+      "to": "UPLI Completer",
+      "direction": "bidirectional",
+      "signals": []
+    }
+  ],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "Originator Device",
+    "Completer Device",
+    "UPLI Interface"
+  ],
+  "entities": [],
+  "relationships": [
+    {
+      "source": "Originator Device",
+      "relation": "connects_to",
+      "target": "UPLI Originator"
+    },
+    {
+      "source": "UPLI Completer",
+      "relation": "connects_to",
+      "target": "Completer Device"
+    }
+  ],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "The UPLI interface abstracts multiple devices into a single connection point between an Originator and Completer."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.9
+}

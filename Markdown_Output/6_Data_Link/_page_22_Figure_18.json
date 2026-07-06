@@ -1,0 +1,74 @@
+{
+  "figure": {
+    "id": "Figure 6-i",
+    "title": "Vendor Defined Packet TLV mapping to UART Stream Transport Messages",
+    "page": 22,
+    "type": "DATA STRUCTURE",
+    "purpose": "Illustrates how a single Vendor Defined Packet spans across multiple UART stream transport messages."
+  },
+  "technical_summary": [
+    "A Vendor Defined Packet (Type-Length-Value or TLV) can be larger than a single UART stream transport message.",
+    "The diagram shows one such packet spanning three distinct transport messages (messages #1, #2, and #3).",
+    "Each transport message has its own length field (L=3, L=2, L=3).",
+    "The Type and Length (TL) DWord and Value DWords (V0, V1, V2, etc.) of the payload are distributed across these messages."
+  ],
+  "components": [],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [
+    {
+      "field": "UART stream transport message",
+      "bits": "",
+      "description": "Transport container with its own Length field (L) and payload."
+    },
+    {
+      "field": "Vendor Defined Packet",
+      "bits": "",
+      "description": "Payload consisting of TL (Type-Length) and V (Value) DWords distributed across multiple transport messages."
+    }
+  ],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [
+    "There is no fixed relationship between the UART Stream transport Message length and the Vendor Defined Packet length; packets can span multiple messages."
+  ],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "UART",
+    "Vendor Defined Packet",
+    "TLV",
+    "Fragmentation"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "The UART sideband can transport larger encapsulated packets by fragmenting them into multiple UART transport messages."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

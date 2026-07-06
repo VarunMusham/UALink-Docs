@@ -1,0 +1,80 @@
+{
+  "figure": {
+    "id": "Figure 5-c",
+    "title": "UALink TL Receive Path Block Diagram",
+    "page": 20,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Details the internal components and data flow for the receive (Rx) path within the UALink Transaction Layer."
+  },
+  "technical_summary": [
+    "Receives a 64-Byte Inbound (Rx) TL Flit.",
+    "The flit is first processed by the TL Flit Decoder.",
+    "Decoded components are distributed to the Rx Req Queue, Rx Address Cache, Rx Rsp Queue, and the Data/BE/Operand Buffer.",
+    "Outputs from these internal structures are forwarded to the external UPLI Originator and Completer.",
+    "The Rx Address Cache works with the decoder to expand compressed addresses."
+  ],
+  "components": [
+    {
+      "name": "TL Flit Decoder",
+      "description": "Parses the incoming 64-byte flit into appropriate queues and buffers."
+    },
+    {
+      "name": "Rx Address Cache",
+      "description": "Used to reconstruct full addresses from cached/compressed incoming addresses."
+    }
+  ],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [
+    {
+      "field": "Inbound Receive (Rx) TL Flit",
+      "bits": "512",
+      "description": "64-byte flit received by the TL.",
+      "valid_values": []
+    }
+  ],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": [
+      "Inbound Flit -> TL Flit Decoder -> Queues/Buffers -> UPLI"
+    ]
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "Receive Path",
+    "Flit Decoder",
+    "Address Cache",
+    "Rx"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "The TL receive path relies on a central Flit Decoder to unpack the 64-byte flit and distribute requests, responses, and data to respective queues and external upper layers."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

@@ -1,0 +1,86 @@
+{
+  "figure": {
+    "id": "Figure 2-j",
+    "title": "One Byte Read Request",
+    "page": 42,
+    "type": "PACKET FORMAT",
+    "purpose": "Shows an example of a single-byte read request using ReqAddr and ReqAttr."
+  },
+  "technical_summary": [
+    "ReqAddr[6:0] = 011_0100b (52). Points to Byte Lane 52.",
+    "ReqLen = 0, meaning 1 doubleword.",
+    "ReqAttr[7:4] = don't care (since it's only 1 doubleword).",
+    "ReqAttr[3:0] = 0100b, which enables Byte Lane 54 (Byte 2 within the DW)."
+  ],
+  "components": [],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [
+    {
+      "field": "ReqAddr[6:0]",
+      "bits": "6:0",
+      "description": "Address offset",
+      "valid_values": [
+        "011_0100b"
+      ]
+    },
+    {
+      "field": "ReqLen",
+      "bits": "",
+      "description": "Length of the request in doublewords minus 1",
+      "valid_values": [
+        "0"
+      ]
+    },
+    {
+      "field": "ReqAttr[3:0]",
+      "bits": "3:0",
+      "description": "Byte enables for the first doubleword",
+      "valid_values": [
+        "0100b"
+      ]
+    }
+  ],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "ReqAddr",
+    "ReqLen",
+    "ReqAttr",
+    "Byte enable"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "ReqAttr is used as a byte-enable mask for the first and last doublewords of a request."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

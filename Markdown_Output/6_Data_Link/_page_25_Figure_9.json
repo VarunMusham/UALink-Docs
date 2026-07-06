@@ -1,0 +1,90 @@
+{
+  "figure": {
+    "id": "Figure 6-j",
+    "title": "Clock Domains in Data Link and Phy",
+    "page": 25,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Shows the clock domain crossings between the Transaction Layer, Data Link Layer, and Physical Layer."
+  },
+  "technical_summary": [
+    "Transmitter Node: The Transaction Layer, Transmit Pacing, and Tx FIFO operate in the UPLI CLK domain (yellow). Flit Packing and the Phy operate in the Transmit CLK domain (blue).",
+    "Receiver Node: The Phy and Flit Unpacking operate in the Recovered CLK domain (blue). The Rx FIFO and Transaction Layer operate in the UPLI CLK domain (yellow).",
+    "The diagram highlights where data must cross clock boundaries, typically at FIFOs (Tx FIFO and Rx FIFO)."
+  ],
+  "components": [
+    {
+      "name": "Transaction Layer",
+      "description": "Operates in UPLI CLK domain."
+    },
+    {
+      "name": "Data Link",
+      "description": "Bridges the UPLI CLK and Physical layer clocks using FIFOs."
+    },
+    {
+      "name": "Phy",
+      "description": "Operates in Transmit CLK (Tx) or Recovered CLK (Rx) domains."
+    }
+  ],
+  "interfaces": [],
+  "signals": [
+    {
+      "name": "UPLI CLK",
+      "type": "Clock",
+      "description": "Upper layer clock domain."
+    },
+    {
+      "name": "Transmit CLK",
+      "type": "Clock",
+      "description": "Tx physical clock domain."
+    },
+    {
+      "name": "Recovered CLK",
+      "type": "Clock",
+      "description": "Rx physical clock domain."
+    }
+  ],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "Clock Domains",
+    "UPLI CLK",
+    "Transmit CLK",
+    "Recovered CLK",
+    "FIFO"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "The Data Link layer is responsible for managing clock domain crossings between the synchronous UPLI clock and the potentially asynchronous physical layer clocks using Tx and Rx FIFOs."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

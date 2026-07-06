@@ -1,0 +1,120 @@
+{
+  "figure": {
+    "id": "Figure 1-3",
+    "title": "UALink Stack",
+    "page": 3,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Illustrates the UALink stack layers"
+  },
+  "technical_summary": [
+    "UALink200 Stack contains Protocol, Transaction, Data, and PHY layers.",
+    "UPLI interface is between Functional/Protocol Layer and Transaction Layer.",
+    "Transaction Layer interfaces with Data Layer using TL Flit (64B).",
+    "Data Layer interfaces with Ethernet PHY Layer using DL Flit (640B).",
+    "PHY layer connects via 200G Serial Link / SerDes."
+  ],
+  "components": [
+    {
+      "name": "Accelerator Functional/Protocol Layer",
+      "type": "Layer",
+      "description": ""
+    },
+    {
+      "name": "Switch/Accelerator Functional/Protocol Layer",
+      "type": "Layer",
+      "description": ""
+    },
+    {
+      "name": "Transaction Layer Protocol FLITs",
+      "type": "Layer",
+      "description": ""
+    },
+    {
+      "name": "Data Layer DL FLITs",
+      "type": "Layer",
+      "description": ""
+    },
+    {
+      "name": "Ethernet PHY Layer",
+      "type": "Layer",
+      "description": ""
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "UPLI",
+      "from": "Protocol Layer",
+      "to": "Transaction Layer",
+      "direction": "bidirectional",
+      "signals": []
+    },
+    {
+      "name": "Transaction Layer Interface",
+      "from": "Transaction Layer",
+      "to": "Data Layer",
+      "direction": "bidirectional",
+      "signals": []
+    },
+    {
+      "name": "Data Link Layer Interface",
+      "from": "Data Layer",
+      "to": "Ethernet PHY Layer",
+      "direction": "bidirectional",
+      "signals": []
+    },
+    {
+      "name": "Serial Link SerDes",
+      "from": "Ethernet PHY Layer",
+      "to": "Ethernet PHY Layer",
+      "direction": "bidirectional",
+      "signals": []
+    }
+  ],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [
+    "TL Flit (64B)",
+    "DL Flit (640B)",
+    "200G"
+  ],
+  "cross_references": [],
+  "keywords": [
+    "UPLI",
+    "TL",
+    "DL",
+    "PHY",
+    "FLIT"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

@@ -31,6 +31,8 @@ End to End protection of control and data buses shall be provided in UALink from
 
 ![](_page_1_Figure_4.jpeg)
 
+[JSON Extraction](_page_1_Figure_4.json)
+
 **Figure 3-1 UALink End to End Data Protection**
 
 <span id="page-1-0"></span>The UALink Protocol Level Interfaces shall be protected by even parity bits (the number of set bits in a protected group including the parity bit itself is even). Each channel within a UALink Protocol Level Interface shall have a separate set of parity signals for the individual channel. Each channel that has a \*Vld signal shall protect the \*Vld signal with a single parity bit. These parity bits shall be checked every cycle to detect extraneous or missing \*Vld assertions.
@@ -157,11 +159,15 @@ The processing of a UPLI Control Error shall depend on whether the error is take
 
 ![](_page_7_Figure_7.jpeg)
 
+[JSON Extraction](_page_7_Figure_7.json)
+
 <span id="page-7-0"></span>**Figure 3-2 UPLI Control Error detected at an Originator or Completer not on a UALink TL on an Accelerators**
 
 In [Figure 3-2](#page-7-0) above, the processing for a UPLI Control Error detected at a UPLI Originator or UPLI Completer in an Accelerator is shown (errors are detected on both the received Channels and the received Credit Return Interfaces). Processing these Control Errors involves dropping the bad Deat or returned Credit, placing the detecting UPLI Originator or UPLI Completer into Drop Mode for all channels for all ports (implementations can chose to limit Drop Mode to the specific channel with the error), and signaling firmware by an implementation specific means that the error has occurred. Implementations may choose, either through implementation specific hardware means or in the RAS recovery sequence in firmware to place other TLs, Originators, or Completers in this or other Stations into Drop Mode and to possibly take various links into a link down state (up to and including all Stations and links on the Accelerator). It is acceptable to place all links on an Accelerator into a link down state on a Control Error because these links can only communicate with other Accelerators in the same Virtual Pod.
 
 ![](_page_8_Figure_2.jpeg)
+
+[JSON Extraction](_page_8_Figure_2.json)
 
 **Figure 3-3 UPLI Control Error detected at a UALink TL on an Accelerator**
 
@@ -171,11 +177,15 @@ In [Figure 3-2](#page-7-0) above, the processing for a UPLI Control Error detect
 
 ![](_page_9_Figure_3.jpeg)
 
+[JSON Extraction](_page_9_Figure_3.json)
+
 **Figure 3-4 UPLI Interface Control Error detected at the UALink TL on the Switch**
 
 <span id="page-9-0"></span>As shown i[n Figure 3-4](#page-9-0) above, the processing of a UPLI Control Error detected at the UALink TL (either at the Originator or Completer) on the Switch is the same as processing the same error on the Accelerator: the bad Beat is dropped and the TL detecting the error enters Drop Mode for all channels, on all ports, for both UPLI interfaces (implementations may limit this to a port on both interfaces). Implementations may also, either through implementation specific hardware means or in the RAS recovery sequence in firmware, place other TLs, Originators, or Completers in this or other Stations in the Switch into Drop Mode, and to possibly take various links into a link down state (up to and including all Stations and links on the Switch). This is possible because this is a UPLI Control Error and not a Link Down error. For Link Down errors, only the involved port may be affected. The TL being in Drop Mode will block Responses to the UPLI Originators in the Accelerators in the Virtual Pod causing them to eventually enter Isolation Mode.
 
 ![](_page_9_Picture_6.jpeg)
+
+[JSON Extraction](_page_9_Picture_6.json)
 
 **Figure 3-5 UPLI Control Error detected at the UPLI Completer on a Switch**
 
@@ -188,6 +198,8 @@ Credit, placing the detecting UPLI Completer or UPLI Originator into Drop Mode f
 # **Switch UPLI Control Errors within the Switch Core**
 
 ![](_page_10_Figure_4.jpeg)
+
+[JSON Extraction](_page_10_Figure_4.json)
 
 **Figure 3-6 UPLI Control Error detected within the Switch Core at the UPLI Originator**
 
@@ -203,6 +215,8 @@ The sequencing for a Link Down Error is described below:
 
 ![](_page_11_Figure_2.jpeg)
 
+[JSON Extraction](_page_11_Figure_2.json)
+
 **Figure 3-7 UALink Link goes down**
 
 <span id="page-11-0"></span>As shown i[n Figure 3-7](#page-11-0) above, the process begins with a UALink Link going down.
@@ -217,17 +231,23 @@ On the Switch, however, the UALink TL shall go into Drop Mode only for the affec
 
 ![](_page_12_Figure_2.jpeg)
 
+[JSON Extraction](_page_12_Figure_2.json)
+
 **Figure 3-9 Placing the Accelerator UPLI Originator Into Isolation Mode**
 
 <span id="page-12-0"></span>As shown above in [Figure 3-9,](#page-12-0) the UALink TL shall issue a credited Write Response of "Isolate" to the UPLI Originator which shall cause the UPLI Originator to enter Isolation Mode. This shall prevent the Accelerator from creating new traffic for the dropped link (an all links in the Station).
 
 ![](_page_12_Figure_5.jpeg)
 
+[JSON Extraction](_page_12_Figure_5.json)
+
 **Figure 3-10 Other Accelerators Time Out**
 
 <span id="page-12-1"></span>As shown i[n Figure 3-10](#page-12-1) above, once the Accelerator UPLI Originator is in Isolation Mode, the Accelerator UALink TL is in Drop Mode, the link is down, and the UALink TL on the Switch is in Drop Mode for the affected ports, Responses from Accelerator A to Accelerator B's Requests may be blocked. This shall cause the Watch Dog Timers in Accelerator B's UPLI Originator(s) to time out and enter Isolation Mode.
 
 ![](_page_13_Figure_2.jpeg)
+
+[JSON Extraction](_page_13_Figure_2.json)
 
 **Figure 3-11 Link Down Error Processing Complete**
 

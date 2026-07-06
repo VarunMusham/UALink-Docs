@@ -1,0 +1,100 @@
+{
+  "figure": {
+    "id": "Figure 6-h",
+    "title": "Protocol Request Sequence - Complex Concurrent Exchanges",
+    "page": 19,
+    "type": "SEQUENCE DIAGRAM",
+    "purpose": "Shows concurrent request exchanges with multiple acknowledgment messages flowing between nodes."
+  },
+  "technical_summary": [
+    "Local node sends an orange 'request' to Remote.",
+    "Remote node sends a green 'request' to Local.",
+    "Remote sends an orange 'ack' to Local.",
+    "Local sends a green 'ack' to Remote.",
+    "Local sends another orange 'ack' to Remote.",
+    "Remote sends another green 'ack' to Local.",
+    "Both sequences result in 'req successful'."
+  ],
+  "components": [
+    {
+      "name": "Local",
+      "description": "Left-side node."
+    },
+    {
+      "name": "Remote",
+      "description": "Right-side node."
+    }
+  ],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [
+      {
+        "name": "request (orange)",
+        "description": "Local to Remote."
+      },
+      {
+        "name": "request (green)",
+        "description": "Remote to Local."
+      },
+      {
+        "name": "ack (orange, R->L)",
+        "description": "Remote to Local."
+      },
+      {
+        "name": "ack (green, L->R)",
+        "description": "Local to Remote."
+      },
+      {
+        "name": "ack (orange, L->R)",
+        "description": "Local to Remote."
+      },
+      {
+        "name": "ack (green, R->L)",
+        "description": "Remote to Local."
+      }
+    ],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "request",
+    "ack",
+    "concurrent",
+    "multiple acks"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "Shows a highly interleaved sequence of requests and acknowledgments, indicating robust handling of out-of-order or multi-part message completions."
+    ],
+    "potential_ambiguities": [
+      "The specific meaning of the extra ACKs (e.g., whether they represent multi-part data transfers or retries) is context-dependent."
+    ],
+    "missing_information": []
+  },
+  "confidence": 0.85
+}

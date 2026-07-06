@@ -1,0 +1,109 @@
+{
+  "figure": {
+    "id": "Figure 2-b",
+    "title": "End-to-End Routing through a Switch",
+    "page": 6,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Shows the detailed UALink stack flow for routing a transaction from ACC A to ACC B through a Switch Core."
+  },
+  "technical_summary": [
+    "ACC A connects to SWITCH via UALink PL+SERDES.",
+    "SWITCH receives data, unpacks it through UALink DL A and UALink TL A to UPLI Protocol signals.",
+    "SWITCH CORE routes the transaction from Port A to Port B.",
+    "SWITCH Port B packs the UPLI Protocol signals through UALink TL B and UALink DL B to UALink PL+SERDES B.",
+    "SWITCH Port B connects to ACC B via UALink PL+SERDES."
+  ],
+  "components": [
+    {
+      "name": "ACC A",
+      "type": "Node",
+      "description": "Source Accelerator"
+    },
+    {
+      "name": "SWITCH",
+      "type": "Switch",
+      "description": "Routing switch with multiple UALink stacks (A and B)"
+    },
+    {
+      "name": "SWITCH CORE",
+      "type": "Logic",
+      "description": "Core routing logic inside the switch"
+    },
+    {
+      "name": "ACC B",
+      "type": "Node",
+      "description": "Destination Accelerator"
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "Link A",
+      "from": "ACC A UALink PL+SERDES",
+      "to": "SWITCH UALink PL+SERDES A",
+      "direction": "bidirectional",
+      "signals": []
+    },
+    {
+      "name": "Link B",
+      "from": "SWITCH UALink PL+SERDES B",
+      "to": "ACC B UALink PL+SERDES",
+      "direction": "bidirectional",
+      "signals": []
+    }
+  ],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": [
+      "ACC A",
+      "SWITCH UALink Stack Component A",
+      "SWITCH CORE",
+      "SWITCH UALink Stack Component B",
+      "ACC B"
+    ]
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "ACC A",
+    "ACC B",
+    "SWITCH CORE"
+  ],
+  "entities": [],
+  "relationships": [
+    {
+      "source": "ACC A",
+      "relation": "communicates_with",
+      "target": "ACC B"
+    }
+  ],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "The Switch Core routes transactions at the UPLI protocol level after TL extraction."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

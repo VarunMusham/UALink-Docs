@@ -1,0 +1,90 @@
+{
+  "figure": {
+    "id": "Figure 6-d",
+    "title": "Concurrent Protocol Request Sequence",
+    "page": 12,
+    "type": "SEQUENCE DIAGRAM",
+    "purpose": "Shows successful request-acknowledge sequences occurring concurrently in both directions."
+  },
+  "technical_summary": [
+    "Local node sends an orange 'request' message to the Remote node.",
+    "Concurrently, the Remote node sends a green 'request' message to the Local node.",
+    "Local node responds with a green 'ack' message.",
+    "Remote node responds with an orange 'ack' message.",
+    "Both sequences result in 'req successful'."
+  ],
+  "components": [
+    {
+      "name": "Local",
+      "description": "Left-side node."
+    },
+    {
+      "name": "Remote",
+      "description": "Right-side node."
+    }
+  ],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [
+      {
+        "name": "request (orange)",
+        "description": "Local to Remote."
+      },
+      {
+        "name": "request (green)",
+        "description": "Remote to Local."
+      },
+      {
+        "name": "ack (green)",
+        "description": "Local to Remote."
+      },
+      {
+        "name": "ack (orange)",
+        "description": "Remote to Local."
+      }
+    ],
+    "ordering": [
+      "request (orange) -> ack (orange)",
+      "request (green) -> ack (green)"
+    ],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "request",
+    "ack",
+    "Concurrent"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "The protocol supports independent, concurrent request-acknowledge flows in both directions without blocking."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

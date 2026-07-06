@@ -1,0 +1,76 @@
+{
+  "figure": {
+    "id": "Figure 2-n",
+    "title": "Write Request with Scattered Byte Enables",
+    "page": 44,
+    "type": "PACKET FORMAT",
+    "purpose": "Shows an example of a write request where not all bytes within the address range are enabled for writing."
+  },
+  "technical_summary": [
+    "ReqAddr[6:0] points to the start of DW0.",
+    "ReqLen specifies a length covering multiple doublewords.",
+    "Byte Enables are mixed (0 and 1) across the targeted bytes.",
+    "Only bytes with a corresponding Byte Enable of '1' are written."
+  ],
+  "components": [],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [
+    {
+      "field": "Byte Enables",
+      "bits": "63:0",
+      "description": "Per-byte write enables for the beat",
+      "valid_values": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "field": "Data",
+      "bits": "511:0",
+      "description": "Data payload for the write request",
+      "valid_values": []
+    }
+  ],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "Write Request",
+    "Scattered",
+    "Byte Enables"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "Byte enables provide granular, per-byte write control, allowing non-contiguous data within a single request to be written."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

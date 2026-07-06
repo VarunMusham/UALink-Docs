@@ -1,0 +1,78 @@
+{
+  "figure": {
+    "id": "Figure 2-q",
+    "title": "Atomic Operation Operand and Return Data",
+    "page": 47,
+    "type": "PACKET FORMAT",
+    "purpose": "Shows how operand data is packed into a request and how the corresponding return data is formatted for Atomic operations."
+  },
+  "technical_summary": [
+    "Shows Operand Data for 4-byte Op1 AtomicR/AtomicNR.",
+    "Operands (E0, E1, E2, E3, E4) are placed at specific Doubleword offsets (0, 4, 6, 7, 9) corresponding to the target addresses.",
+    "Byte Enables for the operand data are 0xF (4 bytes).",
+    "Returned Data for AtomicR aligns exactly with the operand positions (Dat E0, E1, E2, E3, E4 at DW0, DW4, DW6, DW7, DW9)."
+  ],
+  "components": [],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [
+    {
+      "field": "OrigData",
+      "bits": "",
+      "description": "Originator Data channel carrying operands",
+      "valid_values": []
+    },
+    {
+      "field": "RdRspData",
+      "bits": "",
+      "description": "Read Response Data channel carrying returned values",
+      "valid_values": []
+    }
+  ],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [
+    "4-byte operands"
+  ],
+  "cross_references": [],
+  "keywords": [
+    "AtomicR",
+    "AtomicNR",
+    "Operand",
+    "Returned Data",
+    "Doubleword"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "Atomic operations use the OrigData channel to send operands and the RdRspData channel to return previous values.",
+      "Data layout is sparsely packed according to the target addresses, with corresponding Byte Enables (0xF) marking the active 4-byte operands."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

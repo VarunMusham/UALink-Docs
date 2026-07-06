@@ -1,0 +1,80 @@
+{
+  "figure": {
+    "id": "Figure 6-c",
+    "title": "Single Protocol Request Sequence",
+    "page": 12,
+    "type": "SEQUENCE DIAGRAM",
+    "purpose": "Shows a successful request-acknowledge sequence initiated by the local side."
+  },
+  "technical_summary": [
+    "Local node sends a 'request' message to the Remote node.",
+    "Remote node responds with an 'ack' message.",
+    "The sequence results in a 'Request successful' state."
+  ],
+  "components": [
+    {
+      "name": "Local",
+      "description": "Initiating node."
+    },
+    {
+      "name": "Remote",
+      "description": "Responding node."
+    }
+  ],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [
+      {
+        "name": "request",
+        "description": "Local to Remote."
+      },
+      {
+        "name": "ack",
+        "description": "Remote to Local."
+      }
+    ],
+    "ordering": [
+      "request -> ack"
+    ],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "request",
+    "ack",
+    "Local",
+    "Remote"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "A basic protocol exchange requires a request followed by a corresponding acknowledgment."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

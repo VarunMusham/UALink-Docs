@@ -10,6 +10,8 @@ The PCS and RS require additional behavior to synchronize DL Flits to codewords,
 
 ![](_page_1_Figure_2.jpeg)
 
+[JSON Extraction](_page_1_Figure_2.json)
+
 **Figure 7-1 Physical Layer Block Diagram**
 
 #### **Ultra Accelerator Link Consortium Inc. (UALink) - UALink\_200 Rev 1.0 Specification**
@@ -345,6 +347,8 @@ The Tx sequence is as follows; alignment markers sent every 16384 codewords.
 
 ![](_page_11_Figure_4.jpeg)
 
+[JSON Extraction](_page_11_Figure_4.json)
+
 **Figure 7-3 100GBASE-R**
 
 # **7.4.1 Removed functional Blocks**
@@ -429,6 +433,8 @@ See 802.3 clause 82.2.16, with the following additional requirements. The first 
 
 ![](_page_14_Figure_4.jpeg)
 
+[JSON Extraction](_page_14_Figure_4.json)
+
 **Figure 7-4 200GBASE-R & 400GBASE-R**
 
 # **7.5.1 Transmit Function**
@@ -500,6 +506,8 @@ See 802.3 clause 119.2.5.7.
 802.3 Clause 172 PCS is used for 800GBASE-KR4/CR4. Shown below is the modified block diagram to support UALink. Colored blocks indicate changes from 802.3.
 
 ![](_page_17_Figure_2.jpeg)
+
+[JSON Extraction](_page_17_Figure_2.json)
 
 **Figure 7-5 800GBASE-R**
 
@@ -625,6 +633,8 @@ In addition, the PCS does not perform 10-bit symbol distribution to two FEC enco
 Clause 119.2.4.5 Pre-FEC distribution is not performed and a single FEC encoder is used. 802.3 figure 119-10 is updated as follows.
 
 ![](_page_21_Figure_2.jpeg)
+
+[JSON Extraction](_page_21_Figure_2.json)
 
 **Figure 7-6 200GBASE-KR1/CR1, 1-Way Interleave** 
 

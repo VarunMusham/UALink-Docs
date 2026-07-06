@@ -1,0 +1,67 @@
+{
+  "figure": {
+    "id": "Figure 9-h",
+    "title": "RX Master Key Rollover Protocol",
+    "page": 27,
+    "type": "FLOWCHART",
+    "purpose": "Details the RX side of the multi-step protocol for rolling over the Master Key."
+  },
+  "technical_summary": [
+    "Processes incoming transactions, decrypting and incrementing IVs.",
+    "Detects the 'KeyRollMSG.ReqChannel' request from the remote TX, initiating the rollover sequence.",
+    "Switches the request stream to the alternate master key and sends an acknowledgment on the write response stream.",
+    "Initiates handshakes for the read response stream ('KeyRollMSG.RdRspChannel') and write response stream ('KeyRollMSG.WrRspChannel').",
+    "Switches keys sequentially for each stream upon receiving the corresponding remote TX responses."
+  ],
+  "components": [],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": [
+      "Process transactions normally until KeyRollMSG is received.",
+      "Switch Request stream key and acknowledge.",
+      "Handshake and switch Read Response stream key.",
+      "Handshake and switch Write Response stream key."
+    ]
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "Master Key Rollover",
+    "KeyRollMSG",
+    "Handshake",
+    "RX Streams"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "The RX acts as the responsive partner in the master key rollover, switching its decryption keys in strict lockstep with the TX's requests and confirmations."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

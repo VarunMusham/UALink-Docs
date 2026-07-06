@@ -1,0 +1,65 @@
+{
+  "figure": {
+    "id": "Figure 3-j",
+    "title": "Error Detected at Switch UPLI Completer",
+    "page": 9,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Shows the system state when an error is detected at the UPLI Completer of a Switch port."
+  },
+  "technical_summary": [
+    "An error is detected within the UPLI Completer of the Switch (on the port facing ACC A).",
+    "The entire UPLI Originator and Completer block for that switch port is highlighted with a dashed box.",
+    "A loopback symbol (purple arrow) is shown between the Originator and Completer within the Switch, isolating the port from the switch core."
+  ],
+  "components": [
+    {
+      "name": "UPLI Completer (Switch)",
+      "description": "The component where the error is detected on the switch port."
+    }
+  ],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "Error Detection",
+    "UPLI Completer",
+    "Isolation Mode",
+    "Switch"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "Errors at the UPLI Completer level of a switch port cause the port to enter an isolated loopback state, protecting the switch core."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

@@ -1,0 +1,67 @@
+{
+  "figure": {
+    "id": "Figure 7-b",
+    "title": "PCS Block Diagram - Variant 2",
+    "page": 14,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Shows an alternative or more detailed transmit and receive processing pipeline within the PCS."
+  },
+  "technical_summary": [
+    "Transmit path (Tx): Transcode, Scramble, Alignment Overwrite, Pre FEC distribution, FEC Encode, Distribution and interleave.",
+    "Receive path (Rx): Alignment lock and deskew, Lane reorder and de-interleave, FEC Decode, Post-FEC interleave, Alignment Overwrite, Descramble, Transcode.",
+    "In this variant, Transcode occurs before Scramble, and explicit interleaving/distribution steps are shown."
+  ],
+  "components": [
+    {
+      "name": "PCS",
+      "description": "Physical Coding Sublayer."
+    }
+  ],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": [
+      "Transcode -> Scramble -> Alignment Overwrite -> Pre FEC distribution -> FEC Encode -> Distribution and interleave"
+    ]
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "Transcode",
+    "Scramble",
+    "Interleave",
+    "FEC"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "Distribution and interleaving are explicitly handled around the FEC encoding stage to improve error correction performance against burst errors."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

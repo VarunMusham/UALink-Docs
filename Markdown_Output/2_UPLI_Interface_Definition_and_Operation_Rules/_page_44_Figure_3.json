@@ -1,0 +1,88 @@
+{
+  "figure": {
+    "id": "Figure 2-m",
+    "title": "Sixteen Byte Write Request",
+    "page": 44,
+    "type": "PACKET FORMAT",
+    "purpose": "Shows an example of a write request with a continuous block of 16 bytes (4 doublewords)."
+  },
+  "technical_summary": [
+    "ReqAddr[6:0] = 000_0000b (0).",
+    "ReqLen = 3 (4 doublewords).",
+    "Byte Enables for the targeted doublewords (DW0, DW1, DW2, DW3) are all 1s.",
+    "Unshown Byte Enables are 0."
+  ],
+  "components": [],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [
+    {
+      "field": "ReqAddr[6:0]",
+      "bits": "6:0",
+      "description": "Start address of the write",
+      "valid_values": [
+        "000_0000b"
+      ]
+    },
+    {
+      "field": "ReqLen",
+      "bits": "",
+      "description": "Length of the request in doublewords minus 1",
+      "valid_values": [
+        "3"
+      ]
+    },
+    {
+      "field": "Byte Enables",
+      "bits": "",
+      "description": "Indicates which bytes in the data payload are valid to be written",
+      "valid_values": [
+        "1"
+      ]
+    }
+  ],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [
+    "4 doublewords = 16 bytes"
+  ],
+  "cross_references": [],
+  "keywords": [
+    "Write Request",
+    "Byte Enables",
+    "ReqAddr",
+    "ReqLen"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "A contiguous write request asserts all corresponding byte enables within the length specified by ReqLen."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

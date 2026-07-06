@@ -1,0 +1,73 @@
+{
+  "figure": {
+    "id": "Figure 3-d",
+    "title": "Blocked Responses and Watchdog Expiration",
+    "page": 12,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Illustrates how a link failure blocks responses from ACC A to ACC B, leading to watchdog timer expiration in ACC B."
+  },
+  "technical_summary": [
+    "A failure is shown on the link between ACC A and the Switch.",
+    "A request path from ACC B to ACC A is traced, but responses back to ACC B are blocked at multiple points (marked with 'X').",
+    "As a result of the blocked responses, watchdog timers in ACC B's originator (UADP/UPU Originator) will eventually expire."
+  ],
+  "components": [
+    {
+      "name": "Watchdog Timer",
+      "description": "Timer in ACC B's originator that detects missing responses."
+    }
+  ],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [
+      {
+        "name": "Link Failure",
+        "description": "Physical link goes down."
+      },
+      {
+        "name": "Watchdog Expiration",
+        "description": "Timer expires due to missing responses."
+      }
+    ],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "Watchdog Timer",
+    "Blocked Responses",
+    "Link Failure"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "When a link fails, outstanding requests will time out, triggering watchdog timer expirations at the originating device."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

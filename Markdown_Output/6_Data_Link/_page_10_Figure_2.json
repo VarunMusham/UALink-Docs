@@ -1,0 +1,68 @@
+{
+  "figure": {
+    "id": "Figure 6-a",
+    "title": "64-byte TL Flit Mirrored View",
+    "page": 10,
+    "type": "DATA STRUCTURE",
+    "purpose": "Illustrates the mapping and byte packing/swizzling of message bits across the 16 sectors of a 64-byte TL Flit."
+  },
+  "technical_summary": [
+    "Displays the layout of a 64-byte TL Flit divided into 16 sectors.",
+    "Shows the detailed bit/byte mapping from logical message bits (M0, M1, etc.) to physical byte positions in the lower and upper halves of the flit.",
+    "Details specific byte indices (e.g., S127.B0) mapped into the 64-byte structure."
+  ],
+  "components": [],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [
+    {
+      "field": "64-byte TL Flit",
+      "bits": "512",
+      "description": "Divided into 16 sectors, with lower and upper halves shown."
+    }
+  ],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [
+    "16 sectors per 64-byte flit"
+  ],
+  "cross_references": [],
+  "keywords": [
+    "TL Flit",
+    "Mirrored view",
+    "Sectors",
+    "Byte packing"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "The mapping of data into the TL Flit involves a complex mirroring and interleaving of bytes across sectors."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

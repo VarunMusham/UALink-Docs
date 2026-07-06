@@ -1,0 +1,73 @@
+{
+  "figure": {
+    "id": "Figure 6-n",
+    "title": "Tx Flit Processing Logic",
+    "page": 36,
+    "type": "FLOWCHART",
+    "purpose": "Details the logical flow for sourcing and scheduling Transmit (Tx) Flits."
+  },
+  "technical_summary": [
+    "Divided into two sections: Tx Source Flit Rules and Tx Scheduling.",
+    "Tx Source Flit Rules determine whether to pull the next flit from the normal DL stream or from the TxReplay buffer.",
+    "Tx Scheduling manages counters (Tx_explicit_count, Tx_replay_req_count) to format the flit header Op code appropriately (Original, Replay, Ack, Replay Request)."
+  ],
+  "components": [
+    {
+      "name": "Tx Source Flit Rules",
+      "description": "Logic to select between new data or replay data."
+    },
+    {
+      "name": "Tx Scheduling",
+      "description": "Logic to build the flit header and manage control counters."
+    }
+  ],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": [
+      "Select source (DL Stream or TxReplay).",
+      "Determine operation type based on counters and states.",
+      "Update sequence and acknowledgment fields."
+    ]
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "Tx Flit",
+    "Replay",
+    "Scheduling",
+    "Op Code"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "The Tx scheduling logic multiplexes between new data transmissions and error-recovery replays based on signals from the receiver."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

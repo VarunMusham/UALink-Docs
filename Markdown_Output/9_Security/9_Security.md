@@ -164,6 +164,8 @@ Pod controller
 
 ![](_page_6_Figure_2.jpeg)
 
+[JSON Extraction](_page_6_Figure_2.json)
+
 Figure 9-1 System level view of confidential computing in a pod
 
 <span id="page-6-0"></span>A Tenant running a Virtual Pod spanning several System nodes shall have a TVM on each of its System nodes. The TVMs on different System nodes attest each other and establish cryptographically protected session with each other. All communication between TVMs shall occur via the front-end network and is encrypted and integrity protected. Pod controller
@@ -181,6 +183,8 @@ The accelerators shall be assigned accelerator identifiers by the Pod Controller
 To meet the security objectives, UALink standard uses AES-GCM. AES-GCM data processing is performed in the protocol/functional layer as shown in [Figure 9-2](#page-7-0) below:
 
 ![](_page_7_Figure_6.jpeg)
+
+[JSON Extraction](_page_7_Figure_6.json)
 
 **Figure 9-2 Encryption and Authentication touch points in UALink stack**
 
@@ -389,6 +393,8 @@ An UALink port is assumed to have transmit logic (TX) and receive logic (RX)[. F
 
 ![](_page_16_Figure_2.jpeg)
 
+[JSON Extraction](_page_16_Figure_2.json)
+
 <span id="page-16-0"></span>**Figure 9-4 Security related state elements in UALink port TX for a 1024 accelerator system** 
 
 ## **Ultra Accelerator Link Consortium Inc. (UALink) - UALink\_200 Rev 1.0 Specification**
@@ -402,6 +408,8 @@ Note: It is assumed that an accelerator will not send transactions to itself thr
 [Figure 9-4](#page-16-0) below summarizes the security related state elements in an UALink RX for a 1024 accelerator system:
 
 ![](_page_18_Figure_2.jpeg)
+
+[JSON Extraction](_page_18_Figure_2.json)
 
 **Figure 9-5 Security related state elements in UALink RX for a 1024 accelerator system**
 
@@ -428,6 +436,8 @@ As described previously, given a source accelerator A and a destination accelera
 
 ![](_page_20_Figure_2.jpeg)
 
+[JSON Extraction](_page_20_Figure_2.json)
+
 **Figure 9-6 Illustration of master keys maintained by UALink Port RX and TX in a UALink system**
 
 <span id="page-20-0"></span>In [Figure 9-6](#page-20-0) , Accelerator 0 port 0 TX has key pair K001 for Accelerator 1 as the destination and Accelerator 1 port 0 RX has the same key pair K001 for Accelerator 0 as the source. Similarly, Accelerator 0 port 0 TX has key pair K002 for Accelerator 2 as the destination and Accelerator 2 port 0 RX has the same key pair K002 for Accelerator 0 as the source.
@@ -437,6 +447,8 @@ As described previously, given a source accelerator A and a destination accelera
 To understand the security state requirements in more detail, the 4-accelerator system example shown below i[n Figure 9-7](#page-21-0) is helpful:
 
 ![](_page_21_Figure_2.jpeg)
+
+[JSON Extraction](_page_21_Figure_2.json)
 
 **Figure 9-7 A 4 accelerator UALink system example**
 
@@ -491,6 +503,8 @@ The Stream-key derivation flow in TX is illustrated in [Figure 9-8](#page-23-1) 
 
 ![](_page_23_Figure_3.jpeg)
 
+[JSON Extraction](_page_23_Figure_3.json)
+
 **Figure 9-8 Stream-Key derivation flow in UALink port TX**
 
 <span id="page-23-1"></span>The key derivation flow is done on a per stream basis for each destination accelerator.
@@ -502,6 +516,8 @@ Note: Programmers should ensure that the threshold is not programmed with too lo
 The Master key swap flow actions in TX is illustrated i[n Figure 9-9](#page-24-0) below:
 
 ![](_page_24_Figure_2.jpeg)
+
+[JSON Extraction](_page_24_Figure_2.json)
 
 **Figure 9-9 Key swap flow in UALink port TX**
 
@@ -530,6 +546,8 @@ The key derivation flow is illustrated i[n Figure 9-10](#page-26-1) below:
 
 ![](_page_26_Figure_5.jpeg)
 
+[JSON Extraction](_page_26_Figure_5.json)
+
 **Figure 9-10 Key derivation flow in UALink Port RX**
 
 ## <span id="page-26-1"></span><span id="page-26-0"></span>**9.5.9.3.2 RX Key swap flow**
@@ -537,6 +555,8 @@ The key derivation flow is illustrated i[n Figure 9-10](#page-26-1) below:
 The key swap flow is illustrated i[n Figure 9-11](#page-27-0) below:
 
 ![](_page_27_Figure_2.jpeg)
+
+[JSON Extraction](_page_27_Figure_2.json)
 
 <span id="page-27-0"></span>**Figure 9-11 Key switch flow in UALink port RX**
 
@@ -547,6 +567,8 @@ Note that RX can optionally raise an error if a HW threshold or a SW configured 
 The interactions between a source accelerator and a destination accelerator for the key swap flow is illustrated in Figure 9-12 below:
 
 ![](_page_28_Figure_5.jpeg)
+
+[JSON Extraction](_page_28_Figure_5.json)
 
 <span id="page-28-0"></span>Figure 9-12 Source accelerator - Destination accelerator interactions for key swap flow
 
@@ -752,6 +774,8 @@ The total MSG size is 640 bits. The tables below describe the mapping of MSG bit
 
 ![](_page_34_Figure_2.jpeg)
 
+[JSON Extraction](_page_34_Figure_2.json)
+
 The table below describes the mapping **AAD** bits of **non-1st beat of the originator data**. The AAD size is 32-bits.
 
 **Table 9-18 Mapping AAD bits for Originator data non 1st beat**
@@ -821,6 +845,8 @@ The table below describes the mapping **MSG** bits of **non-1st beat of the orig
 **Bytes [0-15] OrigData[511-384]**
 
 ![](_page_36_Figure_2.jpeg)
+
+[JSON Extraction](_page_36_Figure_2.json)
 
 The table below describes the mapping **AAD** bits for **read response**. The AAD size is 32-bits.
 

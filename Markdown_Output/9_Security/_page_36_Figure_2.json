@@ -1,0 +1,88 @@
+{
+  "figure": {
+    "id": "Figure 9-k",
+    "title": "Counter and Data Mapping (Full)",
+    "page": 36,
+    "type": "DATA STRUCTURE",
+    "purpose": "Provides the complete mapping of the first four 16-byte counters to specific bit ranges of the original data payload."
+  },
+  "technical_summary": [
+    "Displays the structure for AES-GCM counter blocks for the first 512 bits of data.",
+    "1st block (unlabeled counter): Maps to OrigData[127-0].",
+    "2nd Counter: Maps to OrigData[255-127].",
+    "3rd Counter: Maps to OrigData[383-256].",
+    "4th Counter: Maps to OrigData[511-384].",
+    "Each block represents a 16-byte (128-bit) AES-GCM input."
+  ],
+  "components": [],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [
+    {
+      "field": "Block 1",
+      "bits": "128 bits",
+      "description": "Maps to OrigData[127-0]"
+    },
+    {
+      "field": "2nd Counter",
+      "bits": "128 bits",
+      "description": "Maps to OrigData[255-127]"
+    },
+    {
+      "field": "3rd Counter",
+      "bits": "128 bits",
+      "description": "Maps to OrigData[383-256]"
+    },
+    {
+      "field": "4th Counter",
+      "bits": "128 bits",
+      "description": "Maps to OrigData[511-384]"
+    }
+  ],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [
+    "16-byte (128-bit) counters"
+  ],
+  "cross_references": [],
+  "keywords": [
+    "Counter",
+    "AES-GCM",
+    "Data Mapping",
+    "OrigData"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "Provides the definitive mapping showing how a large transaction payload is sequentially chunked into 128-bit segments for parallel or iterative AES-GCM processing."
+    ],
+    "potential_ambiguities": [
+      "The diagram shows [255-127] which is 129 bits. It is likely a typo for [255-128]."
+    ],
+    "missing_information": []
+  },
+  "confidence": 0.90
+}

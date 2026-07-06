@@ -1,0 +1,80 @@
+{
+  "figure": {
+    "id": "Figure 8-c",
+    "title": "UALink Pod Management Interfaces",
+    "page": 2,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Shows the overarching management architecture and connectivity for a UALink Pod."
+  },
+  "technical_summary": [
+    "A central 'UALink Pod Controller' manages the entire Pod via REST API/GUI.",
+    "It connects to the components using three distinct management networks:",
+    "1. System Node Management Interface (red): Connects to the NICs of System Nodes.",
+    "2. Switch Management Interface (purple): Connects to the Switch Mgmt Agents on the Switch Platforms.",
+    "3. Out-of-Band Management Interface (green): Connects to the BMCs on all System Nodes and Switch Platforms."
+  ],
+  "components": [
+    {
+      "name": "UALink Pod Controller",
+      "description": "Central orchestration unit for Initialization, Fault Mgmt, Workload Mgmt, vPod Mgmt, and Telemetry."
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "System Node Management Interface",
+      "description": "In-band/side-band network for node OS/software management."
+    },
+    {
+      "name": "Switch Management Interface",
+      "description": "Network dedicated to switch fabric configuration."
+    },
+    {
+      "name": "Out-of-Band Management Interface",
+      "description": "Hardware-level management via BMCs."
+    }
+  ],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "Pod Controller",
+    "Management Interfaces",
+    "Out-of-Band",
+    "Telemetry"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "The Pod Controller orchestrates complex multi-node and multi-switch topologies using separate, dedicated management networks for hardware, switches, and host systems."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

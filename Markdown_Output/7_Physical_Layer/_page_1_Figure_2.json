@@ -1,0 +1,80 @@
+{
+  "figure": {
+    "id": "Figure 7-d",
+    "title": "OSI Reference Model to UALink Layers Mapping",
+    "page": 1,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Maps the standard OSI 7-layer reference model to the specific layers defined in the UALink architecture."
+  },
+  "technical_summary": [
+    "OSI Application, Presentation, Session, and Transport layers map to the UALink 'Higher Layers' and 'TL' (Transaction Layer).",
+    "OSI Network and Data Link layers map to the UALink 'DL' (Data Link) layer, which includes Pacing/rate adaptation, DL-message service, Flit Packer, and Link Level Replay.",
+    "OSI Physical layer maps to the UALink PHY, which consists of the Reconciliation Sublayer (RS), PCS, PMA, and PMD.",
+    "The 64B/66B code interface connects RS and PCS. The MDI connects PMD to the physical medium."
+  ],
+  "components": [
+    {
+      "name": "OSI Reference Model",
+      "description": "Standard 7-layer networking model."
+    },
+    {
+      "name": "UALink Layers",
+      "description": "TL (Transaction Layer), DL (Data Link), PHY (Physical)."
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "64B/66B code",
+      "description": "Interface between Reconciliation (RS) and PCS."
+    },
+    {
+      "name": "MDI",
+      "description": "Medium Dependent Interface."
+    }
+  ],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "OSI",
+    "UALink Layers",
+    "PHY",
+    "DL",
+    "TL"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "UALink condenses the upper OSI layers into a Transaction Layer and maps Network/Data Link into its own specialized Data Link layer with reliability and packing functions."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

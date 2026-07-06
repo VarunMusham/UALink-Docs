@@ -1,0 +1,66 @@
+{
+  "figure": {
+    "id": "Figure 5-g",
+    "title": "UALink TL Flow Control Conceptual Diagram",
+    "page": 28,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Shows where flow control (FC) mechanisms are applied within the UALink Transaction Layer."
+  },
+  "technical_summary": [
+    "Uses the same base conceptual diagram as the general UALink TL (Figure 5-a).",
+    "A yellow block labeled 'FC' (Flow Control) is added.",
+    "The FC block monitors/controls the inbound and outbound traffic paths.",
+    "Arrows from the FC block point to the UPLI Completer's outbound response channels (Rd Rsp/Data, Wr Rsp) and the UPLI Completer's inbound request channels (Req, OrigData).",
+    "This indicates that flow control heavily manages traffic destined for the external upper layers and outgoing from them."
+  ],
+  "components": [
+    {
+      "name": "FC",
+      "description": "Flow Control block managing credit and backpressure."
+    }
+  ],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "Flow Control",
+    "FC",
+    "UALink TL"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "Flow control in the UALink TL intercepts and regulates traffic flows between the TL internals and the UPLI interfaces to prevent buffer overflow."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

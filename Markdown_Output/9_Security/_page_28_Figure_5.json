@@ -1,0 +1,76 @@
+{
+  "figure": {
+    "id": "Figure 9-i",
+    "title": "Master Key Rollover Sequence Diagram",
+    "page": 28,
+    "type": "SEQUENCE DIAGRAM",
+    "purpose": "Illustrates the exact message exchange sequence between Accelerator A (TX) and Accelerator B (RX) during a Master Key Rollover."
+  },
+  "technical_summary": [
+    "When Accelerator A's master key expires, it derives a new master key (MKA2) and new derived keys.",
+    "Accelerator A sends a 'KeyRollMSG.ReqChannel' request encrypted with the old key.",
+    "Accelerator A immediately switches to the new key for subsequent requests.",
+    "Accelerator B acknowledges on the write response stream.",
+    "Accelerator B then initiates handshakes for the read response and write response streams using 'KeyRollMSG.RdRspChannel' and 'KeyRollMSG.WrRspChannel'.",
+    "Both sides switch to the new derived keys in lockstep immediately following the respective handshake messages."
+  ],
+  "components": [
+    {
+      "name": "Accelerator A",
+      "description": "Transmitter initiating the rollover."
+    },
+    {
+      "name": "Accelerator B",
+      "description": "Receiver responding to the rollover."
+    }
+  ],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [
+      "ReqChannel request -> TX switch -> ReqChannel response -> RX switch",
+      "RdRspChannel request -> RdRspChannel response -> TX/RX switch",
+      "WrRspChannel request -> WrRspChannel response -> TX/RX switch"
+    ],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "Sequence",
+    "Master Key Rollover",
+    "KeyRollMSG",
+    "Encryption Switch"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "The sequence diagram confirms that the key switch happens on the 'very next' message after the handshake, guaranteeing no messages are sent with ambiguous encryption states."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

@@ -1,0 +1,68 @@
+{
+  "figure": {
+    "id": "Figure 6-s",
+    "title": "Segment Packing Algorithm",
+    "page": 8,
+    "type": "FLOWCHART",
+    "purpose": "Describes the logic flow for packing Transaction Layer (TL) Flits and Alternate (ALT) sectors into a Data Link segment."
+  },
+  "technical_summary": [
+    "The process starts with optionally adding a DL ALT sector.",
+    "It then checks for 'Carry over' data from a previous TL Flit and adds it if present.",
+    "It attempts to add a new TL Flit (TL Flit[0]). If the segment runs out of space, it zero-fills the remainder or saves the rest as 'carry over' for the next segment.",
+    "If space remains (unallocated sector), it attempts to add a second TL Flit (TL Flit[1]) using similar logic."
+  ],
+  "components": [],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": [
+      "Add DL ALT sector if needed.",
+      "Add any carry over from a previous flit.",
+      "Pack TL Flit[0]. If it doesn't fit completely, generate carry over.",
+      "If space remains, pack TL Flit[1]. If it doesn't fit completely, generate carry over.",
+      "Zero-fill unused space if a flit cannot be fully packed or there is no more data."
+    ]
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "Packing",
+    "Segment",
+    "TL Flit",
+    "Carry over",
+    "ALT sector"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "TL Flits can span across segment boundaries, requiring a 'carry over' mechanism to preserve the remaining flit data for the subsequent segment."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

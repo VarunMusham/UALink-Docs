@@ -1,0 +1,76 @@
+{
+  "figure": {
+    "id": "Figure 3-f",
+    "title": "End-to-End Data Protection Mechanisms",
+    "page": 1,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Illustrates the different error detection and correction mechanisms used at various stages of the UALink data path."
+  },
+  "technical_summary": [
+    "Internal to the Accelerator (UPLI to TL): Uses Parity.",
+    "Link between Accelerator and Switch (TL to TL): Uses Flit level FEC (Forward Error Correction) and CRC.",
+    "Internal to the Switch (TL to Switch Core): Uses Parity.",
+    "Inside the Switch Core: Uses Switch RAS Policy (ECC or Parity)."
+  ],
+  "components": [
+    {
+      "name": "Parity",
+      "description": "Used for internal data paths (e.g., between UPLI and TL)."
+    },
+    {
+      "name": "FEC and CRC",
+      "description": "Used for the external physical links between nodes to provide robust error detection and correction."
+    },
+    {
+      "name": "ECC or Parity",
+      "description": "Used within the Switch Core based on its specific RAS policy."
+    }
+  ],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "Parity",
+    "FEC",
+    "CRC",
+    "ECC",
+    "Data Protection",
+    "RAS"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "Data protection varies by domain: internal paths use lightweight parity, external links use robust FEC/CRC, and switch cores may use ECC or parity."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

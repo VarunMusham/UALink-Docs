@@ -35,6 +35,8 @@ Se[e Figure 6-2,](#page-2-0) Firmware writes to the UART Tx buffer, and the data
 
 ![](_page_2_Picture_2.jpeg)
 
+[JSON Extraction](_page_2_Picture_2.json)
+
 Figure 6-2 UART
 
 ### <span id="page-2-0"></span>6.2.4 Tx Pacing, Rx Rate Adaptation
@@ -71,6 +73,8 @@ The diagram below describes the placement different non data fields of the DL Fl
 - Segment payload
 
 ![](_page_4_Figure_2.jpeg)
+
+[JSON Extraction](_page_4_Figure_2.json)
 
 **Figure 6-3 DL 640-Byte Flit Overview**
 
@@ -113,6 +117,8 @@ The diagram below describes the DL Flit field locations including segment payloa
 
 ![](_page_6_Figure_2.jpeg)
 
+[JSON Extraction](_page_6_Figure_2.json)
+
 Figure 6-4 DL Flit with segment details
 
 The following describe the Flit packing rules.
@@ -145,6 +151,8 @@ Packing flow described below (see [Figure 6-5\)](#page-8-0):
 
 ![](_page_8_Figure_2.jpeg)
 
+[JSON Extraction](_page_8_Figure_2.json)
+
 **Figure 6-5 Flit packing flow chart**
 
 # <span id="page-8-0"></span>**6.3.5 TL Flit to DL Flit Mapping**
@@ -157,11 +165,15 @@ In this example there is no carry over from a previous TL Flit.
 
 ![](_page_9_Figure_2.jpeg)
 
+[JSON Extraction](_page_9_Figure_2.json)
+
 **Figure 6-6 TL Flit[0] example 1**
 
 <span id="page-9-0"></span>[Figure 6-7](#page-9-1) describes that TL Flit[1] starts packing into segment[0]. The message bits[1:0] along with TL Flit[1] present is encoded into SH0. TL Flit sector[0] maps to DL Flit sector[16], and so on.
 
 ![](_page_9_Figure_5.jpeg)
+
+[JSON Extraction](_page_9_Figure_5.json)
 
 **Figure 6-7 TL Flit[1] example 1**
 
@@ -173,6 +185,8 @@ In this example there is an alternative sector and a previous carry over up to s
 
 ![](_page_10_Figure_2.jpeg)
 
+[JSON Extraction](_page_10_Figure_2.json)
+
 Figure 6-8 TL Flit[0] example 2
 
 #### <span id="page-10-0"></span>6.3.6 DL Flit to 64B/66B encoding
@@ -182,6 +196,8 @@ The DI Flit to 64B/66B encoding is shown below. The DL Flit is redrawn with the 
 • Note: The Sync Header is added in the RS layer. The DL only transmits and receives data Flits.
 
 ![](_page_10_Figure_7.jpeg)
+
+[JSON Extraction](_page_10_Figure_7.json)
 
 Figure 6-9 DL Flit to 64B/66B Encoding
 
@@ -239,6 +255,8 @@ The single request flow is shown below. In this case the local link partner make
 
 ![](_page_12_Picture_5.jpeg)
 
+[JSON Extraction](_page_12_Picture_5.json)
+
 **Figure 6-10 Single Request Flow**
 
 #### **6.4.2.1.2 Two Requests**
@@ -246,6 +264,8 @@ The single request flow is shown below. In this case the local link partner make
 It is possible that two request are made at the same time with the same mclass and mtype. These requests are independent and thus operate as two independent sequences. This is shown below.
 
 ![](_page_12_Picture_9.jpeg)
+
+[JSON Extraction](_page_12_Picture_9.json)
 
 **Figure 6-11 Two Requests Flow**
 
@@ -366,6 +386,8 @@ The single successful request flow is shown below. In this case the local link p
 
 ![](_page_16_Figure_2.jpeg)
 
+[JSON Extraction](_page_16_Figure_2.json)
+
 **Figure 6-12 Single Successful Request Flow**
 
 #### **6.4.3.1.2 Single Unsuccessful Request Flow**
@@ -374,6 +396,8 @@ The single unsuccessful request flow is shown below. In this case the local link
 
 ![](_page_16_Picture_6.jpeg)
 
+[JSON Extraction](_page_16_Picture_6.json)
+
 **Figure 6-13 Single Unsuccessful Request Flow**
 
 #### **6.4.3.1.3 Single decision pending Request Flow**
@@ -381,6 +405,8 @@ The single unsuccessful request flow is shown below. In this case the local link
 The single decision pending request flow is shown below. In this case the local link partner makes a request, and the remote link partner responds with decision pending Decision. The Remote link partner is required to issue a request later. The Local link partner shall not issue the same mclass mtype request until after the Remote link partner issues a new request of the decision pending mclass and mtype and it is completed.
 
 ![](_page_17_Picture_2.jpeg)
+
+[JSON Extraction](_page_17_Picture_2.json)
 
 **Figure 6-14 Single decision pending Request Flow**
 
@@ -401,6 +427,8 @@ The identical request flow is shown below. In this scenario both local and remot
 Both local/remote link partners are required to send the Acks in the order shown. Responses relating to received requests or responses shall be in the order received. The resolution function is the same in both link partners, so that they both decide consistently how to resolve the conflict.
 
 ![](_page_19_Picture_2.jpeg)
+
+[JSON Extraction](_page_19_Picture_2.json)
 
 **Figure 6-16 Identical Request Flow** 
 
@@ -530,6 +558,8 @@ There is no relationship between the UART Stream transport Message length and th
 
 ![](_page_22_Figure_18.jpeg)
 
+[JSON Extraction](_page_22_Figure_18.json)
+
 **Figure 6-17 Vendor Defined Packet**
 
 The first DWord of the Vendor Defined Packet is described below.
@@ -627,6 +657,8 @@ Pacing is defined as the rate that a Tx Flit from the TL is admitted to the DL T
 • Note: The "ready" signal is one possible implementation, others are possible. This is for illustration purposes only.
 
 ![](_page_25_Figure_9.jpeg)
+
+[JSON Extraction](_page_25_Figure_9.json)
 
 Figure 6-18 Pacing
 
@@ -926,6 +958,8 @@ The ackReqSeq that falls outside of the expected range are ignored.
 
 ![](_page_32_Figure_12.jpeg)
 
+[JSON Extraction](_page_32_Figure_12.json)
+
 **Figure 6-19 Ack Replay Request valid range**
 
 #### <span id="page-32-0"></span>**6.6.6.4 Rx Enqueuing Rules**
@@ -1026,6 +1060,8 @@ The Rx Flow chart is shown below. Implicit in sectio[n 6.6.6.4](#page-32-0) is t
 
 ![](_page_35_Figure_4.jpeg)
 
+[JSON Extraction](_page_35_Figure_4.json)
+
 **Figure 6-20 Rx Flow Chart**
 
 #### **6.6.6.10 Tx Flow Chart**
@@ -1033,6 +1069,8 @@ The Rx Flow chart is shown below. Implicit in sectio[n 6.6.6.4](#page-32-0) is t
 The Tx Flow chart is shown Below.
 
 ![](_page_36_Figure_4.jpeg)
+
+[JSON Extraction](_page_36_Figure_4.json)
 
 **Figure 6-21 Tx Flow Chart**
 
@@ -1043,6 +1081,8 @@ The TxReplay buffer should be sized to cover the round-trip time of the Link, to
 The diagram in Figure 6-22 depicts the elements of round-trip time.
 
 ![](_page_37_Figure_5.jpeg)
+
+[JSON Extraction](_page_37_Figure_5.json)
 
 Figure 6-22 Round Trip Time
 
@@ -1065,6 +1105,8 @@ For example, a RTT = 1,000ns for 200GBASE-KR1/CR1 would equal 25,000 bytes, or 4
 The DL link state diagram is shown below.
 
 ![](_page_38_Picture_10.jpeg)
+
+[JSON Extraction](_page_38_Picture_10.json)
 
 **Figure 6-23 DL Link State**
 

@@ -1,0 +1,112 @@
+{
+  "figure": {
+    "id": "Figure 6-p",
+    "title": "Data Link State Machine",
+    "page": 38,
+    "type": "STATE MACHINE",
+    "purpose": "Shows the high-level states and transitions of the Data Link layer."
+  },
+  "technical_summary": [
+    "Defines four states: DL Fault, DL Idle, DL NOP, and DL Up.",
+    "Transitions depend on conditions like 'RS fault', 'Reset', 'Enable', 'Rx Flits', and 'No Flits'.",
+    "DL Up indicates normal operation where all flits are transmitted.",
+    "DL NOP is a state where only NOP flits are transmitted.",
+    "DL Idle is when the transmitter is idle.",
+    "DL Fault is the error or reset state."
+  ],
+  "components": [],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "DL Fault",
+    "states": [
+      {
+        "name": "DL Fault",
+        "description": "Tx Fault state."
+      },
+      {
+        "name": "DL Idle",
+        "description": "Tx Idle state."
+      },
+      {
+        "name": "DL NOP",
+        "description": "Tx only NOP Flits state."
+      },
+      {
+        "name": "DL Up",
+        "description": "Tx all Flits state."
+      }
+    ],
+    "transitions": [
+      {
+        "from": "Any",
+        "to": "DL Fault",
+        "condition": "RS fault | Reset"
+      },
+      {
+        "from": "DL Fault",
+        "to": "DL Idle",
+        "condition": "RS !fault"
+      },
+      {
+        "from": "DL Idle",
+        "to": "DL NOP",
+        "condition": "Enable"
+      },
+      {
+        "from": "DL NOP",
+        "to": "DL Up",
+        "condition": "Rx Flits"
+      },
+      {
+        "from": "DL Up",
+        "to": "DL Idle",
+        "condition": "No Flits"
+      },
+      {
+        "from": "DL NOP",
+        "to": "DL Idle",
+        "condition": "No Flits"
+      }
+    ]
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "Data Link State",
+    "DL Fault",
+    "DL Idle",
+    "DL NOP",
+    "DL Up"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "The Data Link layer progresses through Idle and NOP states before reaching the fully operational 'Up' state upon receiving valid flits."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

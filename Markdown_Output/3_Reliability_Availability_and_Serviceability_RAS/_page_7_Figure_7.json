@@ -1,0 +1,69 @@
+{
+  "figure": {
+    "id": "Figure 3-g",
+    "title": "Error Detected at Accelerator UALink TL",
+    "page": 7,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Shows the system state when an error is detected at the UALink TL of an Accelerator."
+  },
+  "technical_summary": [
+    "An error is detected within the UALink TL of ACC A.",
+    "The UALink TL and the corresponding UPLI Originator in ACC A are placed into an isolation or error-handling state (highlighted with dashed boxes).",
+    "A loopback or isolation symbol (purple arrow) is shown at the UPLI Originator, indicating traffic from the upper layer is being dropped or looped back."
+  ],
+  "components": [
+    {
+      "name": "UALink TL (ACC A)",
+      "description": "The layer where the error is detected."
+    },
+    {
+      "name": "UPLI Originator (ACC A)",
+      "description": "Enters isolation mode in response to the TL error."
+    }
+  ],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "Error Detection",
+    "UALink TL",
+    "Isolation Mode",
+    "Accelerator"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "Errors detected at the UALink TL of an accelerator propagate up to the UPLI Originator, causing it to enter isolation mode to prevent further traffic generation."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

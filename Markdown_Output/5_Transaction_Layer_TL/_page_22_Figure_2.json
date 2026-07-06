@@ -1,0 +1,74 @@
+{
+  "figure": {
+    "id": "Figure 5-d",
+    "title": "Address Caching System",
+    "page": 22,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Illustrates the end-to-end address caching mechanism across Accelerators and Switches, indexed by Destination Accelerator ID (DSTACCID)."
+  },
+  "technical_summary": [
+    "Shows a source (SRC) Accelerator communicating with a destination (DST) Accelerator via a Switch.",
+    "The SRC Accelerator has a Tx Cache indexed by DSTACCID in its UALink TL.",
+    "The Switch has Rx Caches, also indexed by DSTACCID, at its ingress ports.",
+    "The DST Accelerator has a Tx Cache (indexed by DSTACCID) for returning responses, and the corresponding Switch port has an Rx Cache.",
+    "Green arrows show the flow of cached/compressed address information from the SRC Tx Cache to the Switch Rx Cache, and back from DST Tx to Switch Rx."
+  ],
+  "components": [
+    {
+      "name": "Accelerator Tx Cache",
+      "description": "Cache in the source or destination node used to compress outgoing addresses."
+    },
+    {
+      "name": "Switch Rx Cache",
+      "description": "Cache in the switch ingress port to decompress incoming addresses."
+    }
+  ],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [
+    "Indexed by DSTACCID"
+  ],
+  "cross_references": [],
+  "keywords": [
+    "Address Cache",
+    "DSTACCID",
+    "Compression",
+    "Tx Cache",
+    "Rx Cache"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "Address caching is directional and indexed by the destination Accelerator ID (DSTACCID) to facilitate address compression between adjacent nodes (Accelerator to Switch)."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

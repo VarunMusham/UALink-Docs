@@ -1,0 +1,79 @@
+{
+  "figure": {
+    "id": "Figure 2-s",
+    "title": "Dual Operand 4-Byte Atomic Operation Data Packing",
+    "page": 49,
+    "type": "PACKET FORMAT",
+    "purpose": "Shows the layout for a dual-operand (Op1/Op2) 4-byte Atomic operation and its returned data."
+  },
+  "technical_summary": [
+    "Operands are 4 bytes each, taking one Doubleword.",
+    "Byte Enables are 0xF for each active 4-byte operand element.",
+    "Op1 Elements (E0, E1, E2, E3) are mapped to DW0, DW4, DW6, DW7.",
+    "Op2 Elements (E0, E1, E2, E3) are mapped to DW8, DW12, DW14, DW15.",
+    "Returned Data (Dat E0, Dat E1, Dat E2, Dat E3) for AtomicR is returned in the DW locations of Op1."
+  ],
+  "components": [],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [
+    {
+      "field": "OrigData",
+      "bits": "",
+      "description": "Originator Data channel carrying 4-byte Op1 and Op2 operands",
+      "valid_values": []
+    },
+    {
+      "field": "RdRspData",
+      "bits": "",
+      "description": "Read Response Data channel carrying 4-byte returned values in Op1 locations",
+      "valid_values": []
+    }
+  ],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [
+    "4-byte operands",
+    "0xF Byte Enables per element"
+  ],
+  "cross_references": [],
+  "keywords": [
+    "AtomicR",
+    "Op1",
+    "Op2",
+    "4-byte",
+    "0xF"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "In dual-operand atomic requests, Op2 data is typically shifted to higher doublewords, while Op1 data resides in the lower doublewords, and return data maps to Op1's doublewords."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

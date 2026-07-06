@@ -4,6 +4,8 @@ The UALink Transaction Layer (TL Layer) is responsible for converting UPLI beats
 
 ![](_page_0_Figure_4.jpeg)
 
+[JSON Extraction](_page_0_Figure_4.json)
+
 <span id="page-0-0"></span>**Figure 5-1: TL Flit connections to UPLI interfaces**
 
 The figure above[, TL Flit connections to UPLI interfaces,](#page-0-0) schematically illustrates the connections between the various channels for the two UPLI interfaces attached to a UALink TL and their relationship to the Tx and Rx TL Flit Channels. Because of the symmetry of the interfaces, the format for both the Receive and Transmit Flits are the same. The 64-byte Transmit Flit and Receive Flit Channels each encode the information for a UPLI Request Channel, Originator Data Channel, Read Response/Data Channel, and Write Response Channel.
@@ -527,6 +529,8 @@ The following figure gives a more detailed schematic description of a representa
 
 ![](_page_19_Figure_4.jpeg)
 
+[JSON Extraction](_page_19_Figure_4.json)
+
 **Figure 5-2: UALink TL Tx Dataflow.**
 
 Outbound Requests are routed to a Request Queue and the Tx Address Cache Request is referenced to determine if the address of the Request has been sent previously and is cached in the Receiver Rx cache in the UALink TL on the other end of the UALink (if present – the Tx and Rx Address Caches are optional and if they are not implemented, the interface only uses Uncompressed Requests that are marked to not load the absent Rx Address Cache). If the Tx Address Cache hits, a Compressed Request that omits many of the address bits and some other information may be used for the Request. If not, and this Request address can be cached, the Request address is typically, but not always, loaded in the Tx Address Cache and the uncompressed Request will indicate whether or not to load the cache at the receiving end of the UALink. If the Tx Address Cache is loaded, future Requests may then be issued as Compressed Requests and the Receive Address Cache will reconstitute the omitted address bits. If, however, for implementation specific reasons, the Transmit cache cannot be loaded or the implementations chooses not to load the Transmit cache for this specific Request, an Uncompressed Request indicating to not load the Rx Address Cache shall be sent.
@@ -546,6 +550,8 @@ A final mux stage selects between the 8-Sector Packing Buffer and the Data Buffe
 The following figure[, Figure 5-3: UALink TL Rx Dataflow,](#page-20-0) gives a more detailed schematic description of a representative datapath in the UALink TL for the Inbound Rx Flit interface.
 
 ![](_page_20_Figure_8.jpeg)
+
+[JSON Extraction](_page_20_Figure_8.json)
 
 **Figure 5-3: UALink TL Rx Dataflow**
 
@@ -572,11 +578,15 @@ The figure below, [Figure 5-4: Indexing of Accelerator Tx Address Caches/Switch 
 
 ![](_page_22_Figure_2.jpeg)
 
+[JSON Extraction](_page_22_Figure_2.json)
+
 **Figure 5-4: Indexing of Accelerator Tx Address Caches/Switch Rx Address Caches**
 
 <span id="page-22-0"></span>All Requests issued by a given Accelerator will have only one value for the ReqSrcPhysAccID[9:0] signal: the identifier of the given Accelerator. This renders the ReqSrcPhysAccID field unsuitable to index the Accelerator Tx Address Cache. Instead, the Tx Address Caches on the Accelerators (and therefore the Rx Address Caches on the Switch) shall be indexed by the ReqDstPhysAccID[9:0] signal value in the UPLI Reqest Interface in order to fully populate the caches.
 
 ![](_page_22_Figure_5.jpeg)
+
+[JSON Extraction](_page_22_Figure_5.json)
 
 **Figure 5-5: Indexing of Switch Tx Address Caches/Accelerator Rx Address Caches**
 
@@ -668,6 +678,8 @@ The following figure, Figure 5-6 [TL Receive Catch Buffer Dataflow,](#page-26-0)
 
 ![](_page_26_Figure_3.jpeg)
 
+[JSON Extraction](_page_26_Figure_3.json)
+
 **Figure 5-6 TL Receive Catch Buffer Dataflow**
 
 <span id="page-26-0"></span>The TL Flit Decoder processes the non-NOP Control Half-Flit to produce an ordered list of the Responses and Requests that are present. The Catch Buffers shift one entry into the Rx Req and Rx Rsp Queues per incoming TL Flit.
@@ -691,6 +703,8 @@ The Flow Control between UALink TLs shall be managed by means of Credits for the
 A Credit is either a Pool Credit that can be used with a Request, Response, or Data on any Virtual Channel or a Virtual Channel Credit that shall only be used with a Request, Response, or Data specifically associated with one of the four Virtual Channels.
 
 ![](_page_28_Figure_5.jpeg)
+
+[JSON Extraction](_page_28_Figure_5.json)
 
 **Figure 5-7: Flow Control Field Relation to Credit Channels.**
 

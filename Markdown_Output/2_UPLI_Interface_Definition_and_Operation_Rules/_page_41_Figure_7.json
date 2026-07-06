@@ -1,0 +1,74 @@
+{
+  "figure": {
+    "id": "Figure 2-i",
+    "title": "Request Straddling a Beat Boundary",
+    "page": 41,
+    "type": "PACKET FORMAT",
+    "purpose": "Shows how a read request starting near the end of BEAT 0 can straddle across into BEAT 1."
+  },
+  "technical_summary": [
+    "ReqAddr points to DW14 (byte lane 56) in BEAT 0.",
+    "ReqLen indicates a length that spans beyond the end of BEAT 0.",
+    "The data continues into BEAT 1, ending at DW1."
+  ],
+  "components": [],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [
+    {
+      "field": "BEAT 0",
+      "bits": "511:0",
+      "description": "First beat of the request",
+      "valid_values": []
+    },
+    {
+      "field": "BEAT 1",
+      "bits": "511:0",
+      "description": "Second beat of the request",
+      "valid_values": []
+    }
+  ],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "BEAT 0",
+    "BEAT 1",
+    "ReqAddr",
+    "ReqLen",
+    "Straddle"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "Requests can wrap across beat boundaries if the requested length exceeds the remaining bytes in the current beat."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

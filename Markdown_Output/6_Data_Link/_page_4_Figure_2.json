@@ -1,0 +1,76 @@
+{
+  "figure": {
+    "id": "Figure 6-q",
+    "title": "Flit Layout Overview",
+    "page": 4,
+    "type": "DATA STRUCTURE",
+    "purpose": "Shows the high-level arrangement of headers, payload segments, and CRC within a flit."
+  },
+  "technical_summary": [
+    "The flit is composed of a Flit Header (FH0, FH1, FH2).",
+    "It contains multiple payload segments, each preceded by a Segment Header (SH0 to SH4).",
+    "A 4-byte CRC (CRC0 to CRC3) is appended at the end of the flit to protect its contents."
+  ],
+  "components": [],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [
+    {
+      "field": "Flit Header (FH)",
+      "bits": "3 bytes",
+      "description": "Global header for the flit (FH0-FH2)."
+    },
+    {
+      "field": "Segment Headers (SH)",
+      "bits": "",
+      "description": "Headers for individual payload segments (SH0-SH4)."
+    },
+    {
+      "field": "CRC",
+      "bits": "4 bytes",
+      "description": "Cyclic Redundancy Check (CRC0-CRC3)."
+    }
+  ],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "Flit Header",
+    "Segment Header",
+    "Segment",
+    "CRC"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "A single flit encapsulates multiple segments, each with its own header, wrapped by a global flit header and trailing CRC."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

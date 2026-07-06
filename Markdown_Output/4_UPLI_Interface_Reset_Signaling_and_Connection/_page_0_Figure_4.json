@@ -1,0 +1,100 @@
+{
+  "figure": {
+    "id": "Figure 4-a",
+    "title": "UPLI Reset Timing",
+    "page": 0,
+    "type": "TIMING DIAGRAM",
+    "purpose": "Shows the timing relationship between UPLIReset_N assertion/deassertion and the interface signals."
+  },
+  "technical_summary": [
+    "When UPLIReset_N is asserted (active low), all Valid (*Vld, *CreditVld) and connection signals (*ClkReq, *ClkAck) deassert synchronously with UPLIClk.",
+    "UPLIReset_N must remain asserted for a minimum interval to allow the interface to reset.",
+    "After UPLIReset_N deasserts, the earliest a connection request (*ClkReq) can reassert is shown."
+  ],
+  "components": [],
+  "interfaces": [
+    {
+      "name": "UPLI",
+      "type": "Reset and Connection",
+      "width": "",
+      "description": "Interface reset behavior."
+    }
+  ],
+  "signals": [
+    {
+      "name": "UPLIClk",
+      "type": "Clock",
+      "description": "Interface clock."
+    },
+    {
+      "name": "UPLIReset_N",
+      "type": "Control",
+      "description": "Active low reset signal."
+    },
+    {
+      "name": "*Vld, *CreditVld",
+      "type": "Control",
+      "description": "Valid signals that clear on reset."
+    },
+    {
+      "name": "*ClkReq, *ClkAck",
+      "type": "Control",
+      "description": "Connection request and acknowledge signals that clear on reset."
+    }
+  ],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [
+      "UPLIReset_N",
+      "*Vld",
+      "*ClkReq"
+    ],
+    "events": [
+      {
+        "name": "Reset Assertion",
+        "description": "Causes control signals to deassert."
+      }
+    ],
+    "ordering": [
+      "UPLIReset_N goes low -> *Vld, *ClkReq go low"
+    ],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "Reset",
+    "UPLIReset_N",
+    "Timing",
+    "ClkReq",
+    "ClkAck"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "Assertion of UPLIReset_N immediately clears all valid and connection-related signals synchronously to the clock."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

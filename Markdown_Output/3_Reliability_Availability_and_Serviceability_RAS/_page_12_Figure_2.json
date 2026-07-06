@@ -1,0 +1,67 @@
+{
+  "figure": {
+    "id": "Figure 3-c",
+    "title": "Isolation Mode Response",
+    "page": 12,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Shows the system's reaction to a link failure by putting components into Isolation Mode."
+  },
+  "technical_summary": [
+    "Following a link down event, components on both sides of the failed link enter Isolation Mode.",
+    "The UPLI Originator and Completer in ACC A, and the corresponding UPLI Originator and Completer in the Switch, are highlighted with dashed orange boxes.",
+    "An annotation indicates: 'credited Write Response is issued from UALink TL to UADP Originator to put it into Isolation Mode.' Note: the block is labeled UPU Originator, suggesting UPU and UADP might be used interchangeably or represent related upper layers."
+  ],
+  "components": [
+    {
+      "name": "UPU Originator / UADP Originator",
+      "description": "Upper layer component that receives a response to enter isolation mode."
+    }
+  ],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "Isolation Mode",
+    "Write Response",
+    "UADP Originator",
+    "UPU Originator"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "In response to a link failure, the UALink TL issues a credited Write Response to the upper layer originator to place it into Isolation Mode."
+    ],
+    "potential_ambiguities": [
+      "The diagram labels the block 'UPU Originator' while the text refers to 'UADP Originator'."
+    ],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

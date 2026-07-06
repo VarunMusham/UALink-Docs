@@ -1,0 +1,143 @@
+{
+  "figure": {
+    "id": "Figure 1-2",
+    "title": "Accelerator communication over a direct link and over a Switch",
+    "page": 2,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Shows Direct Connected vs Switch Connected topologies"
+  },
+  "technical_summary": [
+    "Direct connected topology links two Acc units via UALink.",
+    "Switch connected topology links multiple Acc units via a ULS (UALink Switch).",
+    "Hosts connect to Ethernet Switch Fabric via NICs.",
+    "Hosts connect to Accelerators via PCIe."
+  ],
+  "components": [
+    {
+      "name": "Ethernet Switch Fabric",
+      "type": "Switch",
+      "description": "Ethernet network connecting nodes"
+    },
+    {
+      "name": "NIC",
+      "type": "Network Interface",
+      "description": "Connects host to Ethernet"
+    },
+    {
+      "name": "Host",
+      "type": "Processor",
+      "description": "Host processor"
+    },
+    {
+      "name": "Acc",
+      "type": "Accelerator",
+      "description": "Accelerator device"
+    },
+    {
+      "name": "OS-Domain",
+      "type": "Domain",
+      "description": "OS boundary containing Host and Acc"
+    },
+    {
+      "name": "ULS",
+      "type": "Switch",
+      "description": "UALink Switch"
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "Ethernet",
+      "from": "NIC",
+      "to": "Ethernet Switch Fabric",
+      "direction": "bidirectional",
+      "signals": []
+    },
+    {
+      "name": "PCIe",
+      "from": "Host",
+      "to": "NIC",
+      "direction": "bidirectional",
+      "signals": []
+    },
+    {
+      "name": "Host-Acc",
+      "from": "Host",
+      "to": "Acc",
+      "direction": "bidirectional",
+      "signals": []
+    },
+    {
+      "name": "UALink (Direct)",
+      "from": "Acc",
+      "to": "Acc",
+      "direction": "bidirectional",
+      "signals": []
+    },
+    {
+      "name": "UALink (Switched)",
+      "from": "Acc",
+      "to": "ULS",
+      "direction": "bidirectional",
+      "signals": []
+    }
+  ],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "PCIe",
+    "Ethernet",
+    "UALink",
+    "ULS",
+    "OS-Domain"
+  ],
+  "entities": [],
+  "relationships": [
+    {
+      "source": "Host",
+      "relation": "connects_to",
+      "target": "Acc"
+    },
+    {
+      "source": "Host",
+      "relation": "connects_to",
+      "target": "NIC"
+    },
+    {
+      "source": "Acc",
+      "relation": "connects_to",
+      "target": "ULS"
+    }
+  ],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

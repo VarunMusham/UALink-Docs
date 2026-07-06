@@ -1,0 +1,71 @@
+{
+  "figure": {
+    "id": "Figure 6-b",
+    "title": "64B/66B Block Mapping",
+    "page": 10,
+    "type": "DATA STRUCTURE",
+    "purpose": "Shows the mapping of TL Flit sectors to the 64B/66B encoding payload blocks."
+  },
+  "technical_summary": [
+    "Illustrates a block of 8 bytes (D0 to D7) plus a 2-bit Sync Header (SH) forming a 66-bit block.",
+    "Shows specific flit sectors (e.g., S29.B0, S0.B0) being mapped into the data payload D0-D7 of the 64B/66B encoding structure."
+  ],
+  "components": [],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [
+    {
+      "field": "SH",
+      "bits": "2",
+      "description": "Sync Header for 64B/66B."
+    },
+    {
+      "field": "D0-D7",
+      "bits": "64",
+      "description": "Data payload bytes mapped from flit sectors."
+    }
+  ],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [
+    "64B/66B"
+  ],
+  "cross_references": [],
+  "keywords": [
+    "64B/66B",
+    "Sync Header",
+    "Mapping"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "TL Flit bytes are mapped sequentially into the 8-byte payload of standard 64B/66B blocks."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

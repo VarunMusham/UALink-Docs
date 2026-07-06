@@ -1,0 +1,69 @@
+{
+  "figure": {
+    "id": "Figure 9-d",
+    "title": "Accelerator Switched Topology (Base)",
+    "page": 21,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Shows the base physical connectivity of four accelerators through two switches, without the key assignment overlays."
+  },
+  "technical_summary": [
+    "Shows four Accelerators (0, 1, 2, 3), each with Port 0 and Port 1.",
+    "Port 0 of each accelerator connects to Switch 0.",
+    "Port 1 of each accelerator connects to Switch 1.",
+    "Provides a clear view of the redundant, dual-switch fabric topology."
+  ],
+  "components": [
+    {
+      "name": "Accelerators (0-3)",
+      "description": "Endpoints with dual ports."
+    },
+    {
+      "name": "Switches (0-1)",
+      "description": "Fabric interconnects."
+    }
+  ],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "Topology",
+    "Redundancy",
+    "Fabric"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "The architecture uses a dual-plane switched topology where Port 0 and Port 1 of all accelerators connect to separate, independent switches for redundancy and bandwidth."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

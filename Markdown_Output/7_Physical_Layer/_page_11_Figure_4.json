@@ -1,0 +1,76 @@
+{
+  "figure": {
+    "id": "Figure 7-a",
+    "title": "PCS Block Diagram - Variant 1",
+    "page": 11,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Shows the high-level transmit and receive processing steps within the Physical Coding Sublayer (PCS)."
+  },
+  "technical_summary": [
+    "Transmit path (Tx): Data from the Reconciliation Sub Layer undergoes Scrambling, Transcoding, Alignment Overwrite, FEC Encoding, and Symbol Distribution before reaching the PMA Sub Layer.",
+    "Receive path (Rx): Data from the PMA undergoes Alignment lock and deskew, Lane reorder, FEC Decoding, Alignment Overwrite, Transcoding, and Descrambling before passing up.",
+    "Notably in this variant, Scramble occurs before Transcode on the Tx path."
+  ],
+  "components": [
+    {
+      "name": "PCS",
+      "description": "Physical Coding Sublayer, handles encoding, scrambling, and forward error correction."
+    },
+    {
+      "name": "Reconciliation Sub Layer",
+      "description": "Interface to the upper layer (Data Link)."
+    },
+    {
+      "name": "PMA Sub Layer",
+      "description": "Physical Medium Attachment layer."
+    }
+  ],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": [
+      "Scramble -> Transcode -> Alignment Overwrite -> FEC Encode -> Symbol Distribution"
+    ]
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "PCS",
+    "Scramble",
+    "Transcode",
+    "FEC",
+    "PMA"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "The PCS abstracts the physical medium by providing encoding, scrambling, and FEC."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

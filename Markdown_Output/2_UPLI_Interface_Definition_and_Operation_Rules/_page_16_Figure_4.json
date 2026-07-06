@@ -1,0 +1,85 @@
+{
+  "figure": {
+    "id": "Figure 2-g",
+    "title": "Credit Loops in UALink End-to-End Connection",
+    "page": 16,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Illustrates the separated UPLI credit loops and UALink TL credit loops across an end-to-end switch connection."
+  },
+  "technical_summary": [
+    "UPLI credit loops operate locally between an upper-layer UPLI Originator and the lower TL-side UPLI Completer.",
+    "UALink TL credit loops span across the physical serial link between the local UALink TL and remote UALink TL.",
+    "In a switched connection, UALink TL credit loops are hop-by-hop (ACC to Switch, Switch to ACC)."
+  ],
+  "components": [
+    {
+      "name": "ACC A",
+      "type": "Node",
+      "description": ""
+    },
+    {
+      "name": "SWITCH",
+      "type": "Switch",
+      "description": ""
+    },
+    {
+      "name": "ACC B",
+      "type": "Node",
+      "description": ""
+    }
+  ],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "UPLI credit loop",
+    "UALink TL credit loop"
+  ],
+  "entities": [],
+  "relationships": [
+    {
+      "source": "UPLI credit loop",
+      "relation": "operates_between",
+      "target": "UPLI Originator and UPLI Completer"
+    },
+    {
+      "source": "UALink TL credit loop",
+      "relation": "operates_between",
+      "target": "UALink TLs across a link"
+    }
+  ],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "Credit loops are segmented. TL credits manage link-level flow control, while UPLI credits manage protocol-level flow control."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

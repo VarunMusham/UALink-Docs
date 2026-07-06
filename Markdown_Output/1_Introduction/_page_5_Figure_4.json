@@ -1,0 +1,106 @@
+{
+  "figure": {
+    "id": "Figure 1-4",
+    "title": "UALink cross-domain address translation model",
+    "page": 5,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Shows how GVA translates to NPA and then SPA across the UALink Network"
+  },
+  "technical_summary": [
+    "Source Accelerator translates Guest Virtual Address (GVA) to Network Physical Address (NPA) using Acc MMU.",
+    "NPA traverses the UALink Network through UALink Switches.",
+    "Destination Accelerator translates NPA to System Physical Address (SPA) using Link MMU.",
+    "SPA accesses local HBM on Destination Accelerator."
+  ],
+  "components": [
+    {
+      "name": "CU",
+      "type": "Compute Unit",
+      "description": ""
+    },
+    {
+      "name": "Acc MMU",
+      "type": "MMU",
+      "description": "Translates GVA to NPA"
+    },
+    {
+      "name": "UALink",
+      "type": "Interface",
+      "description": ""
+    },
+    {
+      "name": "UALink Switches",
+      "type": "Switch",
+      "description": ""
+    },
+    {
+      "name": "Link MMU",
+      "type": "MMU",
+      "description": "Translates NPA to SPA"
+    },
+    {
+      "name": "HBM",
+      "type": "Memory",
+      "description": "High Bandwidth Memory"
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "GVA -> NPA",
+      "from": "CU",
+      "to": "Acc MMU",
+      "direction": "unidirectional",
+      "signals": []
+    },
+    {
+      "name": "NPA -> SPA",
+      "from": "Link MMU",
+      "to": "HBM",
+      "direction": "unidirectional",
+      "signals": []
+    }
+  ],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "GVA",
+    "NPA",
+    "SPA",
+    "MMU",
+    "HBM"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

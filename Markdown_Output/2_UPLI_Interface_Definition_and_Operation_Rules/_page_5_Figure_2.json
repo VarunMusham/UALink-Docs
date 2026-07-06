@@ -1,0 +1,82 @@
+{
+  "figure": {
+    "id": "Figure 2-a",
+    "title": "Accelerator and Switch UALink Stack connection",
+    "page": 5,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Details the UPLI protocol connections across the UALink stack between an Accelerator and a Switch."
+  },
+  "technical_summary": [
+    "ACCELERATOR UALink Stack Component connects to SWITCH UALink Stack Component via Serial link.",
+    "In Accelerator, UPLI Completer receives UPLI Protocol signals (Req, OrigData).",
+    "In Switch, UPLI Protocol signals connect identically to UPLI Originator and Completer."
+  ],
+  "components": [
+    {
+      "name": "ACCELERATOR",
+      "type": "Node",
+      "description": "Accelerator device"
+    },
+    {
+      "name": "SWITCH",
+      "type": "Node",
+      "description": "Switch device"
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "Serial link",
+      "from": "ACCELERATOR UALink PL+SERDES",
+      "to": "SWITCH UALink PL+SERDES",
+      "direction": "bidirectional",
+      "signals": []
+    }
+  ],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "ACCELERATOR",
+    "SWITCH",
+    "Serial link"
+  ],
+  "entities": [],
+  "relationships": [
+    {
+      "source": "ACCELERATOR",
+      "relation": "connects_to",
+      "target": "SWITCH"
+    }
+  ],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

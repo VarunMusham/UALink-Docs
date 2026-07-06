@@ -1,0 +1,67 @@
+{
+  "figure": {
+    "id": "Figure 3-e",
+    "title": "Dual Isolation Mode",
+    "page": 13,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Shows both ACC A and ACC B originator components entering isolation mode after a link failure."
+  },
+  "technical_summary": [
+    "Following a link failure and subsequent timeouts/responses, the originators in both ACC A and ACC B are placed into Isolation Mode.",
+    "The UPU Originator blocks in both ACC A and ACC B are highlighted, showing circular arrows indicating they are handling traffic internally (dropping or looping back) rather than forwarding it to the failed link."
+  ],
+  "components": [
+    {
+      "name": "UPU Originator (ACC A)",
+      "description": "Enters isolation mode on the left side."
+    },
+    {
+      "name": "UPU Originator (ACC B)",
+      "description": "Enters isolation mode on the right side."
+    }
+  ],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "Isolation Mode",
+    "UPU Originator",
+    "Dual Isolation"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "A single link failure can lead to multiple nodes entering isolation mode as they detect timeouts and receive isolation responses."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.9
+}

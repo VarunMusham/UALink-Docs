@@ -1,0 +1,74 @@
+{
+  "figure": {
+    "id": "Figure 2-o",
+    "title": "Sparse Write Request Straddling a Beat Boundary",
+    "page": 45,
+    "type": "PACKET FORMAT",
+    "purpose": "Shows an example of a sparse write request with scattered byte enables crossing from one beat to the next."
+  },
+  "technical_summary": [
+    "ReqAddr starts at DW14 in BEAT 0.",
+    "The request straddles the boundary into BEAT 1.",
+    "Byte enables are specified for individual bytes across DW14, DW15 in BEAT 0, and DW0 in BEAT 1.",
+    "Only bytes with an active '1' enable are written."
+  ],
+  "components": [],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [
+    {
+      "field": "BEAT 0",
+      "bits": "511:0",
+      "description": "First beat containing the start of the sparse write",
+      "valid_values": []
+    },
+    {
+      "field": "BEAT 1",
+      "bits": "511:0",
+      "description": "Second beat containing the end of the sparse write",
+      "valid_values": []
+    }
+  ],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "Sparse Write",
+    "Straddle",
+    "Beat Boundary",
+    "Byte Enables"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "Sparse writes can straddle beat boundaries just like contiguous reads/writes, maintaining byte-level enable granularity."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

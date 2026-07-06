@@ -1,0 +1,69 @@
+{
+  "figure": {
+    "id": "Figure 9-f",
+    "title": "TX Master Key Rollover Protocol",
+    "page": 24,
+    "type": "FLOWCHART",
+    "purpose": "Details the complex, multi-step protocol for rolling over the Master Key on the TX side."
+  },
+  "technical_summary": [
+    "Triggers when the sum of epoch counters for all 3 TX streams hits the 'Master key expiry threshold'.",
+    "Switches to the alternate master key and derives new keys for all 3 streams with {0x0, StreamID} as salt.",
+    "Initiates a handshake with the remote RX using 'KeyRollMSG.ReqChannel'.",
+    "Sequentially switches the key for the request stream, then coordinates with RX for the read response stream ('KeyRollMSG.RdRspChannel'), and finally for the write response stream ('KeyRollMSG.WrRspChannel').",
+    "Ensures both sides synchronize the switchover for each specific stream before proceeding."
+  ],
+  "components": [],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": [
+      "Check epoch sum against threshold.",
+      "Switch to alternate master key.",
+      "Derive new stream keys.",
+      "Handshake and switch Request stream.",
+      "Handshake and switch Read Response stream.",
+      "Handshake and switch Write Response stream."
+    ]
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "Master Key Rollover",
+    "KeyRollMSG",
+    "Handshake",
+    "TX Streams"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "Master key rollover is a synchronized, stream-by-stream handshake process between TX and RX to ensure no data is lost or decrypted with the wrong key during the transition."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

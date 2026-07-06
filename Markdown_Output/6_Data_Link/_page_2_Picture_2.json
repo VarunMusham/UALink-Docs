@@ -1,0 +1,78 @@
+{
+  "figure": {
+    "id": "Figure 6-k",
+    "title": "Sideband Data Link Physical Connections",
+    "page": 2,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Shows the physical connectivity for the sideband (UART) data link over the physical medium."
+  },
+  "technical_summary": [
+    "Each node's Data Link layer contains a UART TXB (Transmit Buffer) and UART RXB (Receive Buffer).",
+    "These buffers connect to the Physical Layer SERDES.",
+    "The physical medium cross-connects the nodes: the UART TXB of one node connects to the UART RXB of the other node."
+  ],
+  "components": [
+    {
+      "name": "UART TXB",
+      "description": "UART Transmit Buffer."
+    },
+    {
+      "name": "UART RXB",
+      "description": "UART Receive Buffer."
+    },
+    {
+      "name": "SERDES",
+      "description": "Serializer/Deserializer in the Physical Layer."
+    },
+    {
+      "name": "PHYSICAL MEDIUM",
+      "description": "The interconnect carrying the sideband signals."
+    }
+  ],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "Sideband",
+    "UART",
+    "SERDES",
+    "TXB",
+    "RXB"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "The sideband channel relies on standard crossover UART connections implemented over the Physical Layer SERDES."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

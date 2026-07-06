@@ -1,0 +1,126 @@
+{
+  "figure": {
+    "id": "Figure 2-c",
+    "title": "Request and Response Flow Between Accelerators",
+    "page": 7,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Illustrates the paths of requests and corresponding responses between two accelerators connected via a switch."
+  },
+  "technical_summary": [
+    "ACC A sends requests to ACC B through the UPLI Originator and UALink Stack.",
+    "The Switch Core routes ACC A's request to ACC B's UPLI Completer.",
+    "ACC B's response is returned via its UPLI Completer back through the switch to ACC A's UPLI Originator.",
+    "ACC B can simultaneously send requests to ACC A using its UPLI Originator.",
+    "ACC A responds to ACC B's requests via its UPLI Completer."
+  ],
+  "components": [
+    {
+      "name": "ACC A",
+      "type": "Node",
+      "description": "Accelerator node acting as requester and responder"
+    },
+    {
+      "name": "SWITCH",
+      "type": "Switch",
+      "description": "Intermediate switch routing UPLI protocol messages"
+    },
+    {
+      "name": "ACC B",
+      "type": "Node",
+      "description": "Accelerator node acting as requester and responder"
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "ACC A Request Path",
+      "from": "ACC A",
+      "to": "ACC B",
+      "direction": "unidirectional",
+      "signals": [
+        "ACC A request"
+      ]
+    },
+    {
+      "name": "ACC A Response Path",
+      "from": "ACC B",
+      "to": "ACC A",
+      "direction": "unidirectional",
+      "signals": [
+        "Response for ACC A request"
+      ]
+    },
+    {
+      "name": "ACC B Request Path",
+      "from": "ACC B",
+      "to": "ACC A",
+      "direction": "unidirectional",
+      "signals": [
+        "ACC B request"
+      ]
+    },
+    {
+      "name": "ACC B Response Path",
+      "from": "ACC A",
+      "to": "ACC B",
+      "direction": "unidirectional",
+      "signals": [
+        "Response for ACC B request"
+      ]
+    }
+  ],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "ACC A",
+    "ACC B",
+    "Request",
+    "Response"
+  ],
+  "entities": [],
+  "relationships": [
+    {
+      "source": "ACC A",
+      "relation": "sends_request_to",
+      "target": "ACC B"
+    },
+    {
+      "source": "ACC B",
+      "relation": "sends_response_to",
+      "target": "ACC A"
+    }
+  ],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "Request channels and Response channels are logically distinct and maintain separate flow paths through the switch core."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

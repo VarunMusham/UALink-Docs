@@ -1,0 +1,128 @@
+{
+  "figure": {
+    "id": "Figure 2-x",
+    "title": "UPLI Interface End-to-End Pipeline",
+    "page": 1,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Illustrates the progression of a UPLI request through initial, intermediate, and final interfaces."
+  },
+  "technical_summary": [
+    "UPLI network consists of Originators, Intermediate Logic, and Completers.",
+    "Initial UPLI Interface connects Originator Device to the network.",
+    "Intermediate UPLI Interfaces chain multiple Intermediate Logic blocks.",
+    "Final UPLI Interface connects the network to the Completer Device."
+  ],
+  "components": [
+    {
+      "name": "Originator Device",
+      "type": "Device",
+      "description": "Source of UPLI requests"
+    },
+    {
+      "name": "UPLI Originator",
+      "type": "Interface Component",
+      "description": "Originator side of the UPLI interface"
+    },
+    {
+      "name": "UPLI Completer",
+      "type": "Interface Component",
+      "description": "Completer side of the UPLI interface"
+    },
+    {
+      "name": "Intermediate Logic",
+      "type": "Logic Block",
+      "description": "Routing or processing logic between UPLI stages"
+    },
+    {
+      "name": "Completer Device",
+      "type": "Device",
+      "description": "Destination for UPLI requests"
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "Initial UPLI",
+      "from": "UPLI Originator",
+      "to": "UPLI Completer (Intermediate)",
+      "direction": "bidirectional",
+      "signals": []
+    },
+    {
+      "name": "Intermediate UPLI",
+      "from": "UPLI Originator (Intermediate)",
+      "to": "UPLI Completer (Intermediate)",
+      "direction": "bidirectional",
+      "signals": []
+    },
+    {
+      "name": "Final UPLI",
+      "from": "UPLI Originator (Intermediate)",
+      "to": "UPLI Completer",
+      "direction": "bidirectional",
+      "signals": []
+    }
+  ],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": [
+      "Originator Device",
+      "Initial UPLI Interface",
+      "Intermediate Logic",
+      "Intermediate UPLI Interfaces",
+      "Intermediate Logic",
+      "Final UPLI Interface",
+      "Completer Device"
+    ]
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "UPLI",
+    "Originator",
+    "Completer",
+    "Intermediate Logic"
+  ],
+  "entities": [],
+  "relationships": [
+    {
+      "source": "Originator Device",
+      "relation": "connects_to",
+      "target": "UPLI Originator"
+    },
+    {
+      "source": "UPLI Completer",
+      "relation": "connects_to",
+      "target": "Completer Device"
+    }
+  ],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "The UPLI pipeline spans from an Initial Originator through Intermediate Logic to a Final Completer."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.9
+}

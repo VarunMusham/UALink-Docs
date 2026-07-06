@@ -1,0 +1,171 @@
+{
+  "figure": {
+    "id": "Figure 2-e",
+    "title": "Routing Information Flow",
+    "page": 9,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Shows the step-by-step transformation of routing header fields as a Request and Response traverse from ACC A to ACC B."
+  },
+  "technical_summary": [
+    "ReqSrcPhysAccID=0 and ReqDstPhysAccID=31 are constant throughout the Request path.",
+    "RdRspSrcPhysAccID=31 and RdRspDstPhysAccID=0 are constant throughout the Response path.",
+    "ReqPortID and RdRspPortID update at each UPLI Interface crossing (0, 1, 2, 3) to reflect the ingress port.",
+    "SWITCH CORE uses a Dst Route Table to determine the egress port (UPLI Interface 2) for the Request.",
+    "Response uses reverse routing based on the stored/returned physical IDs."
+  ],
+  "components": [
+    {
+      "name": "ACC A (Accelerator 0)",
+      "type": "Node",
+      "description": "Source of request"
+    },
+    {
+      "name": "SWITCH 18",
+      "type": "Switch",
+      "description": "Intermediate router"
+    },
+    {
+      "name": "ACC B (Accelerator 31)",
+      "type": "Node",
+      "description": "Destination of request"
+    },
+    {
+      "name": "Dst Route Table",
+      "type": "Lookup Table",
+      "description": "Used by SWITCH CORE to route packets based on ReqDstPhysAccID"
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "UPLI Interface 0",
+      "from": "ACC A",
+      "to": "UALink Stack",
+      "direction": "bidirectional",
+      "signals": []
+    },
+    {
+      "name": "UPLI Interface 1",
+      "from": "Switch Ingress",
+      "to": "SWITCH CORE",
+      "direction": "bidirectional",
+      "signals": []
+    },
+    {
+      "name": "UPLI Interface 2",
+      "from": "SWITCH CORE",
+      "to": "Switch Egress",
+      "direction": "bidirectional",
+      "signals": []
+    },
+    {
+      "name": "UPLI Interface 3",
+      "from": "UALink Stack",
+      "to": "ACC B",
+      "direction": "bidirectional",
+      "signals": []
+    }
+  ],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [
+    {
+      "field": "ReqPortID",
+      "bits": "",
+      "description": "Ingress port ID at each step",
+      "valid_values": [
+        "2",
+        "0",
+        "3"
+      ]
+    },
+    {
+      "field": "ReqSrcPhysAccID",
+      "bits": "",
+      "description": "Physical ID of the source accelerator (0)",
+      "valid_values": [
+        "0"
+      ]
+    },
+    {
+      "field": "ReqDstPhysAccID",
+      "bits": "",
+      "description": "Physical ID of the destination accelerator (31)",
+      "valid_values": [
+        "31"
+      ]
+    },
+    {
+      "field": "RdRspPortID",
+      "bits": "",
+      "description": "Ingress port ID for the response",
+      "valid_values": [
+        "2",
+        "0",
+        "3"
+      ]
+    },
+    {
+      "field": "RdRspSrcPhysAccID",
+      "bits": "",
+      "description": "Physical ID of the response source (31)",
+      "valid_values": [
+        "31"
+      ]
+    },
+    {
+      "field": "RdRspDstPhysAccID",
+      "bits": "",
+      "description": "Physical ID of the response destination (0)",
+      "valid_values": [
+        "0"
+      ]
+    }
+  ],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": [
+      "UPLI Interface 0",
+      "UPLI Interface 1",
+      "SWITCH CORE",
+      "UPLI Interface 2",
+      "UPLI Interface 3"
+    ]
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "ReqPortID",
+    "ReqSrcPhysAccID",
+    "ReqDstPhysAccID",
+    "Dst Route Table"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "Source and Destination Physical Accelerator IDs remain static while Port IDs update dynamically at each interface boundary."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

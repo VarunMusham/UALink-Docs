@@ -1,0 +1,79 @@
+{
+  "figure": {
+    "id": "Figure 6-f",
+    "title": "Protocol Request Sequence - Unsuccessful (NACK)",
+    "page": 16,
+    "type": "SEQUENCE DIAGRAM",
+    "purpose": "Shows an unsuccessful request sequence where the remote node rejects the request."
+  },
+  "technical_summary": [
+    "Local node sends a 'request' message to the Remote node.",
+    "Remote node responds with a 'nack' (negative acknowledgment) message.",
+    "The sequence results in a 'request unsuccessful' state."
+  ],
+  "components": [
+    {
+      "name": "Local",
+      "description": "Initiating node."
+    },
+    {
+      "name": "Remote",
+      "description": "Responding node."
+    }
+  ],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [
+      {
+        "name": "request",
+        "description": "Local to Remote."
+      },
+      {
+        "name": "nack",
+        "description": "Remote to Local."
+      }
+    ],
+    "ordering": [
+      "request -> nack"
+    ],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "request",
+    "nack",
+    "unsuccessful"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "A NACK explicitly indicates a failure or rejection of the request by the remote node."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

@@ -1,0 +1,86 @@
+{
+  "figure": {
+    "id": "Figure 4-d",
+    "title": "Connection Establishment - Concurrent Initiation",
+    "page": 3,
+    "type": "TIMING DIAGRAM",
+    "purpose": "Shows the connection establishment sequence where both the Originator and Completer initiate the connection concurrently."
+  },
+  "technical_summary": [
+    "Originator asserts OrigClkReq and Completer asserts CompClkReq concurrently.",
+    "Completer asserts CompClkAck in response to OrigClkReq.",
+    "Originator asserts OrigClkAck in response to CompClkReq.",
+    "Each side can begin issuing credits once their respective Ack is received.",
+    "The interface becomes fully connected once credits are exchanged in both directions."
+  ],
+  "components": [],
+  "interfaces": [],
+  "signals": [
+    {
+      "name": "OrigClkReq",
+      "type": "Control",
+      "description": "Originator Clock Request."
+    },
+    {
+      "name": "CompClkAck",
+      "type": "Control",
+      "description": "Completer Clock Acknowledge."
+    },
+    {
+      "name": "CompClkReq",
+      "type": "Control",
+      "description": "Completer Clock Request."
+    },
+    {
+      "name": "OrigClkAck",
+      "type": "Control",
+      "description": "Originator Clock Acknowledge."
+    }
+  ],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [
+      "OrigClkReq -> CompClkAck",
+      "CompClkReq -> OrigClkAck"
+    ],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "Connection",
+    "Concurrent",
+    "ClkReq",
+    "ClkAck"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "The connection handshake signals are completely independent, allowing for concurrent initialization without race conditions."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

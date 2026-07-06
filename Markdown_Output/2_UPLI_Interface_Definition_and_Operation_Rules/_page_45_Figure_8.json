@@ -1,0 +1,72 @@
+{
+  "figure": {
+    "id": "Figure 2-p",
+    "title": "Large Block Write Straddling a Beat Boundary",
+    "page": 45,
+    "type": "PACKET FORMAT",
+    "purpose": "Shows a large contiguous write block that starts near the end of one beat and extends fully across a second beat."
+  },
+  "technical_summary": [
+    "ReqAddr starts at DW14 in BEAT 0.",
+    "ReqLen covers the remainder of BEAT 0 and extends all the way through DW15 of BEAT 1.",
+    "All byte enables within the active range are '1', indicating a full block write."
+  ],
+  "components": [],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [
+    {
+      "field": "BEAT 0",
+      "bits": "511:0",
+      "description": "First data beat containing the beginning of the block write",
+      "valid_values": []
+    },
+    {
+      "field": "BEAT 1",
+      "bits": "511:0",
+      "description": "Second data beat containing the continuation of the block write",
+      "valid_values": []
+    }
+  ],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "Block Write",
+    "Straddle",
+    "Beat Boundary"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "Large contiguous writes can span multiple beats seamlessly, with all intermediate byte enables asserted."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

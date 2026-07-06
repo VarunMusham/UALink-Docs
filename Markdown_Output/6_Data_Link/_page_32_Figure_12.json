@@ -1,0 +1,75 @@
+{
+  "figure": {
+    "id": "Figure 6-l",
+    "title": "Tx Replay Queue Pointers",
+    "page": 32,
+    "type": "DATA STRUCTURE",
+    "purpose": "Illustrates the pointers used to manage the Transmit (Tx) Replay Queue for error recovery."
+  },
+  "technical_summary": [
+    "Shows a Tx Replay buffer containing unacknowledged packets, labeled with sequence numbers (5, 6, 7, 8, 9).",
+    "Tx_last_seq points to the most recently transmitted sequence number (9).",
+    "Rx_last_ack points to the last sequence number successfully acknowledged by the receiver (4, which is now retired from the queue).",
+    "The range of sequence numbers between the two pointers defines the current window of outstanding requests/acknowledgments."
+  ],
+  "components": [
+    {
+      "name": "Tx Replay Queue",
+      "description": "Buffer holding transmitted packets until they are acknowledged."
+    }
+  ],
+  "interfaces": [],
+  "signals": [],
+  "registers": [
+    {
+      "name": "Tx_last_seq",
+      "description": "Pointer to the sequence number of the last transmitted flit."
+    },
+    {
+      "name": "Rx_last_ack",
+      "description": "Pointer to the sequence number of the last received acknowledgment."
+    }
+  ],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "Replay Queue",
+    "Tx_last_seq",
+    "Rx_last_ack",
+    "Sequence Number"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "The Replay Queue maintains a sliding window of transmitted packets to enable retransmission in case of errors, tracked by last sent and last acknowledged sequence pointers."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

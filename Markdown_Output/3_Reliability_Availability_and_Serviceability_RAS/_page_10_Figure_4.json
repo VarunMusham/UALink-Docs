@@ -1,0 +1,73 @@
+{
+  "figure": {
+    "id": "Figure 3-a",
+    "title": "Switch Port Loopback / Isolation",
+    "page": 10,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Illustrates a loopback or isolation configuration within a Switch port's UPLI components."
+  },
+  "technical_summary": [
+    "Shows two Accelerators (ACC A and ACC B) connected via a central Switch.",
+    "The UPLI Originator and UPLI Completer blocks on one port of the Switch Core are highlighted.",
+    "A loopback symbol (purple circular arrow) indicates data being turned around at the UPLI layer within the Switch."
+  ],
+  "components": [
+    {
+      "name": "ACC A",
+      "description": "Accelerator device on the left."
+    },
+    {
+      "name": "SWITCH",
+      "description": "Central switch connecting the accelerators."
+    },
+    {
+      "name": "ACC B",
+      "description": "Accelerator device on the right."
+    }
+  ],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "Switch",
+    "Loopback",
+    "UPLI Originator",
+    "UPLI Completer"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "Switches can loop back traffic at the UPLI layer for diagnostic or isolation purposes."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.9
+}

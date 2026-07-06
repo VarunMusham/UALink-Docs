@@ -1,0 +1,76 @@
+{
+  "figure": {
+    "id": "Figure 9-a",
+    "title": "TX Path Security Architecture",
+    "page": 16,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Shows the cryptographic key and counter management for the transmit (TX) path feeding into the AES-GCM Crypto Engine."
+  },
+  "technical_summary": [
+    "A Key Derivation Function (KDF) uses Active & alternate master keys (2x32B per destination) to generate derived keys for different stream types.",
+    "The streams include Request, Read Response, and Write Response.",
+    "For each destination accelerator (up to 1023), the engine receives a 32B Derived Key, a 4B IV counter, and an 8B epoch counter for each stream type.",
+    "These inputs feed into the AES-GCM Crypto Engine to secure the TX data."
+  ],
+  "components": [
+    {
+      "name": "AES-GCM Crypto Engine",
+      "description": "Hardware encryption block for the TX path."
+    },
+    {
+      "name": "KDF",
+      "description": "Key Derivation Function."
+    }
+  ],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [
+    "1023 destinations",
+    "32B derived keys",
+    "4B IV counters",
+    "8B epoch counters"
+  ],
+  "cross_references": [],
+  "keywords": [
+    "TX",
+    "AES-GCM",
+    "KDF",
+    "Encryption",
+    "Epoch"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "The TX security architecture maintains separate cryptographic contexts (keys, IVs, epoch counters) for up to 1023 destination accelerators."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

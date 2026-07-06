@@ -1,0 +1,67 @@
+{
+  "figure": {
+    "id": "Figure 8-d",
+    "title": "Virtual Pods (vPods) Architecture",
+    "page": 3,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Demonstrates the concept and flexibility of Virtual Pods (vPods) within a physical UALink Pod."
+  },
+  "technical_summary": [
+    "Highlights how physical Accelerators across different System Nodes can be logically grouped into vPods.",
+    "Virtual Pod 1: Contains 2 Accelerators from System Node 1.",
+    "Virtual Pod 2: Spans across nodes, containing 2 Accelerators from System Node 1 and 3 Accelerators from System Node 2.",
+    "Virtual Pod 3: Contains all 4 Accelerators from System Node 3.",
+    "The UALink Pod Controller manages these vPod assignments and isolations over the fabric."
+  ],
+  "components": [
+    {
+      "name": "Virtual Pod (vPod)",
+      "description": "A logically isolated subset of Accelerators grouped for a specific workload or tenant."
+    }
+  ],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "Virtual Pod",
+    "vPod",
+    "Logical Grouping",
+    "Isolation"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "vPods provide logical slicing of the physical infrastructure, allowing arbitrary groupings of Accelerators across different physical chassis/nodes into unified compute clusters."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

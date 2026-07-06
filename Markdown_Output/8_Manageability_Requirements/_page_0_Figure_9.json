@@ -1,0 +1,79 @@
+{
+  "figure": {
+    "id": "Figure 8-a",
+    "title": "UALink System Node Architecture",
+    "page": 0,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Illustrates the internal components and connectivity of a typical UALink System Node."
+  },
+  "technical_summary": [
+    "The System Node contains 4 Accelerators (Acc), 2 CPUs, a Network Interface Card (NIC), and a Baseboard Management Controller (BMC).",
+    "The Accelerators are grouped and connected to the CPUs.",
+    "The CPUs are interconnected.",
+    "The NIC and BMC provide external networking and management interfaces, connected to the CPUs."
+  ],
+  "components": [
+    {
+      "name": "Accelerators (Acc)",
+      "description": "Compute resources connected to the CPUs."
+    },
+    {
+      "name": "CPUs",
+      "description": "Host processors."
+    },
+    {
+      "name": "NIC",
+      "description": "Network Interface Card for data/management."
+    },
+    {
+      "name": "BMC",
+      "description": "Baseboard Management Controller for out-of-band management."
+    }
+  ],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "System Node",
+    "Accelerator",
+    "CPU",
+    "NIC",
+    "BMC"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "A standard UALink System Node encapsulates compute (CPUs, Accs) and management (BMC, NIC) domains."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

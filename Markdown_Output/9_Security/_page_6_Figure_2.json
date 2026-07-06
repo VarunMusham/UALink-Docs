@@ -1,0 +1,77 @@
+{
+  "figure": {
+    "id": "Figure 9-l",
+    "title": "Virtual Pod Architecture with Trusted Execution Environment",
+    "page": 6,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Illustrates how Virtual Pods incorporate confidential computing components like Trusted VMs and TSMs to ensure security and isolation."
+  },
+  "technical_summary": [
+    "A 'Virtual Pod' spans multiple physical System Nodes (e.g., Node 1 and Node 2).",
+    "Each participating System Node runs a 'Trusted VM' containing the Confidential Computing Manager (CCM), Application, Accelerator Driver, and Kernel.",
+    "A Trusted Security Module (TSM) interfaces with the Trusted VM.",
+    "Each Accelerator within the vPod has a Device Security Manager (DSM).",
+    "The green shaded areas represent the Trusted Computing Base (TCB) of the Virtual Pod, which encompasses the Trusted VMs, TSMs, and the Accelerators' internal security contexts."
+  ],
+  "components": [
+    {
+      "name": "Trusted VM",
+      "description": "Secure virtual machine hosting the application and drivers."
+    },
+    {
+      "name": "TSM",
+      "description": "Trusted Security Module."
+    },
+    {
+      "name": "Acc DSM",
+      "description": "Accelerator Device Security Manager."
+    }
+  ],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "Virtual Pod",
+    "Trusted VM",
+    "TSM",
+    "DSM",
+    "TCB",
+    "Confidential Computing"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "Virtual Pods provide hardware-enforced isolation (Confidential Computing), extending the Trusted Computing Base across the network fabric to encompass remote accelerators and host VMs."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

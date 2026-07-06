@@ -1,0 +1,79 @@
+{
+  "figure": {
+    "id": "Figure 9-m",
+    "title": "Security Implementation in UALink Protocol Stack",
+    "page": 7,
+    "type": "BLOCK DIAGRAM",
+    "purpose": "Shows where encryption and integrity protections are applied within the layered UALink protocol stack."
+  },
+  "technical_summary": [
+    "The stack consists of the Accelerator Functional/Protocol layer, Transaction layer, Data link layer, and Physical layer.",
+    "Encryption/Decryption happens at the top (Accelerator Functional/Protocol layer) using AES-GCM with 256-bit keys.",
+    "It encrypts the payload and portions of the header for each transaction.",
+    "Requests, read responses, and write responses are treated as independently encrypted streams.",
+    "At the Transaction layer, if integrity is enabled, a 'tag' half flit is created and appended to each control half flit to ensure end-to-end data integrity."
+  ],
+  "components": [
+    {
+      "name": "Accelerator Functional/Protocol layer",
+      "description": "Where AES-GCM encryption is applied."
+    },
+    {
+      "name": "Transaction layer",
+      "description": "Where integrity tags are appended."
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "UPLI interface",
+      "description": "Connects Protocol layer and Transaction layer."
+    }
+  ],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [
+    "AES-GCM 256-bit keys"
+  ],
+  "cross_references": [],
+  "keywords": [
+    "Protocol Stack",
+    "Encryption",
+    "Integrity Tag",
+    "AES-GCM",
+    "UPLI"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "Security is implemented high in the stack, before the UPLI interface, ensuring that data is protected end-to-end as it traverses the lower fabric layers."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

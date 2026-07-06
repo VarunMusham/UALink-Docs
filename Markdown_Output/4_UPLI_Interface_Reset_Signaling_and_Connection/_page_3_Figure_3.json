@@ -1,0 +1,87 @@
+{
+  "figure": {
+    "id": "Figure 4-b",
+    "title": "Connection Establishment - Originator Initiated",
+    "page": 3,
+    "type": "TIMING DIAGRAM",
+    "purpose": "Shows the connection establishment sequence where the Originator initiates the connection first."
+  },
+  "technical_summary": [
+    "Originator asserts OrigClkReq to request connection.",
+    "Completer responds by asserting CompClkAck.",
+    "At this point, the Originator may begin issuing credits to the Completer.",
+    "Subsequently, the Completer asserts CompClkReq.",
+    "Originator responds by asserting OrigClkAck.",
+    "At this point, the Completer may issue credits.",
+    "Once credits are exchanged, the interface is fully connected and beats may be transmitted."
+  ],
+  "components": [],
+  "interfaces": [],
+  "signals": [
+    {
+      "name": "OrigClkReq",
+      "type": "Control",
+      "description": "Originator Clock Request."
+    },
+    {
+      "name": "CompClkAck",
+      "type": "Control",
+      "description": "Completer Clock Acknowledge."
+    },
+    {
+      "name": "CompClkReq",
+      "type": "Control",
+      "description": "Completer Clock Request."
+    },
+    {
+      "name": "OrigClkAck",
+      "type": "Control",
+      "description": "Originator Clock Acknowledge."
+    }
+  ],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [],
+    "ordering": [
+      "OrigClkReq -> CompClkAck",
+      "CompClkReq -> OrigClkAck"
+    ],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "Connection",
+    "OrigClkReq",
+    "CompClkAck"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "The connection sequence requires a four-way handshake (two request/acknowledge pairs) before full bidirectional credit and beat transmission can occur."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

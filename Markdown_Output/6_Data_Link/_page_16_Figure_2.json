@@ -1,0 +1,79 @@
+{
+  "figure": {
+    "id": "Figure 6-e",
+    "title": "Protocol Request Sequence - Successful",
+    "page": 16,
+    "type": "SEQUENCE DIAGRAM",
+    "purpose": "Shows a standard, successful request-acknowledge sequence."
+  },
+  "technical_summary": [
+    "Local node sends a 'request' message to the Remote node.",
+    "Remote node replies with an 'ack' message.",
+    "The sequence results in a 'Request successful' state."
+  ],
+  "components": [
+    {
+      "name": "Local",
+      "description": "Initiating node."
+    },
+    {
+      "name": "Remote",
+      "description": "Responding node."
+    }
+  ],
+  "interfaces": [],
+  "signals": [],
+  "registers": [],
+  "packet_layout": [],
+  "state_machine": {
+    "initial_state": "",
+    "states": [],
+    "transitions": []
+  },
+  "timing": {
+    "signals": [],
+    "events": [
+      {
+        "name": "request",
+        "description": "Local to Remote."
+      },
+      {
+        "name": "ack",
+        "description": "Remote to Local."
+      }
+    ],
+    "ordering": [
+      "request -> ack"
+    ],
+    "constraints": []
+  },
+  "pipeline": {
+    "ordered_flow": []
+  },
+  "algorithm": {
+    "steps": []
+  },
+  "tables": [],
+  "equations": [],
+  "constraints": [],
+  "rules": [],
+  "assumptions": [],
+  "important_constants": [],
+  "cross_references": [],
+  "keywords": [
+    "request",
+    "ack",
+    "successful"
+  ],
+  "entities": [],
+  "relationships": [],
+  "knowledge_triples": [],
+  "llm_notes": {
+    "critical_facts": [
+      "Demonstrates the baseline successful transaction flow over the data link."
+    ],
+    "potential_ambiguities": [],
+    "missing_information": []
+  },
+  "confidence": 0.95
+}

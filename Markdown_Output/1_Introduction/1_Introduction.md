@@ -6,7 +6,7 @@ The main purpose of this specification is to enable low latency and efficient co
 
 The UPLI allows up to 1024 Accelerators or endpoints in a system to communicate using a 10-bit Identifier. The 10-bit Source and Destination Accelerator Identifiers are used by the Switch to route Requests and Responses between a sender and a receiver. All Requests shall carry Source and Destination Accelerator Identifiers, Responses also carry Source and Destination Accelerator Identifiers, but only need the Destination Identifier for routing, the Source Identifier is retained to aid in debugging.
 
-![](_page_0_Figure_6.jpeg)
+![](_page_0_Figure_6.jpeg)\n\n[JSON Extraction](_page_0_Figure_6.json)
 
 **Figure 1-1 UALink Based Multi-Accelerator System**
 
@@ -34,7 +34,7 @@ The signaling rate is usually higher (212.5 GT/s) to accommodate the bandwidth c
 
 An Accelerator System Node may be comprised of one or more host processors, one or more Accelerators, and devices under a single OS domain. An Accelerator can communicate to another Accelerator either through a direct UALink link or through a UALink Switch. Communication between Accelerators inside a system node is called in-domain communication, i.e. within an OSdomain. Communication between Accelerators in differing system nodes is referred to as crossdomain communication.
 
-![](_page_2_Figure_4.jpeg)
+![](_page_2_Figure_4.jpeg)\n\n[JSON Extraction](_page_2_Figure_4.json)
 
 **Figure 1-2 Accelerator communication over a direct link and over a Switch**
 
@@ -51,7 +51,7 @@ A UALink stack shall be comprised of a
 - Data Link Layer and
 - Physical Layer
 
-![](_page_3_Figure_9.jpeg)
+![](_page_3_Figure_9.jpeg)\n\n[JSON Extraction](_page_3_Figure_9.json)
 
 **Figure 1-3 UALink Stack**
 
@@ -81,7 +81,7 @@ The Physical Layer (PL) is based on IEEE 802.3dj (D1.4 at the time of writing). 
 
 [Figure 1-4](#page-5-0) shows the UALink network, which allows data to move between devices. It supports data transfers within and across system nodes. Accelerators may use a System Physical Address (SPA) to access memory within a System domain and may use a Network Physical Address (NPA) to access memory in a different System domain. An implementation can also opt for a global addressing model that is flat to simplify the translation process. This section provides a brief overview of a cross-domain address translation model. It is only for illustration. This specification leaves the address translation as an implementation choice as Switches use identifier-based routing. In this example, the source Accelerator uses the Memory Management Unit (MMU) to translate a Guest Virtual Address (GVA) to a Network Physical Address (NPA). At the destination node, a link MMU is used to translate NPA to a local SPA.
 
-![](_page_5_Figure_4.jpeg)
+![](_page_5_Figure_4.jpeg)\n\n[JSON Extraction](_page_5_Figure_4.json)
 
 **Figure 1-4 UALink cross-domain address translation model**
 
@@ -95,7 +95,7 @@ In [Figure 1-5,](#page-6-0) the source Accelerator, which imports memory, create
 
 [Figure 1-5](#page-6-0) below illustrates the translation process at the source and the destination Accelerators. Applications running on the compute elements use Guest Virtual Address. These accesses from the Compute Unit (CU) with many compute elements go through the MMU to translate virtual address to a physical address.
 
-![](_page_6_Figure_3.jpeg)
+![](_page_6_Figure_3.jpeg)\n\n[JSON Extraction](_page_6_Figure_3.json)
 
 **Figure 1-5 Translation Process**
 
